@@ -40,7 +40,7 @@
         <!-- BEGIN LOGIN -->
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
-            <form class="form-vertical login-form form-signin" role="form" action="AccountServlet" method="post">
+            <form class="form-vertical login-form form-signin" role="form" action="login" method="post">
                 <h3 style='margin-bottom: -5px ; margin-left: -5px; margin-right: -5px;'>City Planning Department</h3>
                 <h5 style='color:white;'>Let's get planning!</h5>
                 <div class="alert alert-error hide">
@@ -79,7 +79,7 @@
             </form>
             <!-- END LOGIN FORM -->        
             <!-- BEGIN REGISTRATION FORM -->
-            <form class="form-vertical register-form" action="RegisterServlet" method="post">
+            <form class="form-vertical register-form" action="register" method="post">
                 <h3 >Sign Up</h3>
                 <p>Enter your personal details below:</p>
                 <div class="control-group">

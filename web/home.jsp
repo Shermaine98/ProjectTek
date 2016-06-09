@@ -3,7 +3,7 @@
     Created on : Jun 8, 2016, 10:13:59 PM
     Author     : Geraldine Atayan
 --%>
-
+<!TODO THIS -->
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!--IMPORTING HTML IMPORTS (bootstrap + scripts)-->
 <%@ include file="imports.html" %>

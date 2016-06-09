@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ include file="imports.html" %>
 <html>
     <head>
         <meta charset="utf-8">
@@ -326,11 +327,10 @@
     <!-- Main content -->
     <section class="content">
         <br>
-        <form action="Upload" method="post" enctype="multipart/form-data">
-            <input accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" type="file" name="file" required/>
-            <br/>
-            <button type="submit" class="btn bg-olive" value="Upload File" style="width:20%">Upload File</button>
-        </form>
+        <form action="UploadServlet" enctype="multipart/form-data" method="post">;
+      <input name="file" type="file" />;
+      <input name="submit" type="submit" value="Submit" />;
+</form>
     </section>
     
     <!-- /.content -->

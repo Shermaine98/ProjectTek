@@ -1,255 +1,233 @@
-<%-- 
-    Document   : index
-    Created on : Jun 8, 2016, 10:10:21 PM
-    Author     : Geraldine Atayan
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html >
     <head>
-        <meta charset="utf-8" />
-        <title>Caloocan City Hall Planning Division</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="" name="description" />
-        <meta content="" name="author" />
-        <!-- BEGIN GLOBAL MANDATORY STYLES -->
-        <link href="index_template/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="index_template/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
-        <link href="index_template/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-        <link href="index_template/css/style-metro.css" rel="stylesheet" type="text/css"/>
-        <link href="index_template/css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="index_template/css/style-responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="index_template/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-        <link href="index_template/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" type="text/css" href="index_template/plugins/select2/select2_metro.css" />
-        <!-- END GLOBAL MANDATORY STYLES -->
-        <!-- BEGIN PAGE LEVEL STYLES -->
-        <link href="index_template/css/pages/login-soft.css" rel="stylesheet" type="text/css"/>
-        <!-- END PAGE LEVEL STYLES -->
-        <link rel="shortcut icon" href="favicon.ico" />
+        <meta charset="UTF-8">
+        <title>Caloocan City Hall: City Planning Department</title>
+
+
+        <style>
+            /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+            @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+            @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+            body{
+                margin: 0;
+                padding: 0;
+                background: #fff;
+
+                color: #fff;
+                font-family: Arial;
+                font-size: 12px;
+            }
+
+            .background-image {
+                position: absolute;
+                left: 0;
+                right: 0;
+                z-index: 1;
+
+                display: block;
+                background-size : 100% auto;
+                background-image: url('https://pixabay.com/static/uploads/photo/2015/06/08/15/22/cityscape-802041_960_720.jpg');
+                width: 100%;
+                height: 100%;
+
+                -webkit-filter: blur(3px);
+                -moz-filter: blur(3px);
+                -o-filter: blur(3px);
+                -ms-filter: blur(3px);
+                filter: blur(3px);
+            }
+
+            .header{
+                position: absolute;
+                top: calc(50% - 125px);
+                left: calc(50% - 270px);
+                z-index: 2;
+            }
+
+            .header div{
+                float: left;
+                color: #1a1a1a;
+                font-family: 'Exo', sans-serif;
+                font-size: 35px;
+                font-weight: 200;
+            }
+
+            .header div span{
+                color: #5379fa !important;
+            }
+
+            .login{
+                position: absolute;
+                top: calc(50% - 125px);
+                left: calc(50% - 50px);
+                height: 150px;
+                width: 350px;
+                padding: 10px;
+                z-index: 2;
+            }
+
+            .login input[type=text]{
+                width: 250px;
+                height: 30px;
+                background: transparent;
+                border: 1px solid rgba(255,255,255,0.6);
+                border-radius: 2px;
+                color: #fff;
+                font-family: 'Exo', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 4px;
+            }
+
+            .login input[type=password]{
+                width: 250px;
+                height: 30px;
+                background: transparent;
+                border: 1px solid rgba(255,255,255,0.6);
+                border-radius: 2px;
+                color: #fff;
+                font-family: 'Exo', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 4px;
+                margin-top: 10px;
+            }
+
+            .login input[type=button]{
+                width: 260px;
+                height: 35px;
+                background: #fff;
+                border: 1px solid #fff;
+                cursor: pointer;
+                border-radius: 2px;
+                color: #a18d6c;
+                font-family: 'Exo', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 6px;
+                margin-top: 10px;
+            }
+
+            .login input[type=button]:hover{
+                opacity: 0.8;
+            }
+
+            .login input[type=button]:active{
+                opacity: 0.6;
+            }
+
+            .login input[type=text]:focus{
+                outline: none;
+                border: 1px solid rgba(255,255,255,0.9);
+            }
+
+            .login input[type=password]:focus{
+                outline: none;
+                border: 1px solid rgba(255,255,255,0.9);
+            }
+
+            .login input[type=button]:focus{
+                outline: none;
+            }
+
+            ::-webkit-input-placeholder{
+                color: #fff;
+            }
+
+            ::-moz-input-placeholder{
+                color: #fff;
+            }
+        </style>
+        <script src="index_template/js/prefixfree.min.js"></script>
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="index_template/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index_template/assets/css/form-elements.css">
+        <link rel="stylesheet" href="index_template/assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="index_template/assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="index_template/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="index_template/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="index_template/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="index_template/assets/ico/apple-touch-icon-57-precomposed.png">
+
+
     </head>
-    <!-- END HEAD -->
-    <!-- BEGIN BODY -->
-    <body class="login">
-        <!-- BEGIN LOGO -->
-        <div class="logo">
-            <img src="index_template/img/logo/Ph_seal_ncr_caloocan.png" alt="Caloocan City Logo" style="width:40%;height:40%;">
-        </div>
-        <!-- END LOGO -->
-        <!-- BEGIN LOGIN -->
-        <div class="content">
-            <!-- BEGIN LOGIN FORM -->
-            <form class="form-vertical login-form form-signin" role="form" action="login" method="post">
-                <h3 style='margin-bottom: -5px ; margin-left: -5px; margin-right: -5px;'>City Planning Department</h3>
-                <h5 style='color:white;'>Let's get planning!</h5>
-                <div class="alert alert-error hide">
-                    <button class="close" data-dismiss="alert"></button>
-                    <span>Enter any username and password.</span>
-                </div>
-                <div class="control-group">
-                    <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                    <label class="control-label visible-ie8 visible-ie9">Username</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-user"></i>
-                            <input class="m-wrap placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Password</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-lock"></i>
-                            <input class="m-wrap placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password"/>
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" class="btn blue" style="width:100%">
-                    <!--LOGIN BUTTON-->
-                        Login <i class="m-icon-swapright m-icon-white"></i>
-                </button>  
-                <div class="create-account">
-                    <p>
-                        Don't have an account yet ?&nbsp; 
-                        <a href="javascript:;" id="register-btn" >Create an account</a>
-                    </p>
-                </div>
-            </form>
-            <!-- END LOGIN FORM -->        
-            <!-- BEGIN REGISTRATION FORM -->
-            <form class="form-vertical register-form" action="register" method="post">
-                <h3 >Sign Up</h3>
-                <p>Enter your personal details below:</p>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">First Name</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-font"></i>
-                            <input class="m-wrap placeholder-no-fix" type="text" placeholder="First Name" name="firstName"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Last Name</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-font"></i>
-                            <input class="m-wrap placeholder-no-fix" type="text" placeholder="Last Name" name="lastName"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="row-fluid">
-                        <label class="control-label visible-ie8 visible-ie9">Gender</label>
-                        <div class="controls">
-                            <select name="gender" style='width:100%; height:35px; margin-bottom:-5px'>
-                                <option value="" disabled selected>Select Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <p>Input birthdate:</p>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Birthdate</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-calendar"></i>
-                            <input class="m-wrap placeholder-no-fix" id="Birthdate" type="date" name="birthdate" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
-                        </div>
-                    </div>
-                </div>
-                <p>Input date of employment:</p>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Date of Employment</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-calendar"></i>
-                            <input class="m-wrap placeholder-no-fix" type="date" id="employmentDate" name="employmentDate" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="row-fluid">
-                        <label class="control-label visible-ie8 visible-ie9">Division</label>
-                        <div class="controls">
-                            <select onchange="yesnoCheck(this)" name="division" style='width:100%; height:35px; margin-bottom:-5px'>
-                                <option value="" disabled selected>Select Division</option>
-                                <option value="Admin">Administrative Division</option>
-                                <option value="Physical">Physical Planning Division</option>
-                                <option value="Social">Social Planning Division</option>
-                                <option value="Others">Others</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group" id="ifYes" style="display:none;">
-                    <div class="row-fluid">
-                        <div class="controls" style='width:95%;' >
-                            <p>Input Reason for Data Access</p>
-                            <textarea rows="4" name="Reason" style='width:100%;'></textarea>
 
-                            <p>Until when do you need access?</p>
-                            <div class="input-icon left">
-                                <i class="icon-calendar"></i>
-                                <input class="m-wrap placeholder-no-fix" style='width:90%;' type="date" id='DateValid' name="DateValid" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
+    <body>
+
+        <div class="background-image"></div>
+        <div class="header">
+            <img src="index_template/Ph_seal_ncr_caloocan.png" style="width:80%; height:80%;"/>
+        </div>
+        <br>
+        <div class="login">
+            <div style="
+                 color: #1a1a1a;
+                 font-family: 'Exo', sans-serif;
+                 font-size: 35px;
+                 font-weight: 200;">City<span>Planning</span><br/>Department</div><br>
+            <input type="text" placeholder="username" name="user"><br>
+            <input type="password" placeholder="password" name="password"><br>
+            <input type="button" value="Login"><br>
+            <a class="launch-modal" href="#" data-modal-id="modal-register" style="color: #990000">No account yet? Register now!</a>
+
+        </div>
+
+
+        <!-- MODAL -->
+        <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                        </button>
+                        <h3 class="modal-title" id="modal-register-label">Register Now!</h3>
+                        <p>Fill in the form below to get instant access:</p>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <form role="form" action="" method="post" class="registration-form">
+                            <div class="form-inline">
+                                <div class="form-group" style="margin-bottom: 9px;">
+                                    <input type="text" name="form-first-name" placeholder="First name..." class="form-control" style="margin-right: 30px;">
+                                    <input type="text" name="form-last-name" placeholder="Last name..." class="form-control" >
+                                </div>
+                                <div class="form-group" style="margin-bottom: 5px;">
+                                    <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email" style="margin-right: 30px;">
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <p>Enter your account details below:</p>
-                <div class="control-group">
-                    <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                    <label class="control-label visible-ie8 visible-ie9">Email</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-envelope"></i>
-                            <input class="m-wrap placeholder-no-fix" type="text" placeholder="Email" name="email"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Username</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-user"></i>
-                            <input class="m-wrap placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Password</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-lock"></i>
-                            <input class="m-wrap placeholder-no-fix" type="password" autocomplete="off" id="register_password" placeholder="Password" name="password"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label visible-ie8 visible-ie9">Re-type Your Password</label>
-                    <div class="controls">
-                        <div class="input-icon left">
-                            <i class="icon-ok"></i>
-                            <input class="m-wrap placeholder-no-fix" type="password" autocomplete="off" placeholder="Re-type Your Password" name="rpassword"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-actions">
-                    <button id="register-back-btn" type="button" class="btn">
-                        <i class="m-icon-swapleft"></i>  Back
-                    </button>
-                    <button type="submit" id="register-submit-btn" class="btn green pull-right">
-                        Sign Up <i class="m-icon-swapright m-icon-white"></i>
-                    </button>            
-                </div>
-            </form>
-            <!-- END REGISTRATION FORM -->
-        </div>
-        <!-- END LOGIN -->
-        <!-- BEGIN COPYRIGHT -->
-        <div class="copyright" style="margin-bottom:50px">
-            2014 &copy; <a href="http://www.justukfreebies.co.uk/">Just UK Freebies</a> Login Form
-            <br>
-            <a href="http://www.justukfreebies.co.uk/website-templates/free-responsive-login-form-template/">Free Website Templates</a>
+                            <button type="submit" class="btn" style="background-color: #ff9933l; margin-top: 20px">Sign me up!</button>
+                        </form>
 
-        </div>
-        <!-- END COPYRIGHT -->
-        <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-        <!-- BEGIN CORE PLUGINS -->   <script src="index_template/plugins/jquery-1.10.1.min.js" type="text/javascript"></script>
-        <script src="index_template/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-        <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-        <script src="index_template/plugins/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
-        <script src="index_template/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="index_template/plugins/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js" type="text/javascript" ></script>
-        
-        <script src="index_template/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-        <script src="index_template/plugins/jquery.blockui.min.js" type="text/javascript"></script>  
-        <script src="index_template/plugins/jquery.cookie.min.js" type="text/javascript"></script>
-        <script src="index_template/plugins/uniform/jquery.uniform.min.js" type="text/javascript" ></script>
-        <!-- END CORE PLUGINS -->
-        <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="index_template/plugins/jquery-validation/dist/jquery.validate.min.js" type="text/javascript"></script>
-        <script src="index_template/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
-        <script type="text/javascript" src="index_template/plugins/select2/select2.min.js"></script>
-        <!-- END PAGE LEVEL PLUGINS -->
-        <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script src="index_template/scripts/app.js" type="text/javascript"></script>
-        <script src="index_template/scripts/login-soft.js" type="text/javascript"></script>      
-        <!-- END PAGE LEVEL SCRIPTS --> 
-        <script>
-        jQuery(document).ready(function () {
-                                        App.init();
-                                        Login.init();
-                                    });
-        </script>
+                    </div>
 
-        <script src="AdminLTE/js/DateTime.js" type="text/javascript"></script>
-        
-        <!-- END JAVASCRIPTS -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="index_template/assets/js/jquery-1.11.1.min.js"></script>
+        <script src="index_template/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="index_template/assets/js/jquery.backstretch.min.js"></script>
+        <script src="index_template/assets/js/scripts.js"></script>
+
+
     </body>
-    <!-- END BODY -->
 </html>

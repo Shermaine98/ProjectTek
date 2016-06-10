@@ -44,40 +44,27 @@
             
                 div.appendChild(selectList);
                 cell1.appendChild(div); 
-	
-                //cell2
-                var cell2 = row.insertCell(1);
-                var div = document.createElement("div");
-                div.setAttribute('class', 'form-group');
-                //Create array of options to be added
-                var array = ["Under 1", "1-4", "5-9", "10-14"];
-                //Create and append select list
-                var selectList = document.createElement("select");
-                selectList.id = "selectExpenseType";
-                selectList.name = "selectExpenseType";
-                selectList.setAttribute('class','form-control');
                 
-                //Create and append the options
-                for (var i = 0; i < array.length; i++) {
-                    var option = document.createElement("option");
-                    option.value = array[i];
-                    option.text = array[i];
-                    selectList.appendChild(option);
-                }
-            
-                div.appendChild(selectList);
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+        
+                //cell2
+                var cell2 = row.insertCell(0);
+                var div = document.createElement("div");
+                cell2.innerHTML = "<center>Under 1</center>";
                 cell2.appendChild(div); 
 	
                 //cell 3
-                var cell3 = row.insertCell(2);
+                var cell3 = row.insertCell(1);
                 var element3 = document.createElement("input");
                 element3.readonly="true";
                 element3.className="form-control";
+                element3.disabled="true";
                 //element6.addEventListener("change", calculate);
                 cell3.appendChild(element3);
                 
                 //cell 4
-                var cell4 = row.insertCell(3);
+                var cell4 = row.insertCell(2);
                 var element4 = document.createElement("input");
                 element4.type = "number";
                 element4.name = "totalBudget";
@@ -91,7 +78,145 @@
                 cell4.appendChild(element4);
                 
                 //cell 5
-                var cell5 = row.insertCell(4);
+                var cell5 = row.insertCell(3);
+                var element5 = document.createElement("input");
+                element5.type = "number";
+                element5.name = "totalBudget";
+                element5.required=true;
+                element5.min="0"
+                element5.max="99999999999"
+                element5.step="0.01"
+                element5.style.width="100%";
+                element5.className="form-control";
+                element5.addEventListener("change", calculate);
+                cell5.appendChild(element5);
+                
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+        
+                //cell2
+                var cell2 = row.insertCell(0);
+                var div = document.createElement("div");
+                cell2.innerHTML = "<center>1 - 4</center>";
+                cell2.appendChild(div); 
+	
+                //cell 3
+                var cell3 = row.insertCell(1);
+                var element3 = document.createElement("input");
+                element3.readonly="true";
+                element3.className="form-control";
+                element3.disabled="true";
+                //element6.addEventListener("change", calculate);
+                cell3.appendChild(element3);
+                
+                //cell 4
+                var cell4 = row.insertCell(2);
+                var element4 = document.createElement("input");
+                element4.type = "number";
+                element4.name = "totalBudget";
+                element4.required=true;
+                element4.min="0"
+                element4.max="99999999999"
+                element4.step="1"
+                element4.style.width="100%";
+                element4.className="form-control";
+                element4.addEventListener("change", calculate);
+                cell4.appendChild(element4);
+                
+                //cell 5
+                var cell5 = row.insertCell(3);
+                var element5 = document.createElement("input");
+                element5.type = "number";
+                element5.name = "totalBudget";
+                element5.required=true;
+                element5.min="0"
+                element5.max="99999999999"
+                element5.step="0.01"
+                element5.style.width="100%";
+                element5.className="form-control";
+                element5.addEventListener("change", calculate);
+                cell5.appendChild(element5);
+                
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+        
+                //cell2
+                var cell2 = row.insertCell(0);
+                var div = document.createElement("div");
+                cell2.innerHTML = "<center>5 - 9</center>";
+                cell2.appendChild(div); 
+	
+                //cell 3
+                var cell3 = row.insertCell(1);
+                var element3 = document.createElement("input");
+                element3.readonly="true";
+                element3.className="form-control";
+                element3.disabled="true";
+                //element6.addEventListener("change", calculate);
+                cell3.appendChild(element3);
+                
+                //cell 4
+                var cell4 = row.insertCell(2);
+                var element4 = document.createElement("input");
+                element4.type = "number";
+                element4.name = "totalBudget";
+                element4.required=true;
+                element4.min="0"
+                element4.max="99999999999"
+                element4.step="1"
+                element4.style.width="100%";
+                element4.className="form-control";
+                element4.addEventListener("change", calculate);
+                cell4.appendChild(element4);
+                
+                //cell 5
+                var cell5 = row.insertCell(3);
+                var element5 = document.createElement("input");
+                element5.type = "number";
+                element5.name = "totalBudget";
+                element5.required=true;
+                element5.min="0"
+                element5.max="99999999999"
+                element5.step="0.01"
+                element5.style.width="100%";
+                element5.className="form-control";
+                element5.addEventListener("change", calculate);
+                cell5.appendChild(element5);
+                
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+        
+                //cell2
+                var cell2 = row.insertCell(0);
+                var div = document.createElement("div");
+                cell2.innerHTML = "<center>10 - 14</center>";
+                cell2.appendChild(div); 
+	
+                //cell 3
+                var cell3 = row.insertCell(1);
+                var element3 = document.createElement("input");
+                element3.readonly="true";
+                element3.className="form-control";
+                element3.disabled="true";
+                //element6.addEventListener("change", calculate);
+                cell3.appendChild(element3);
+                
+                //cell 4
+                var cell4 = row.insertCell(2);
+                var element4 = document.createElement("input");
+                element4.type = "number";
+                element4.name = "totalBudget";
+                element4.required=true;
+                element4.min="0"
+                element4.max="99999999999"
+                element4.step="1"
+                element4.style.width="100%";
+                element4.className="form-control";
+                element4.addEventListener("change", calculate);
+                cell4.appendChild(element4);
+                
+                //cell 5
+                var cell5 = row.insertCell(3);
                 var element5 = document.createElement("input");
                 element5.type = "number";
                 element5.name = "totalBudget";
@@ -117,39 +242,36 @@
             function calculate() {
             var table = document.getElementById("myTable");
             var rowCount = table.rows.length;
-            
             var sum = 0;
-            for(var i = 1 ; i<rowCount ; i++){
-                
-              var bothSexes = document.getElementById("myTable").rows[i].cells[2].value;
-              var male = document.getElementById("myTable").rows[i].cells[3].value;
-              var female = document.getElementById("myTable").rows[i].cells[4].value;
-              //if(male != null && male!= "" && female!=null && female!=""){
-                //  if((isNaN(qty)|| Math.sign(parseInt(qty)) == -1 || Math.sign(parseInt(qty)) == -0 || Math.sign(parseInt(qty)) == 0) 
-                  //&& (isNaN(costingamt) || Math.sign(parseFloat(costingamt)) == -1 || Math.sign(parseFloat(costingamt)) == -0 || Math.sign(parseFloat(costingamt)) == 0 )){
+            for(var i = 2 ; i<rowCount ; i++){
+                if(!i==1){
+                    var male = document.getElementById("myTable").rows[i].cells[2].children[0].value;
+                    var female = document.getElementById("myTable").rows[i].cells[3].children[0].value;
+                    alert(male);
+                    //if(male != null && male!= "" && female!=null && female!=""){
+                    //  if((isNaN(qty)|| Math.sign(parseInt(qty)) == -1 || Math.sign(parseInt(qty)) == -0 || Math.sign(parseInt(qty)) == 0) 
+                    //&& (isNaN(costingamt) || Math.sign(parseFloat(costingamt)) == -1 || Math.sign(parseFloat(costingamt)) == -0 || Math.sign(parseFloat(costingamt)) == 0 )){
                     //  alert("Quantity and Costing Amount should both be positive numbers");
                       //document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group has-error');
                       //document.getElementById("myTable").rows[i].cells[4].children[0].setAttribute('class','form-group has-error');
                   //}
                   //else if(isNaN(male)|| Math.sign(parseInt(male)) == -1 || Math.sign(parseInt(male)) == -0 || Math.sign(parseInt(male)) == 0 ){
                     //  document.getElementById("myTable").rows[i].cells[4].children[0].setAttribute('class','form-group');
-                     // alert("Quantity should be a positive number");
-                      //document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group has-error');
+                    //  alert("Quantity should be a positive number");
+                    //  document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group has-error');
                   //}
                   //else if(isNaN(female) || Math.sign(parseFloat(female)) == -1 || Math.sign(parseFloat(female)) == -0 || Math.sign(parseFloat(female)) == 0 ){
-                   ///   document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group');
-                   //   alert("Costing Amount should be a positive number");
+                    //  document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group');
+                    //  alert("Costing Amount should be a positive number");
                     //  document.getElementById("myTable").rows[i].cells[4].children[0].setAttribute('class','form-group has-error');
                   //} else {
-                      
                       sum = parseInt(male) + parseInt(female);
-                      document.getElementById("myTable").rows[i].cells[2].value = sum;
-                                      
-
-                  //}
-             // }
-            } 
-        }
+                      document.getElementById("myTable").rows[i].cells[1].children[0].value = sum;
+                  }
+              }
+              }
+            //}
+        //}
 	</script>
     </head>
     <body class="hold-transition skin-yellow-light fixed sidebar-mini">
@@ -182,7 +304,8 @@
                         <div class="box-header with-border">
                             <h2 class="box-title">Input manually the forms</h2>
                             <div class="box-tools pull-right">
-                                <button class="btn btn-flat btn-warning btn-sm" onClick="myFunction()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Row</button>
+                                <button class="btn btn-flat btn-warning btn-sm" onClick="myFunction()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Barangay</button>
+                                <button class="btn btn-flat btn-danger btn-sm" onClick=""><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Delete Barangay</button>
                             </div>
                           <!-- /.box-tools -->
                         </div>
@@ -191,39 +314,83 @@
                             <div class="box-body">
                                 <table class="table table-striped" id="myTable">
                                     <tr>
-                                      <th>Barangay No.</th>
                                       <th>Age Bracket</th>
                                       <th>Both Sexes</th>
                                       <th>Male</th>
                                       <th>Female</th>
                                     </tr>
                                     <tr>
-                                        <td>
+                                                                                <td>
                                             <select class="form-control select2" style="width: 100%;">
                                                 <option>Barangay 1</option>
+                                                <option>Barangay 2</option>
+                                                <option>Barangay 3</option>
+                                                <option>Barangay 4</option>
                                             </select>
                                         </td>
+                                    </tr>
+                                    <tr>
                                         <td>
-                                            <select class="form-control select2" style="width: 100%;">
-                                                <option>Under 1</option>
-                                                <option>1 - 4</option>
-                                                <option>5 - 9</option>
-                                                <option>10 - 14</option>
-                                            </select>
+                                            <center>Under 1</center>
                                         </td>
                                         <td>
                                             <input class="form-control" disabled="true" value="0"> 
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onKeyUp="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onKeyUp="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <center>1 - 4</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <center>5 - 9</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <center>10 - 14</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()">
                                         </td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
+                        <br>
+                        <center><button type="submit" class="btn btn-flat btn-success" style="width:20%">Submit</button></center>
+                        <br>
                     </div>
                 </section>
                 <!-- /.content -->

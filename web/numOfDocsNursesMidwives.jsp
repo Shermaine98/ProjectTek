@@ -53,7 +53,7 @@
                         <div class="box-header with-border">
                             <h2 class="box-title">Input manually the forms</h2>
                             <div class="box-tools pull-right">
-                                <button class="btn btn-flat btn-warning btn-sm"  id="addmorePOIbutton" onclick="insRow()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Hospital</button>
+                                <button class="btn btn-flat btn-warning btn-sm"  id="add_row"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Hospital</button>
                                 <!--<button class="btn btn-flat btn-danger btn-sm" onClick=""><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Delete Hospital</button>-->
                             </div>
                             <!-- /.box-tools -->
@@ -78,9 +78,9 @@
                                         <td><input type="number" class="form-control" min="0"> </td>
                                         <td><input type="number" class="form-control" min="0"> </td>
                                         <td><input type="number" class="form-control" min="0"> </td>
-                                        <td><button class="btn" id="delPOIbutton" value="Delete" onclick="deleteRow(this)"/>X</button></td>
+                                        <td><button class="btn" id="delPOIbutton" onclick="deleteRow(this)"/>X</button></td>
                                     </tr>
-
+                                    <tr id="addr1"></tr>
 
                                 </table>
                             </div>
@@ -104,23 +104,20 @@
             document.getElementById('myTable').deleteRow(i);
         }
 
+        var i = 1;
+        $("#add_row").click(function () {
+            $('#addr' + i).html("\
+    <td><input type='text' class='form-control'> </td>\
+                                        <td><input type='text' class='form-control'> </td>\
+                                        <td><input type='text' class='form-control'> </td>\
+                                        <td><input type='number' class='form-control' min='0'> </td>\
+                                        <td><input type='number' class='form-control' min='0'> </td>\
+                                        <td><input type='number' class='form-control' min='0'> </td>\
+                                        <td><button class='btn' id='delPOIbutton' onclick='deleteRow(this)'>X</button></td>");
+            $('#myTable').append('<tr id="addr' + (i + 1) + '"></tr>');
 
-        function insRow()
-        {
-            var x = document.getElementById('myTable');
-            var new_row = x.rows[1].cloneNode(true);
-            var len = x.rows.length;
-//            new_row.cells[0].innerHTML = len;
-
-            var inp1 = new_row.cells[1].getElementsByTagName('input')[0];
-            inp1.id += len;
-            inp1.value = '';
-            
-            var inp2 = new_row.cells[2].getElementsByTagName('input')[0];
-            inp2.id += len;
-            inp2.value = '';
-            x.appendChild(new_row);
-        }
+            i++;
+        });
     </script>
 
     <%@ include file="footer.html" %>

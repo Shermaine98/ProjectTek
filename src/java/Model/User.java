@@ -21,6 +21,7 @@ public class User {
     private String gender;
     private Date birthdate;
     private Date employment;
+    private String position;
     private String division;
     private String reason;
     private Date accessDate;
@@ -202,6 +203,20 @@ public class User {
         java.util.Date birthdate = formatter.parse(date);
         java.sql.Date sqlbirthdate = new java.sql.Date(birthdate.getTime());
         return sqlbirthdate;
+    }
+
+    /**
+     * @return the position
+     */
+    public String getPosition() {
+        return position;
+    }
+
+    /**
+     * @param position the position to set
+     */
+    public void setPosition(String position) {
+        this.position = position;
     }
     
 }

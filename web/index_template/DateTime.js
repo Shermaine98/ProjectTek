@@ -19,7 +19,9 @@ document.getElementById('employmentDate').setAttribute('value', today);
 function yesnoCheck(that) {
     if (that.value == "Others") {
         document.getElementById("ifYes").style.display = "block";
+        document.getElementById("ifNo").style.display = "none";
     } else {
+        document.getElementById("ifNo").style.display = "block";
         document.getElementById("ifYes").style.display = "none";
     }
 }

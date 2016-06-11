@@ -113,19 +113,12 @@
                                     <option value="Female">Female</option>
                                 </select>
                             </div>
-                            <div class="form-group" style="float:left; width: 30%; margin-right: 2%">
+                            <div class="form-group">
                                 <p>Input Birthdate:</p>
                             </div>
-                            <div class="form-group" style="float:right; width: 67%;">
+                            <div class="form-group">
                                 <label class="sr-only">Birthdate</label>
                                 <input class="form-control form_element" id="Birthdate" placeholder="Birth Date" type="date" name="birthdate" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
-                            </div>
-                            <div class="form-group" style="float:left; width: 30%; margin-right: 2%">
-                                <p>Input Date of Employment:</p>
-                            </div>
-                            <div class="form-group" style="float:right; width: 67%">
-                                <label class="sr-only">Date of Employment</label>
-                                <input class="form-control form_element" id="employmentDate" placeholder="Date of Employment" type="date" name="employmentDate" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
                             </div>
                             <div class="form-group">
                                 <select class="form-group form_element" style="width:100%;" onchange="yesnoCheck(this)" name="division">
@@ -136,27 +129,36 @@
                                     <option value="Others">Others</option>
                                 </select>
                             </div>
+                            <div id="ifNo" style="display:none; margin-bottom:10%;">
+                                <div class="form-group">
+                                    <p>Input Date of Employment:</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only">Date of Employment</label>
+                                    <input class="form-control form_element" id="employmentDate" placeholder="Date of Employment" type="date" name="employmentDate" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
+                                </div>
+                            </div>
                             <div class="form-group" id="ifYes" style="display:none;">
                                 <p>Input Reason for Data Access</p>
-                                <textarea rows="4" name="Reason" style='width:100%;'></textarea><br><br>
+                                <textarea rows="4" name="reason" style='width:100%;'></textarea><br><br>
 
                                 <p>Until when do you need access?</p>
-                                <input class="form-group form_element" style='width:100%' type="date" id='DateValid' name="DateValid" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
+                                <input class="form-group form_element" style='width:100%' type="date" id='DateValid' name="dateValid" onfocus="(this.type = 'date')" onblur="(this.type = 'text')" />
 
                             </div>
-                            
+
                             <h4 class="form-title">Account Details</h4>
                             <div class="form-group">
                                 <label class="sr-only">Email</label>
-                                <input type="text" name="form-username" placeholder="Email Address" class="form-control" id="form-username">
+                                <input type="text" name="email" placeholder="Email Address" class="form-control" id="form-username">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-username">Username</label>
-                                <input type="text" name="form-username" placeholder="Username" class="form-username form-control" id="form-username">
+                                <input type="text" name="username" placeholder="Username" class="form-username form-control" id="form-username">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="form-password">Password</label>
-                                <input type="password" name="form-password" placeholder="Password" class="form-password form-control" id="form-password">
+                                <input type="password" name="password" placeholder="Password" class="form-password form-control" id="form-password">
                             </div>
                             <button type="submit" class="btn">Submit</button>
                             <a href="index.jsp">Back</a>

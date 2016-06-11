@@ -288,11 +288,20 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Modal Header</h4>
       </div>
-      <div class="modal-body" id="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
+	<br />
+	<br />
+	<form id="UploadToDatabase">
+	  <div class="paragraph">
+	    <b>Choose the Age by Group Sex Sheet</b> <br />
+            <div id="table1">
+            <!--radio button-->
+            </div>
+	    <input type="button" value="Submit">
+        <span style=color:red id="radio_error"></span>
+	  </div>
+        </form>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
       </div>
     </div>
 

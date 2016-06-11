@@ -6,12 +6,11 @@
 package ServletsUpload;
 
 
-import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Iterator;
  
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -20,12 +19,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
  
-@WebServlet("/uploadServlet")
+@WebServlet("/UploadToDatabase")
 @MultipartConfig(maxFileSize = 16177215)    // upload file's size up to 16MB
-public class UploadServlet extends HttpServlet {
+public class UploadToDatabase extends HttpServlet {
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
@@ -37,25 +39,12 @@ public class UploadServlet extends HttpServlet {
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         
-            POIFSFileSystem fs = new POIFSFileSystem(inputStream);  
-            HSSFWorkbook wb = new HSSFWorkbook(fs);
-                int numberSheet = wb.getNumberOfSheets();
-               
-                ArrayList<String> SheetName = new ArrayList<String>(); 
-                for(int i =0;i<numberSheet;i++){
-                    SheetName.add(wb.getSheetName(i));
-                     System.out.println(SheetName.get(i));
-                }
-            Map <String, Object> map = new HashMap<String, Object>();  
-         //   boolean isValid = false;
-            
-           // if (numberSheet>-1){
-        //     isValid = true;
-           // }
-        //    map.put("isValid", isValid);
-            write(response, SheetName);
-     
-         /*Iterator rows = sheet.rowIterator();
+          POIFSFileSystem fs = new POIFSFileSystem( inputStream );
+          //TODO can be changed into xssf      
+          HSSFWorkbook wb = new HSSFWorkbook(fs);
+                HSSFSheet sheet = wb.getSheetAt(0);
+
+                Iterator rows = sheet.rowIterator();
                 while( rows.hasNext() ) {  
                     HSSFRow row = (HSSFRow) rows.next();
                     System.out.println("\n");
@@ -77,11 +66,8 @@ public class UploadServlet extends HttpServlet {
                                     else
                                 System.out.print("Unknown cell type");                         
                     }                        
-                }    */  
+                }      
             }
-   public void write(HttpServletResponse respone,ArrayList<String> SheetName) throws IOException{
-       respone.setContentType("application/json");
-       respone.setCharacterEncoding("UTF-8");
-       respone.getWriter().write(new Gson().toJson(SheetName));
-   }
 }
+   
+

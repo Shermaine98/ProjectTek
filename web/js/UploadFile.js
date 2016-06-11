@@ -50,6 +50,26 @@ var isExcel = function(name) {
     } });
 
 
+
+$(document).on('submit', '#UploadToDatabase', function(e){
+  e.preventDefault();
+        $.ajax({
+            url:'UploadToDatabase',
+            type:'POST',
+            enctype:"multipart/form-data",
+            dataType:'json',
+            data: new FormData(document.getElementById("UploadToDatabase")),
+            
+            processData: false,
+            contentType: false,
+           success: function(){
+                 alert('success');
+            }
+           });
+        return false;
+    } });
+
+
 function validate() {
 	    var radioError = checkRadio();
 		

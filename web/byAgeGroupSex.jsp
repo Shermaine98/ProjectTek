@@ -44,8 +44,6 @@
             
                 div.appendChild(selectList);
                 cell1.appendChild(div); 
-                
-
         
                 //cell2
                 var cell2 = row.insertCell(1);
@@ -321,114 +319,8648 @@
                                         <th>Male</th>
                                         <th>Female</th>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <center>Barangay 1</center>
-                                        </td>
-                                        <td>
-                                            <center>Under 1</center>
-                                        </td>
-                                        <td>
-                                            <input class="form-control" disabled="true" value="0"> 
-                                        </td>
-                                        <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
-                                        </td>
-                                        <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
-                                        </td>
-                                    </tr>
-                                    <tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 1</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                         <td></td>
                                         <td>
-                                            <center>1 - 4</center>
+                                            <center>80 and Over</center>
                                         </td>
                                         <td>
                                             <input class="form-control" disabled="true" value="0"> 
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 2</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 3</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 4</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 5</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 6</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 7</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 8</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 9</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 10</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 1</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 2</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 3</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 4</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 5</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 6</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 7</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 8</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 9</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 10</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
                                         </td>
                                     </tr>
                                     <tr>
+                                            <td>
+                                                <center>Barangay 1</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                         <td></td>
                                         <td>
-                                            <center>5 - 9</center>
+                                            <center>80 and Over</center>
                                         </td>
                                         <td>
                                             <input class="form-control" disabled="true" value="0"> 
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
                                         </td>
                                     </tr>
-                                    <tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 2</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                         <td></td>
                                         <td>
-                                            <center>10 - 14</center>
+                                            <center>80 and Over</center>
                                         </td>
                                         <td>
                                             <input class="form-control" disabled="true" value="0"> 
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
                                         </td>
                                     </tr>
-                                    <tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 3</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                         <td></td>
                                         <td>
-                                            <center>10 - 14</center>
+                                            <center>80 and Over</center>
                                         </td>
                                         <td>
                                             <input class="form-control" disabled="true" value="0"> 
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
                                         </td>
                                     </tr>
-                                    <tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 4</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                         <td></td>
                                         <td>
-                                            <center>10 - 14</center>
+                                            <center>80 and Over</center>
                                         </td>
                                         <td>
                                             <input class="form-control" disabled="true" value="0"> 
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
                                         </td>
                                     </tr>
-                                    <tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 5</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
                                         <td></td>
                                         <td>
-                                            <center>10 - 14</center>
+                                            <center>80 and Over</center>
                                         </td>
                                         <td>
                                             <input class="form-control" disabled="true" value="0"> 
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
                                         </td>
                                         <td>
-                                            <input type="number" class="form-control" onChange="calculate()">
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
                                         </td>
                                     </tr>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 6</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 7</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 8</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 9</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                            <td>
+                                                <center>Barangay 10</center>
+                                            </td>
+                                            <td>
+                                                <center>All Ages</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" disabled="true">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td>
+                                                <center>Under 1</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>1 - 4</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>5 - 9</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>10 - 14</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>15 - 19</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>20 - 24</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>25 - 29</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>30 - 34</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>35 - 39</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>40 - 44</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>45 - 49</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>50 - 54</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>55 - 59</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>60 - 64</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>65 - 69</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>70 - 74</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <center>75 - 79</center>
+                                            </td>
+                                            <td>
+                                                <input class="form-control" disabled="true" value="0"> 
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()"name="male">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="form-control" onChange="calculate()" name="female">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <td></td>
+                                        <td>
+                                            <center>80 and Over</center>
+                                        </td>
+                                        <td>
+                                            <input class="form-control" disabled="true" value="0"> 
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="male">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="form-control" onChange="calculate()" name="female">
+                                        </td>
+                                    </tr>
+                                    
+                                    
                                 </table>
                             </div>
                         </div>

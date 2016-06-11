@@ -160,11 +160,11 @@
                             </div>
                             <button type="submit" class="btn">Submit</button>
                             <a href="index.jsp">Back</a>
-                        </form><br/>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
+        </div><br/><br/>
 
         <!-- Javascript -->
         <script src="index_template/assets/js/jquery-1.11.1.min.js"></script>

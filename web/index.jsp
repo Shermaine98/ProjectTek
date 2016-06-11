@@ -1,151 +1,16 @@
 <!DOCTYPE html>
 <html >
     <head>
-        <meta charset="UTF-8">
         <title>Caloocan City Hall: City Planning Department</title>
 
-
-        <style>
-            /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-            @import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
-            @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-
-            body{
-                margin: 0;
-                padding: 0;
-                background: #fff;
-
-                color: #fff;
-                font-family: Arial;
-                font-size: 12px;
-            }
-
-            .background-image {
-                position: absolute;
-                left: 0;
-                right: 0;
-                z-index: 1;
-
-                display: block;
-                background-size : 100% auto;
-                background-image: url('https://pixabay.com/static/uploads/photo/2015/06/08/15/22/cityscape-802041_960_720.jpg');
-                width: 100%;
-                height: 100%;
-
-                -webkit-filter: blur(3px);
-                -moz-filter: blur(3px);
-                -o-filter: blur(3px);
-                -ms-filter: blur(3px);
-                filter: blur(3px);
-            }
-
-            .header{
-                position: absolute;
-                top: calc(50% - 125px);
-                left: calc(50% - 270px);
-                z-index: 2;
-            }
-
-            .header div{
-                float: left;
-                color: #1a1a1a;
-                font-family: 'Exo', sans-serif;
-                font-size: 35px;
-                font-weight: 200;
-            }
-
-            .header div span{
-                color: #5379fa !important;
-            }
-
-            .login{
-                position: absolute;
-                top: calc(50% - 125px);
-                left: calc(50% - 50px);
-                height: 150px;
-                width: 350px;
-                padding: 10px;
-                z-index: 2;
-            }
-
-            .login input[type=text]{
-                width: 250px;
-                height: 30px;
-                background: transparent;
-                border: 1px solid rgba(255,255,255,0.6);
-                border-radius: 2px;
-                color: #fff;
-                font-family: 'Exo', sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-                padding: 4px;
-            }
-
-            .login input[type=password]{
-                width: 250px;
-                height: 30px;
-                background: transparent;
-                border: 1px solid rgba(255,255,255,0.6);
-                border-radius: 2px;
-                color: #fff;
-                font-family: 'Exo', sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-                padding: 4px;
-                margin-top: 10px;
-            }
-
-            .login input[type=button]{
-                width: 260px;
-                height: 35px;
-                background: #fff;
-                border: 1px solid #fff;
-                cursor: pointer;
-                border-radius: 2px;
-                color: #a18d6c;
-                font-family: 'Exo', sans-serif;
-                font-size: 16px;
-                font-weight: 400;
-                padding: 6px;
-                margin-top: 10px;
-            }
-
-            .login input[type=button]:hover{
-                opacity: 0.8;
-            }
-
-            .login input[type=button]:active{
-                opacity: 0.6;
-            }
-
-            .login input[type=text]:focus{
-                outline: none;
-                border: 1px solid rgba(255,255,255,0.9);
-            }
-
-            .login input[type=password]:focus{
-                outline: none;
-                border: 1px solid rgba(255,255,255,0.9);
-            }
-
-            .login input[type=button]:focus{
-                outline: none;
-            }
-
-            ::-webkit-input-placeholder{
-                color: #fff;
-            }
-
-            ::-moz-input-placeholder{
-                color: #fff;
-            }
-        </style>
-        <script src="index_template/js/prefixfree.min.js"></script>
-
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="index_template/assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index_template/assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="index_template/assets/css/form-elements.css">
         <link rel="stylesheet" href="index_template/assets/css/style.css">
 
@@ -163,71 +28,71 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="index_template/assets/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="index_template/assets/ico/apple-touch-icon-57-precomposed.png">
 
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+            .post-thumb {
+                margin-top: 20px;
+                margin-right: 30px;
+                float: left
+            }
+            .post-thumb img {
+                display: block
+            }
+            .post-content {
+                margin-left: 160px
+            }
+            .post-content p{
+                color: #000;
+            }
+            .post-title {
+                margin-top: 15%;
+                font-weight: bold;
+                font-size: 250%;
+                color: #000
+            }
+
+        </style>
 
     </head>
-
     <body>
+        <img src='https://secure.static.tumblr.com/74d2f4dd51e8cbb2a8ad25419533a5b3/ypppws5/oLWn0dbq1/tumblr_static_blurred-background-5-2000x1250.jpg' style='position:fixed;top:0px;left:0px;width:100%;z-index:-1; '>
+        <div class="container">
+            <div class="col-sm-5">
 
-        <div class="background-image"></div>
-        <div class="header">
-            <img src="index_template/Ph_seal_ncr_caloocan.png" style="width:80%; height:80%;"/>
-        </div>
-        <br>
-        <div class="login">
-            <div style="
-                 color: #1a1a1a;
-                 font-family: 'Exo', sans-serif;
-                 font-size: 35px;
-                 font-weight: 200;">City<span>Planning</span><br/>Department</div><br>
-            <input type="text" placeholder="username" name="user"><br>
-            <input type="password" placeholder="password" name="password"><br>
-            <input type="button" value="Login"><br>
-            <a class="launch-modal" href="#" data-modal-id="modal-register" style="color: #990000">No account yet? Register now!</a>
-
-        </div>
-
-
-        <!-- MODAL -->
-        <div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                        </button>
-                        <h3 class="modal-title" id="modal-register-label">Register Now!</h3>
-                        <p>Fill in the form below to get instant access:</p>
+                <div class="form-box">
+                    <div class="form-top">
+                        <div class="post-thumb">
+                            <img src="index_template/Ph_seal_ncr_caloocan.png" width="130px"  /></div>
+                        <div class="post-content">    
+                            <h3 class="post-title">City Planning Department</h3>
+                            <p>Let's get planning!</p></div>
                     </div>
-
-                    <div class="modal-body">
-
-                        <form role="form" action="" method="post" class="registration-form">
-                            <div class="form-inline">
-                                <div class="form-group" style="margin-bottom: 9px;">
-                                    <input type="text" name="form-first-name" placeholder="First name..." class="form-control" style="margin-right: 30px;">
-                                    <input type="text" name="form-last-name" placeholder="Last name..." class="form-control" >
-                                </div>
-                                <div class="form-group" style="margin-bottom: 5px;">
-                                    <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email" style="margin-right: 30px;">
-                                </div>
+                    <div class="form-bottom">
+                        <form role="form" action="" method="post" class="login-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-username">Username</label>
+                                <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
                             </div>
-                            <button type="submit" class="btn" style="background-color: #ff9933l; margin-top: 20px">Sign me up!</button>
-                        </form>
-
+                            <div class="form-group">
+                                <label class="sr-only" for="form-password">Password</label>
+                                <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+                            </div>
+                            <button type="submit" class="btn">Log in!</button>
+                        </form><br/>
+                        <center><a href="register.jsp">No account yet? Register now!</a></center>
                     </div>
-
                 </div>
             </div>
         </div>
-
 
         <!-- Javascript -->
         <script src="index_template/assets/js/jquery-1.11.1.min.js"></script>
         <script src="index_template/assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="index_template/assets/js/jquery.backstretch.min.js"></script>
         <script src="index_template/assets/js/scripts.js"></script>
-
-
+        
     </body>
 </html>

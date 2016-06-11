@@ -5,13 +5,15 @@
  */
 package ServletsUpload;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
+
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.HashMap;
+import java.util.Map;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
  
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -19,10 +21,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
  
@@ -40,9 +40,8 @@ public class UploadServlet extends HttpServlet {
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         
-          POIFSFileSystem fs = new POIFSFileSystem( inputStream );
-          //TODO can be changed into xssf      
-          HSSFWorkbook wb = new HSSFWorkbook(fs);
+            POIFSFileSystem fs = new POIFSFileSystem( inputStream );  
+            HSSFWorkbook wb = new HSSFWorkbook(fs);
                 int numberSheet = wb.getNumberOfSheets();
                
                 ArrayList<String> SheetName = new ArrayList<String>(); 
@@ -50,6 +49,15 @@ public class UploadServlet extends HttpServlet {
                     SheetName.add(wb.getSheetName(i));
                      System.out.println(SheetName.get(i));
                 }
+            Map <String, Object> map = new HashMap<String, Object>();  
+            boolean isValid = false;
+            
+            if (numberSheet>-1){
+             isValid = true;
+            }
+            map.put("isValid", isValid);
+            write(response, map, SheetName);
+     
          /*Iterator rows = sheet.rowIterator();
                 while( rows.hasNext() ) {  
                     HSSFRow row = (HSSFRow) rows.next();
@@ -74,4 +82,10 @@ public class UploadServlet extends HttpServlet {
                     }                        
                 }    */  
             }
+   public void write(HttpServletResponse respone, Map<String, Object> map,ArrayList<String> SheetName) throws IOException{
+       respone.setContentType("application/json");
+       respone.setCharacterEncoding("UTF-8");
+       respone.getWriter().write(new Gson().toJson(map));
+       respone.getWriter().write(new Gson().toJson(SheetName));
+   }
 }

@@ -14,7 +14,7 @@
         <title>Project TEK | Dashboard </title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        
+        <script src="js/UploadFile.js" type="text/javascript"></script>
         <script>
             function myFunction() {
                 var table = document.getElementById("myTable");
@@ -271,9 +271,34 @@
               }
             //}
         //}
+       
+
 	</script>
+         
     </head>
     <body class="hold-transition skin-yellow-light fixed sidebar-mini">
+        <!--MODAL-->
+        <!-- Modal -->
+<div id="ShowSheets" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+        <!--MODAL END HERE-->
         <div class="wrapper">
         <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
@@ -293,9 +318,9 @@
                 <!-- Main content -->
                 <section class="content">
                     <br>
-                    <form action="UploadServlet" enctype="multipart/form-data" method="post">
-                        <input name="file" type="file" />
-                        <input name="submit" type="submit" value="Submit" />
+                    <form id="UploadExcel" >
+                        <input id="file" name="file" type="file" />
+                        <input  type="submit" value="Submit" />
                     </form>
                     <br><br>
                     <!-- table -->

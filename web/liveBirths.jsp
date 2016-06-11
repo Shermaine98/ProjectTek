@@ -53,8 +53,8 @@
                         <div class="box-header with-border">
                             <h2 class="box-title">Input manually the forms</h2>
                             <div class="box-tools pull-right">
-                                <button class="btn btn-flat btn-warning btn-sm" onClick="myFunction()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Day</button>
-                                <button class="btn btn-flat btn-danger btn-sm" onClick=""><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Delete Day</button>
+                                <button class="btn btn-flat btn-warning btn-sm"  id="add_row"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Row</button>
+                                <!--<button class="btn btn-flat btn-danger btn-sm" onClick=""><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Delete Day</button>-->
                             </div>
                             <!-- /.box-tools -->
                         </div>
@@ -68,10 +68,12 @@
                                         <th rowspan="3">Female</th>
                                         <th rowspan="3">Birth Weight</th>
                                         <th colspan="5">Place of Delivery</th>
+                                        <th></th>
                                     </tr>
                                     <tr>
                                         <th colspan="2">House</th>
                                         <th colspan="2">Hospital/Clinic</th>
+                                        <th></th>
                                     </tr>
                                     <tr>
                                         <th>Trad. Mid.</th>
@@ -79,6 +81,7 @@
                                         <th>Doctor</th>
                                         <th>Nurse</th>
                                         <th>Midwife</th>
+                                        <th></th>
                                     </tr>
                                     <tr>
                                         <td><input type="number" class="form-control" value="0" min="0"> </td>
@@ -90,8 +93,9 @@
                                         <td><input type="number" class="form-control" value="0" min="0"> </td>
                                         <td><input type="number" class="form-control" value="0" min="0"> </td>
                                         <td><input type="number" class="form-control" value="0" min="0"> </td>
+                                        <td><button class="btn" id="delPOIbutton" onclick="deleteRow(this)"/>X</button></td>
                                     </tr>
-
+                                    <tr id="addr1"></tr>
 
                                 </table>
                             </div>
@@ -107,6 +111,32 @@
         </div>
         <!-- ./wrapper -->
     </body>
+
+    <script>
+        function deleteRow(row)
+        {
+            var i = row.parentNode.parentNode.rowIndex;
+            document.getElementById('myTable').deleteRow(i);
+        }
+
+        var i = 1;
+        $("#add_row").click(function () {
+            $('#addr' + i).html("\
+    <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><input type='text' class='form-control' placeholder='in grams'> </td>\
+                                        <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><input type='number' class='form-control' value='0' min='0'> </td>\
+                                        <td><button class='btn' id='delPOIbutton' onclick='deleteRow(this)'>X</button></td>");
+            $('#myTable').append('<tr id="addr' + (i + 1) + '"></tr>');
+
+            i++;
+        });
+    </script>
 
     <%@ include file="footer.html" %>
 </html>

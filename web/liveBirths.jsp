@@ -81,15 +81,15 @@
                                         <th>Midwife</th>
                                     </tr>
                                     <tr>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
                                         <td><input type="text" class="form-control" placeholder="in grams"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
+                                        <td><input type="number" class="form-control" value="0" min="0"> </td>
                                     </tr>
 
 

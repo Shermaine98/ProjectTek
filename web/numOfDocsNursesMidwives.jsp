@@ -53,8 +53,8 @@
                         <div class="box-header with-border">
                             <h2 class="box-title">Input manually the forms</h2>
                             <div class="box-tools pull-right">
-                                <button class="btn btn-flat btn-warning btn-sm" onClick="myFunction()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Day</button>
-                                <button class="btn btn-flat btn-danger btn-sm" onClick=""><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Delete Day</button>
+                                <button class="btn btn-flat btn-warning btn-sm" onClick="myFunction()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Hospital</button>
+                                <!--<button class="btn btn-flat btn-danger btn-sm" onClick=""><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Delete Hospital</button>-->
                             </div>
                             <!-- /.box-tools -->
                         </div>
@@ -63,33 +63,20 @@
                             <div class="box-body">
                                 <table class="table table-striped" id="myTable">
                                     <tr>
-                                        <th rowspan="3">Age of Mother</th>
-                                        <th rowspan="3">Male</th>
-                                        <th rowspan="3">Female</th>
-                                        <th rowspan="3">Birth Weight</th>
-                                        <th colspan="5">Place of Delivery</th>
+                                        <th width="25%">Name of Hospital</th>
+                                        <th width="30%">Address</th>
+                                        <th width="15%">Telephone/Fax Number</th>
+                                        <th>Total No. of Doctors</th>
+                                        <th>Total No. of Nurses</th>
+                                        <th>Total No. of Midwives</th>
                                     </tr>
                                     <tr>
-                                        <th colspan="2">House</th>
-                                        <th colspan="2">Hospital/Clinic</th>
-                                    </tr>
-                                    <tr>
-                                        <th>Trad. Mid.</th>
-                                        <th>Midwife</th>
-                                        <th>Doctor</th>
-                                        <th>Nurse</th>
-                                        <th>Midwife</th>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="text" class="form-control" placeholder="in grams"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
-                                        <td><input type="number" class="form-control" value="0"> </td>
+                                        <td><input type="text" class="form-control"> </td>
+                                        <td><input type="text" class="form-control"> </td>
+                                        <td><input type="text" class="form-control"> </td>
+                                        <td><input type="number" class="form-control" min="0"> </td>
+                                        <td><input type="number" class="form-control" min="0"> </td>
+                                        <td><input type="number" class="form-control" min="0"> </td>
                                     </tr>
 
 

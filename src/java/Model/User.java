@@ -66,8 +66,8 @@ public class User {
     /**
      * @param birthdate the birthdate to set
      */
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthdate(String birthdate) throws ParseException {
+        this.birthdate = javaToSQLdate(birthdate);
     }
 
     /**
@@ -80,8 +80,8 @@ public class User {
     /**
      * @param employment the employment to set
      */
-    public void setEmployment(Date employment) {
-        this.employment = employment;
+    public void setEmployment(String employment) throws ParseException {
+        this.employment = javaToSQLdate(employment);
     }
 
     /**
@@ -122,8 +122,8 @@ public class User {
     /**
      * @param accessDate the accessDate to set
      */
-    public void setAccessDate(Date accessDate) {
-        this.accessDate = accessDate;
+    public void setAccessDate(String accessDate) throws ParseException {
+        this.accessDate = javaToSQLdate(accessDate);
     }
 
     /**

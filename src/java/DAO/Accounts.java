@@ -20,7 +20,7 @@ public class Accounts {
     /**
      * Register User
      */
-    public boolean register(User user) {
+    public boolean registerOthers(User user) {
         try {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
@@ -37,6 +37,57 @@ public class Accounts {
             pstmt.setString(6, user.getEmail());
             pstmt.setString(7, user.getUsername());
             pstmt.setString(8, user.getPassword());
+            
+            int rows = pstmt.executeUpdate();
+            conn.close();
+            return rows == 1;
+        } catch (SQLException ex) {
+            Logger.getLogger(Accounts.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
+    public boolean registerReasons(User user) {
+        try {
+            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
+            Connection conn = myFactory.getConnection();
+            String query = "insert into reasons "
+                    + "(userID, division, reason, endOfAccessDate)"
+                    + "values (?,?,?,?)";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            
+            pstmt.setInt(1, user.getUserID());
+            pstmt.setString(2, user.getDivision());
+            pstmt.setString(3, user.getReason());
+            pstmt.setDate(4, user.getAccessDate());
+            
+            int rows = pstmt.executeUpdate();
+            conn.close();
+            return rows == 1;
+        } catch (SQLException ex) {
+            Logger.getLogger(Accounts.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+    
+    public boolean registerMembers(User user) {
+        try {
+            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
+            Connection conn = myFactory.getConnection();
+            String query = "insert into users "
+                    + "(division, firstName, lastName, gender, birthdate, email, username, password, employmentDate)"
+                    + "values (?,?,?,?,?,?,?,password(?),?)";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            
+            pstmt.setString(1, user.getDivision());
+            pstmt.setString(2, user.getFirstName());
+            pstmt.setString(3, user.getLastName());
+            pstmt.setString(4, user.getGender());
+            pstmt.setDate(5, user.getBirthdate());
+            pstmt.setString(6, user.getEmail());
+            pstmt.setString(7, user.getUsername());
+            pstmt.setString(8, user.getPassword());
+            pstmt.setDate(9, user.getEmployment());
             
             int rows = pstmt.executeUpdate();
             conn.close();
@@ -94,7 +145,7 @@ public class Accounts {
                 User.setFirstName(rs.getString("firstName"));
                 User.setLastName(rs.getString("lastName"));
                 User.setGender(rs.getString("gender"));
-                User.setBirthdate(rs.getDate("birthdate"));
+                User.setBirthdate(rs.getString("birthdate"));
                 User.setEmail(rs.getString("email"));
                 User.setUsername(rs.getString("username"));
                 User.setPassword(rs.getString("password"));
@@ -109,6 +160,35 @@ public class Accounts {
             Logger.getLogger(Accounts.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+    
+    /**
+     * Get last Employee number
+     *
+     * @return
+     */
+    public int getLastUserID() {
+        int lastUserID = 0;
+        try {
+            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
+            Connection conn = myFactory.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement("select max(userID)as userID from users");
+
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                lastUserID = rs.getInt("userID");
+                return lastUserID;
+            }
+
+            pstmt.close();
+            rs.close();
+            conn.close();
+            return lastUserID;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(Accounts.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return -1;
     }
     
 }

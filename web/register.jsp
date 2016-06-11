@@ -96,7 +96,7 @@
                             <p>Join the department!</p></div>
                     </div>
                     <div class="form-bottom">
-                        <form role="form" action="" method="post" class="login-form">
+                        <form role="form" action="register" method="post">
                             <h4 class="form-title">Personal Information</h4>
                             <div class="form-group" style="float:left; width: 49%; margin-right: 2%">
                                 <label class="sr-only">First Name</label>

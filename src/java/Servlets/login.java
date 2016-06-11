@@ -46,7 +46,8 @@ public class login extends HttpServlet {
                 Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
             }
             session.setAttribute("user", user);
-			response.sendRedirect("/home.jsp");
+            RequestDispatcher rd = context.getRequestDispatcher("/home.jsp");
+            rd.forward(request, response);
         } else {
             out.print("Sorry, username or password error!");
             request.getRequestDispatcher("login.html").include(request, response);

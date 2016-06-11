@@ -28,12 +28,56 @@ var isExcel = function(name) {
             processData: false,
             contentType: false,
            success: function(data){
-               if(data.isValid){
+               var i;
+             //  if(data.isValid){
                    $("#ShowSheets").modal("show");
-               }else{
-                   alert('Please Put a Valid Excel Sheet');
-               }
+                   //@todo for loop here and add/print to modal
+                 //  var radioBtn =null;
+                   for (i = 0; i < data.length; i++) {
+                 var radioBtn = $('<input type="radio" name="rbtnCount" value ='+ data[i] +'>'+ data[i]+'<br/>');
+                   radioBtn.appendTo('#table1');    
+            }
+                     
+             //  }else{
+               //    alert('Please Put a Valid Excel Sheet');
+               //}
+               
+               //
+               
            }
         });
         return false;
     } });
+
+
+function validate() {
+	    var radioError = checkRadio();
+		
+		if (radioError) {
+		  document.frmOne.submit();
+		}
+		else {
+		  return false;
+		}
+	  }
+	  function checkRadio() {
+	    var headphone = "";
+		var len = document.frmOne.headphone.length;
+		var i;
+		
+		for (i = 0; i < len; i++) {
+		  if (document.frmOne.headphone[i].checked) {
+		    headphone = document.frmOne.headphone[i].value;
+			break;
+	      }
+		}
+		
+		if (headphone == "") {
+		  document.getElementById("radio_error").innerHTML = "You do not have a choice selected.  Please select a choice.";
+		  return false;
+		}
+		else {
+		  document.getElementById("radio_error").innerHTML = "";
+		  return true;
+		}
+	  }

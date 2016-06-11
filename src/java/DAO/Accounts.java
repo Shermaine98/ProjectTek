@@ -24,18 +24,19 @@ public class Accounts {
         try {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
-            String query = "insert into accounts "
+            String query = "insert into users "
                     + "(division, firstName, lastName, gender, birthdate, email, username, password)"
                     + "values (?,?,?,?,?,?,?,password(?))";
             PreparedStatement pstmt = conn.prepareStatement(query);
             
-            pstmt.setString(1, user.getFirstName());
-            pstmt.setString(2, user.getLastName());
-            pstmt.setString(3, user.getGender());
-            pstmt.setDate(4, user.getBirthdate());
-            pstmt.setString(5, user.getEmail());
-            pstmt.setString(6, user.getUsername());
-            pstmt.setString(7, user.getPassword());
+            pstmt.setString(1, user.getDivision());
+            pstmt.setString(2, user.getFirstName());
+            pstmt.setString(3, user.getLastName());
+            pstmt.setString(4, user.getGender());
+            pstmt.setDate(5, user.getBirthdate());
+            pstmt.setString(6, user.getEmail());
+            pstmt.setString(7, user.getUsername());
+            pstmt.setString(8, user.getPassword());
             
             int rows = pstmt.executeUpdate();
             conn.close();
@@ -51,17 +52,17 @@ public class Accounts {
      * @param User
      * @return 
      */
-    public boolean authenticate(User User) {
+    public boolean authenticate(String username, String pass) {
         boolean valid = false;
         try {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
 
-            String query = "select * from accounts where username = ? and password = ?";
+            String query = "select * from users where username = ? and password = ?";
             PreparedStatement pstmt = conn.prepareStatement(query);
 
-            pstmt.setString(1, User.getUsername());
-            pstmt.setString(2, User.getPassword());
+            pstmt.setString(1, username);
+            pstmt.setString(2, pass);
 
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
@@ -81,7 +82,7 @@ public class Accounts {
         try {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("select * from accounts where "
+            PreparedStatement pstmt = conn.prepareStatement("select * from users where "
                     + "username = ? and password = password(?)");
             pstmt.setString(1, username);
             pstmt.setString(2, password);

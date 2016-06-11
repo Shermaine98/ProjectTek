@@ -70,7 +70,7 @@ public class register extends HttpServlet {
                 String accessDate = request.getParameter("dateValid");
                 newUser.setAccessDate(accessDate);
 
-                if (dao.registerOthers(newUser) && dao.registerReasons(newUser)) {
+                if (dao.registerOthers(newUser)) {
                     ServletContext context = getServletContext();
                     RequestDispatcher rd = context.getRequestDispatcher("/index.jsp");
                     rd.forward(request, response);

@@ -25,41 +25,22 @@ public class Accounts {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
             String query = "insert into users "
-                    + "(division, firstName, lastName, gender, birthdate, email, username, password)"
-                    + "values (?,?,?,?,?,?,?,password(?))";
+                    + "(email, username, password, division, firstName, lastName, gender,"
+                    + "birthdate, approved, reason, endOfAccessDate)"
+                    + "values (?,?,password(?),?,?,?,?,?,?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(query);
             
-            pstmt.setString(1, user.getDivision());
-            pstmt.setString(2, user.getFirstName());
-            pstmt.setString(3, user.getLastName());
-            pstmt.setString(4, user.getGender());
-            pstmt.setDate(5, user.getBirthdate());
-            pstmt.setString(6, user.getEmail());
-            pstmt.setString(7, user.getUsername());
-            pstmt.setString(8, user.getPassword());
-            
-            int rows = pstmt.executeUpdate();
-            conn.close();
-            return rows == 1;
-        } catch (SQLException ex) {
-            Logger.getLogger(Accounts.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return false;
-    }
-    
-    public boolean registerReasons(User user) {
-        try {
-            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
-            Connection conn = myFactory.getConnection();
-            String query = "insert into reasons "
-                    + "(userID, division, reason, endOfAccessDate)"
-                    + "values (?,?,?,?)";
-            PreparedStatement pstmt = conn.prepareStatement(query);
-            
-            pstmt.setInt(1, user.getUserID());
-            pstmt.setString(2, user.getDivision());
-            pstmt.setString(3, user.getReason());
-            pstmt.setDate(4, user.getAccessDate());
+            pstmt.setString(1, user.getEmail());
+            pstmt.setString(2, user.getUsername());
+            pstmt.setString(3, user.getPassword());
+            pstmt.setString(4, user.getDivision());
+            pstmt.setString(5, user.getFirstName());
+            pstmt.setString(6, user.getLastName());
+            pstmt.setString(7, user.getGender());
+            pstmt.setDate(8, user.getBirthdate());
+            pstmt.setBoolean(9, false);
+            pstmt.setString(10, user.getReason());
+            pstmt.setDate(11, user.getAccessDate());
             
             int rows = pstmt.executeUpdate();
             conn.close();
@@ -75,19 +56,21 @@ public class Accounts {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
             String query = "insert into users "
-                    + "(division, firstName, lastName, gender, birthdate, email, username, password, employmentDate)"
-                    + "values (?,?,?,?,?,?,?,password(?),?)";
+                    + "(email, username, password, division, firstName, lastName, gender,"
+                    + "birthdate, approved, employmentDate)"
+                    + "values (?,?,password(?),?,?,?,?,?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(query);
             
-            pstmt.setString(1, user.getDivision());
-            pstmt.setString(2, user.getFirstName());
-            pstmt.setString(3, user.getLastName());
-            pstmt.setString(4, user.getGender());
-            pstmt.setDate(5, user.getBirthdate());
-            pstmt.setString(6, user.getEmail());
-            pstmt.setString(7, user.getUsername());
-            pstmt.setString(8, user.getPassword());
-            pstmt.setDate(9, user.getEmployment());
+            pstmt.setString(1, user.getEmail());
+            pstmt.setString(2, user.getUsername());
+            pstmt.setString(3, user.getPassword());
+            pstmt.setString(4, user.getDivision());
+            pstmt.setString(5, user.getFirstName());
+            pstmt.setString(6, user.getLastName());
+            pstmt.setString(7, user.getGender());
+            pstmt.setDate(8, user.getBirthdate());
+            pstmt.setBoolean(9, true);
+            pstmt.setDate(10, user.getEmployment());
             
             int rows = pstmt.executeUpdate();
             conn.close();

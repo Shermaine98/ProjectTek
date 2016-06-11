@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Iterator;
  
 import javax.servlet.ServletException;
@@ -42,9 +43,14 @@ public class UploadServlet extends HttpServlet {
           POIFSFileSystem fs = new POIFSFileSystem( inputStream );
           //TODO can be changed into xssf      
           HSSFWorkbook wb = new HSSFWorkbook(fs);
-                HSSFSheet sheet = wb.getSheetAt(0);
-
-                Iterator rows = sheet.rowIterator();
+                int numberSheet = wb.getNumberOfSheets();
+               
+                ArrayList<String> SheetName = new ArrayList<String>(); 
+                for(int i =0;i<numberSheet;i++){
+                    SheetName.add(wb.getSheetName(i));
+                     System.out.println(SheetName.get(i));
+                }
+         /*Iterator rows = sheet.rowIterator();
                 while( rows.hasNext() ) {  
                     HSSFRow row = (HSSFRow) rows.next();
                     System.out.println("\n");
@@ -66,6 +72,6 @@ public class UploadServlet extends HttpServlet {
                                     else
                                 System.out.print("Unknown cell type");                         
                     }                        
-                }      
+                }    */  
             }
 }

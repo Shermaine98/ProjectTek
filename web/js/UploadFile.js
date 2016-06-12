@@ -1,77 +1,81 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-var isExcel = function(name) {
+var isExcel = function (name) {
     return name.match(/xls$/i);
 };
-    
 
- $(document).on('submit', '#UploadExcel', function(e){
-  e.preventDefault();
-  var file = $('[name="file"]');
-  
-  var filename = $.trim(file.val());
-        
-      if (!isExcel(filename)){
-            alert('Please Put a Valid Excel 2004?? File');
-     return;
- }else{
+
+$(document).on('submit', '#UploadExcel', function (e) {
+    e.preventDefault();
+    var file = $('[name="file"]');
+    var filename = $.trim(file.val());
+    if (!isExcel(filename)) {
+        alert('Please Put a Valid Excel 2004?? File');
+        return;
+    } else {
         $.ajax({
-            url:'UploadServlet',
-            type:'POST',
-             enctype:"multipart/form-data",
-            dataType:'json',
+            url: 'UploadServlet',
+            type: 'POST',
+            enctype: "multipart/form-data",
+            dataType: 'json',
             data: new FormData(document.getElementById("UploadExcel")),
             processData: false,
             contentType: false,
-           success: function(data){
-               var i;
-                //  if(data.isValid){
-                   $("#ShowSheets").modal("show");
-                //  var radioBtn =null;
-                //  i want to put file name here
-                //    var textbox = $('<input type="text" name="rbtnCount" value =i want to put file name here hahaaha <br/>');
-                //textbox.appendTo('#table1'); 
-               for (i = 0; i < data.length; i++) {
-                 var radioBtn = $('<input type="radio" name="rbtnCount"'+i+' value ='+ data[i] +'>'+ data[i]+'<br/>');
-                   radioBtn.appendTo('#table1');    
-                     window.alert("hello");
-                     var rate_value = document.getElementsByName('rbtnCount'+i);
-                     window.alert(rate_value);
-                if (document.getElementsByName('rbtnCount'+i).checked) {
-                    rate_value = document.getElementsByName('rbtnCount'+i).value;
-                    
-               }
-               
-                  }
-                //  }else{
-                //    alert('Please Put a Valid Excel Sheet');
-                //}
-           }
+            success: function (data) {
+                var i;
+                $("#ShowSheets").modal("show");
+                for (i = 0; i < data.length; i++) {
+                    var radioBtn = $('<input type="radio" name="rbtnCount" value =' + data[i] + '>' + data[i] + '<br/>');
+                    radioBtn.appendTo('#table1');
+                }
+            }
         });
         return false;
-    } });
+    }
+});
 
 
 
-$(document).on('submit', '#UploadToDatabase', function(e){
-  e.preventDefault();
-        $.ajax({
-            url:'UploadToDatabase',
-            type:'POST',
-            enctype:"multipart/form-data",
-            dataType:'json',
-            data: new FormData(document.getElementById("UploadExcel")),
-            processData: false,
-            contentType: false,
-           success: function(){
-            }
-           });
-        return false;
+$(document).on('submit', '#UploadToDatabase', function (e) {
+    e.preventDefault();
+
+    var fd = new FormData();
+    
+    var file_data = object.get(0).files[i]; // for multiple files
+    var other_data = $('UploadToDatabase').serialize();
+    
+    fd.append("file", file_data);
+    fd.append("UploadToDatabase", other_data);
+        
+    console.log(other_data);
+
+    var rbtnCounts = document.getElementsByName('file');
+    var rbtnCounts = document.getElementsByName('rbtnCount');
+
+    var rate_value;
+    var intCount;
+    window.alert(rbtnCounts.length);
+    for (var i = 0; i < rbtnCounts.length; i++) {
+        if (rbtnCounts[i].checked) {
+            rate_value = rbtnCounts[i].value;
+            intCount = i;
+            console.log(intCount);
+            console.log(rbtnCounts.value);
+            $('input.SheetValue').val(intCount);
+        }
+    }
+
+    $.ajax({
+        url: 'UploadToDatabase',
+        type: 'POST',
+       // enctype: "multipart/form-data",
+        // dataType:'json',
+        data: fd,
+        processData: false,
+        contentType: false,
+        success: function () {
+        }
     });
+    return false;
+});
 
 
 //function validate() {

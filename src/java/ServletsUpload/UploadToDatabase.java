@@ -38,15 +38,20 @@ public class UploadToDatabase extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         InputStream inputStream = null; // input stream of the upload file
-         
+
+            String sheetNumber = request.getParameter("SheetValue"); 
+            System.out.println(sheetNumber);
+       
             // obtains the upload file part in this multipart request
             Part filePart = request.getPart("file");
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         
-            POIFSFileSystem fs = new POIFSFileSystem( inputStream );
+            POIFSFileSystem fs = new POIFSFileSystem(inputStream);
             //TODO can be changed into xssf      
             HSSFWorkbook wb = new HSSFWorkbook(fs);
+
+
 
             String table = (new ExcelToHtml(wb).getHTML());
             session.setAttribute("Table", table);
@@ -82,7 +87,36 @@ public class UploadToDatabase extends HttpServlet {
 //                                System.out.print("Unknown cell type");                         
 //                    }                        
 //                }      
-            }
+          //POIFSFileSystem fs = new POIFSFileSystem(inputStream);
+          //TODO can be changed into xssf      
+          //HSSFWorkbook wb = new HSSFWorkbook(fs);
+
+          //@todo change this to user input radio
+          //HSSFSheet sheet = wb.getSheetAt(Integer.parseInt(sheetNumber));
+
+                //Iterator rows = sheet.rowIterator();
+                //while( rows.hasNext() ) {  
+//                    HSSFRow row = (HSSFRow) rows.next();
+//                    System.out.println("\n");
+//                    Iterator cells = row.cellIterator();
+//                    while( cells.hasNext() ) {
+//
+//                        HSSFCell cell = (HSSFCell) cells.next();
+//                        if(HSSFCell.CELL_TYPE_NUMERIC==cell.getCellType())
+//                        System.out.print( cell.getNumericCellValue()+"     " );
+//                        else
+//                        if(HSSFCell.CELL_TYPE_STRING==cell.getCellType())
+//                            System.out.print( cell.getStringCellValue()+"     " );
+//                        else
+//                            if(HSSFCell.CELL_TYPE_BOOLEAN==cell.getCellType())
+//                            System.out.print( cell.getBooleanCellValue()+"     " );
+//                            else
+//                                if(HSSFCell.CELL_TYPE_BLANK==cell.getCellType())
+//                                    System.out.print( "BLANK     " );
+//                                    else
+//                                System.out.print("Unknown cell type");                         
+                    }                        
+                
 
 
 //public static boolean isRowEmpty(Row row) {

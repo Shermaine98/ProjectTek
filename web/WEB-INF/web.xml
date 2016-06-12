@@ -13,12 +13,16 @@
         <servlet-class>ServletsUpload.UploadServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>UploadToDatabase</servlet-name>
+        <servlet-class>ServletsUpload.UploadToDatabase</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>logout</servlet-name>
         <servlet-class>Servlets.logout</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UploadToDatabase</servlet-name>
-        <servlet-class>ServletsUpload.UploadToDatabase</servlet-class>
+        <servlet-name>UploaderServlet</servlet-name>
+        <servlet-class>ServletsUpload.UploaderServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -29,16 +33,20 @@
         <url-pattern>/register</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UploadServlet</servlet-name>
-        <url-pattern>/UploadServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>logout</servlet-name>
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UploadToDatabase</servlet-name>
         <url-pattern>/UploadToDatabase</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploaderServlet</servlet-name>
+        <url-pattern>/Uploader</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

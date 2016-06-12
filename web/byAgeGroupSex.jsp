@@ -297,6 +297,7 @@
             <!--radio button-->
             </div>
 	    <input  type="submit" value="Submit" />
+            <input id="SheetValue"  name="SheetValue" type="hidden" value="-1" />
              <span style=color:red id="radio_error"></span>
 	  </div>
         </form>

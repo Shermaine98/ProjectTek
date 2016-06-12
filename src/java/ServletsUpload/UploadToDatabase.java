@@ -54,7 +54,7 @@ public class UploadToDatabase extends HttpServlet {
             String table = new ExcelToHtml(wb).getHTML();
           
             session.setAttribute("table", table);
-            
+   
             ServletContext context= getServletContext();
             RequestDispatcher rd= context.getRequestDispatcher("/confirmByAgeGroupSex.jsp");
             rd.forward(request, response);

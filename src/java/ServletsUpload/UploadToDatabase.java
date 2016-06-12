@@ -25,7 +25,7 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
  
-@WebServlet("/UploadToDatabase")
+
 @MultipartConfig(maxFileSize = 16177215)    // upload file's size up to 16MB
 public class UploadToDatabase extends HttpServlet {
      

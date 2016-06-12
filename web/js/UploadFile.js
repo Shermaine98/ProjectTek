@@ -62,18 +62,20 @@ $(document).on('submit', '#UploadToDatabase', function (e) {
             $('input.SheetValue').val(intCount);
         }
     }
+    
+    
 
-    $.ajax({
-        url: 'UploadToDatabase',
-        type: 'POST',
-       // enctype: "multipart/form-data",
-        // dataType:'json',
-        data: fd,
-        processData: false,
-        contentType: false,
-        success: function () {
-        }
-    });
+//    $.ajax({
+//        url: 'UploadToDatabase',
+//        type: 'POST',
+//       // enctype: "multipart/form-data",
+//        // dataType:'json',
+//        data: fd,
+//        processData: false,
+//        contentType: false,
+//        success: function () {
+//        }
+//    });
     return false;
 });
 

@@ -146,7 +146,7 @@ public class ExcelToHtml {
                 }
             }
         }
-        out.append("<table cellspacing='0' border='1' style='border-spacing:0; border-collapse:collapse;' class=\"table table-hover\">\n");
+        out.append("<table cellspacing='0' border='0' style='border-spacing:0; border-collapse:collapse;' class=\"table table-hover\">\n");
         for (rowIndex = 0; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
             
             tr(sheet.getRow(rowIndex));
@@ -233,15 +233,21 @@ public class ExcelToHtml {
         if(cell.getCellType() == HSSFCell.CELL_TYPE_STRING) {
              if(cell.getStringCellValue().contains("Age Group")){
                     firstCell="Location";
-                    out.append("<td style='width:20%'>");
+                    out.append("<td style='width:20%'><b>");
                     out.append(firstCell);
-                    out.append("</td>");
+                    out.append("</b></td>");
 
             }
-        }        
+        }
+        
         if(cell.getCellType() == HSSFCell.CELL_TYPE_STRING) {
             if(cell.getStringCellValue().contains("Barangay") || cell.getStringCellValue().contains("CALOOCAN CITY")){
-                firstCell = "Caloocan City";
+                if(cell.getStringCellValue().contains("CALOOCAN CITY")){
+                    firstCell="Caloocan City";
+                }
+                else if(cell.getStringCellValue().contains("Barangay")){
+                    firstCell=cell.getStringCellValue();
+                }
                 return;
             }
         }
@@ -330,6 +336,7 @@ public class ExcelToHtml {
         try {
             switch (cell.getCellType()) {
             case HSSFCell.CELL_TYPE_STRING:
+                
                 val = cell.getStringCellValue();
                 break;
             case HSSFCell.CELL_TYPE_NUMERIC:
@@ -375,7 +382,17 @@ public class ExcelToHtml {
         if ("null".equals(val)) {
             val = "";
         }
-        out.append(val);
+        if(val.toLowerCase().contains("age group") ||
+                val.toLowerCase().contains("both sexes") ||
+                val.toLowerCase().contains("male")||
+                val.toLowerCase().contains("female")){
+                    out.append("<b>");
+                    out.append(val);
+                    out.append("</b>");
+                }
+        else{
+            out.append(val);
+        }
         out.append("</td>\n");
     }
 

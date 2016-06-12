@@ -43,7 +43,7 @@ public class UploadToDatabase extends HttpServlet {
             System.out.println(sheetNumber);
        
             // obtains the upload file part in this multipart request
-            Part filePart = request.getPart("file");
+            Part filePart = request.getPart("file1");
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         
@@ -51,11 +51,10 @@ public class UploadToDatabase extends HttpServlet {
             //TODO can be changed into xssf      
             HSSFWorkbook wb = new HSSFWorkbook(fs);
 
-
-
-            String table = (new ExcelToHtml(wb).getHTML());
-            session.setAttribute("Table", table);
+            String table = new ExcelToHtml(wb).getHTML();
           
+            session.setAttribute("table", table);
+            
             ServletContext context= getServletContext();
             RequestDispatcher rd= context.getRequestDispatcher("/confirmByAgeGroupSex.jsp");
             rd.forward(request, response);

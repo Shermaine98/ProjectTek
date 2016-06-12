@@ -272,6 +272,8 @@
             //}
         //}
        
+       
+
 
 	</script>
          
@@ -290,7 +292,9 @@
       </div>
 	<br />
 	<br />
-	<form id="UploadToDatabase">
+	<form action="UploadToDatabase" method="post" enctype="multipart/form-data">
+            <input id="file1" name="file1" type="file" />
+
 	  <div class="paragraph">
 	    <b>Choose the Age by Group Sex Sheet</b> <br />
             <div id="table1">
@@ -328,10 +332,10 @@
                 <!-- Main content -->
                 <section class="content">
                     <br>
-                    <form id="UploadExcel" >
-                        <input id="file" name="file" type="file" />
-                        <input  type="submit" value="Submit" />
-                    </form>
+                    <!--<form id="UploadExcel" >
+                        <input id="file" name="file" type="file" />-->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ShowSheets">Import Excel</button>                    
+                        <!--/form>-->
                     <br><br>
                     <!-- table -->
                     <div class="box box-danger">

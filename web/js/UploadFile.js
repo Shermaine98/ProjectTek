@@ -29,21 +29,25 @@ var isExcel = function(name) {
             contentType: false,
            success: function(data){
                var i;
-             //  if(data.isValid){
+                //  if(data.isValid){
                    $("#ShowSheets").modal("show");
-                   //@todo for loop here and add/print to modal
-                 //  var radioBtn =null;
-                   for (i = 0; i < data.length; i++) {
-                 var radioBtn = $('<input type="radio" name="rbtnCount" value ='+ data[i] +'>'+ data[i]+'<br/>');
+                //  var radioBtn =null;
+                //  i want to put file name here
+                //    var textbox = $('<input type="text" name="rbtnCount" value =i want to put file name here hahaaha <br/>');
+                //textbox.appendTo('#table1'); 
+               for (i = 0; i < data.length; i++) {
+                 var radioBtn = $('<input type="radio" name="rbtnCount"'+i+' value ='+ data[i] +'>'+ data[i]+'<br/>');
                    radioBtn.appendTo('#table1');    
-            }
-                     
-             //  }else{
-               //    alert('Please Put a Valid Excel Sheet');
-               //}
+                     var rate_value = document.getElementsByName('rbtnCount'+i);
+                if (document.getElementsByName('rbtnCount'+i).checked) {
+                    rate_value = document.getElementsByName('rbtnCount'+i).value;
+                    
+               }
                
-               //
-               
+                  }
+                //  }else{
+                //    alert('Please Put a Valid Excel Sheet');
+                //}
            }
         });
         return false;
@@ -58,12 +62,10 @@ $(document).on('submit', '#UploadToDatabase', function(e){
             type:'POST',
             enctype:"multipart/form-data",
             dataType:'json',
-            data: new FormData(document.getElementById("UploadToDatabase")),
-            
+            data: new FormData(document.getElementById("UploadExcel")),
             processData: false,
             contentType: false,
            success: function(){
-                 alert('success');
             }
            });
         return false;

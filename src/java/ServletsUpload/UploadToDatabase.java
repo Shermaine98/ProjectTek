@@ -42,7 +42,9 @@ public class UploadToDatabase extends HttpServlet {
           POIFSFileSystem fs = new POIFSFileSystem( inputStream );
           //TODO can be changed into xssf      
           HSSFWorkbook wb = new HSSFWorkbook(fs);
-                HSSFSheet sheet = wb.getSheetAt(0);
+             
+          //@todo change this to user input radio
+          HSSFSheet sheet = wb.getSheetAt(1);
 
                 Iterator rows = sheet.rowIterator();
                 while( rows.hasNext() ) {  
@@ -68,6 +70,16 @@ public class UploadToDatabase extends HttpServlet {
                     }                        
                 }      
             }
+
+
+//public static boolean isRowEmpty(Row row) {
+//    for (int c = row.getFirstCellNum(); c < row.getLastCellNum(); c++) {
+//        Cell cell = row.getCell(c);
+//        if (cell != null && cell.getCellType() != Cell.CELL_TYPE_BLANK)
+//            return false;
+//    }
+//    return true;
+//}
 }
    
 

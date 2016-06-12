@@ -296,8 +296,8 @@
             <div id="table1">
             <!--radio button-->
             </div>
-	    <input type="button" value="Submit">
-        <span style=color:red id="radio_error"></span>
+	    <input  type="submit" value="Submit" />
+             <span style=color:red id="radio_error"></span>
 	  </div>
         </form>
       <div class="modal-footer">

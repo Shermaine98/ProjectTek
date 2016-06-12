@@ -67,37 +67,37 @@ $(document).on('submit', '#UploadToDatabase', function(e){
             }
            });
         return false;
-    } });
+    });
 
 
-function validate() {
-	    var radioError = checkRadio();
-		
-		if (radioError) {
-		  document.frmOne.submit();
-		}
-		else {
-		  return false;
-		}
-	  }
-	  function checkRadio() {
-	    var headphone = "";
-		var len = document.frmOne.headphone.length;
-		var i;
-		
-		for (i = 0; i < len; i++) {
-		  if (document.frmOne.headphone[i].checked) {
-		    headphone = document.frmOne.headphone[i].value;
-			break;
-	      }
-		}
-		
-		if (headphone == "") {
-		  document.getElementById("radio_error").innerHTML = "You do not have a choice selected.  Please select a choice.";
-		  return false;
-		}
-		else {
-		  document.getElementById("radio_error").innerHTML = "";
-		  return true;
-		}
-	  }
+//function validate() {
+//	    var radioError = checkRadio();
+//		
+//		if (radioError) {
+//		  document.frmOne.submit();
+//		}
+//		else {
+//		  return false;
+//		}
+//	  }
+//	  function checkRadio() {
+//	    var headphone = "";
+//		var len = document.frmOne.headphone.length;
+//		var i;
+//		
+//		for (i = 0; i < len; i++) {
+//		  if (document.frmOne.headphone[i].checked) {
+//		    headphone = document.frmOne.headphone[i].value;
+//			break;
+//	      }
+//		}
+//		
+//		if (headphone == "") {
+//		  document.getElementById("radio_error").innerHTML = "You do not have a choice selected.  Please select a choice.";
+//		  return false;
+//		}
+//		else {
+//		  document.getElementById("radio_error").innerHTML = "";
+//		  return true;
+//		}
+//	  }

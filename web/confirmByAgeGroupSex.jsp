@@ -33,10 +33,10 @@
                     <div class="box box-danger">
                         <div class="box-header with-border">
                             <center><b><h2 class="box-title">Household Population by Age Group and Sex</h2></b></center>
-                    <% String table = null;
-                        String temp  = (String) session.getAttribute("table");
-                      %>
-                     <%=temp%>
+                            <% String table = null;
+                                String temp  = (String) session.getAttribute("table");
+                              %>
+                             <%=temp%>
                         </div>
                         <button class="btn btn-success">Submit</button>
                     </div>

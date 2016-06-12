@@ -38,9 +38,11 @@ var isExcel = function(name) {
                for (i = 0; i < data.length; i++) {
                  var radioBtn = $('<input type="radio" name="rbtnCount"'+i+' value ='+ data[i] +'>'+ data[i]+'<br/>');
                    radioBtn.appendTo('#table1');    
-//                     var rate_value = document.getElementsByName('rbtnCount'+i);
-//                if (document.getElementsByName('rbtnCount'+i).checked) {
-//                    rate_value = document.getElementsByName('rbtnCount'+i).value;
+                     window.alert("hello");
+                     var rate_value = document.getElementsByName('rbtnCount'+i);
+                     window.alert(rate_value);
+                if (document.getElementsByName('rbtnCount'+i).checked) {
+                    rate_value = document.getElementsByName('rbtnCount'+i).value;
                     
                }
                

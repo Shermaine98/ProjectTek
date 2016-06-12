@@ -33,18 +33,21 @@ public class UploadToDatabase extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
         
         InputStream inputStream = null; // input stream of the upload file
-         
-        // obtains the upload file part in this multipart request
-        Part filePart = request.getPart("file");
+         String sheetNumber = request.getParameter("SheetValue"); 
+             System.out.println(sheetNumber);
+       
+             
+            // obtains the upload file part in this multipart request
+            Part filePart = request.getPart("file");
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         
-          POIFSFileSystem fs = new POIFSFileSystem( inputStream );
+          POIFSFileSystem fs = new POIFSFileSystem(inputStream);
           //TODO can be changed into xssf      
           HSSFWorkbook wb = new HSSFWorkbook(fs);
-             
+
           //@todo change this to user input radio
-          HSSFSheet sheet = wb.getSheetAt(1);
+          HSSFSheet sheet = wb.getSheetAt(Integer.parseInt(sheetNumber));
 
                 Iterator rows = sheet.rowIterator();
                 while( rows.hasNext() ) {  

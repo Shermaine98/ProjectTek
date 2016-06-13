@@ -20,6 +20,21 @@
                 text-align: center; 
                 vertical-align:middle;
             }
+            .table tbody td > td.success {
+                background-color: #dff0d8 !important;
+            }
+
+            .table tbody td > td.error {
+                background-color: #f2dede !important;
+            }
+
+            .table tbody td > td.warning {
+                background-color: #fcf8e3 !important;
+            }
+
+            .table tbody td > td.info {
+                background-color: #d9edf7 !important;
+            }
         </style>
 
     </head>
@@ -32,13 +47,32 @@
                 <section class="content-header">
                     <div class="box box-danger">
                         <div class="box-header with-border">
-                            <center><b><h2 class="box-title">Household Population by Age Group and Sex</h2></b></center>
+                            <center><h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1></center>
+                            <br>
                             <% String table = null;
                                 String temp  = (String) session.getAttribute("table");
+                                boolean withError = false;
+                                if(temp.contains("bgcolor='#f2dede'")){
+                                    withError = true;
                               %>
+                                    <div class="callout callout-danger">
+                                        <h4>Oops! There are errors.</h4>
+
+                                        <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
+                                    </div>
+                            <%
+                                }
+                            %>
                              <%=temp%>
                         </div>
-                        <button class="btn btn-success">Submit</button>
+                        <center>
+                        <%if(withError==true){%>
+                        <button class="btn btn-success" disabled="true" style='width:20%'>Next</button>
+                        <%} else{%>
+                        <button class="btn btn-success" disabled="true" style='width:20%'>Next</button>
+                        <%}%>
+                        </center>
+                        <br>
                     </div>
                 </section>
 

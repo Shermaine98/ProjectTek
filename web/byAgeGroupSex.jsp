@@ -280,31 +280,34 @@
     </head>
     <body class="hold-transition skin-yellow-light fixed sidebar-mini">
         <!--MODAL-->
-        <!-- Modal -->
+        
 <div id="ShowSheets" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Upload Excel here!</h4>
       </div>
-	<br />
-	<br />
-	<form action="UploadToDatabase" method="post" enctype="multipart/form-data">
-            <input id="file1" name="file1" type="file" />
+	<div class="modal-body">
+            <form action="UploadToDatabase" method="post" enctype="multipart/form-data">
+                <input id="file1" name="file1" type="file" />
 
-	  <div class="paragraph">
-	    <b>Choose the Age by Group Sex Sheet</b> <br />
-            <div id="table1">
-            <!--radio button-->
-            </div>
-	    <input  type="submit" value="Submit" />
-            <input id="SheetValue"  name="SheetValue" type="hidden" value="-1" />
-             <span style=color:red id="radio_error"></span>
-	  </div>
-        </form>
+                <div class="paragraph">
+                    <b>Choose the Age by Group Sex Sheet</b> <br />
+                    <div id="table1">
+                    <!--radio button-->
+                    </div>
+                    <br>
+                    <input class="btn btn-flat btn-success" type="submit" value="Submit"/>
+                    <input id="SheetValue"  name="SheetValue" type="hidden" value="-1" />
+                    <span style=color:red id="radio_error"></span>
+                </div>
+            </form>
+        </div>
+	
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
       </div>
@@ -334,7 +337,8 @@
                     <br>
                     <!--<form id="UploadExcel" >
                         <input id="file" name="file" type="file" />-->
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ShowSheets">Import Excel</button>                    
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#ShowSheets">
+                            <i class="fa fa-fw fa-file-excel-o"></i> Import Excel</button>                    
                         <!--/form>-->
                     <br><br>
                     <!-- table -->

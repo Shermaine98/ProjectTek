@@ -1,8 +1,9 @@
 <%-- 
-    Document   : home
-    Created on : Jun 8, 2016, 10:13:59 PM
-    Author     : Geraldine Atayan
+    Document   : hMorbidityReport
+    Created on : Jun 13, 2016, 11:58:45 AM
+    Author     : Gian
 --%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!--IMPORTING HTML IMPORTS (bootstrap + scripts)-->
 <%@ include file="importsAide.html" %>
@@ -11,7 +12,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Project TEK | Dashboard </title>
+        <title>Morbidity Report</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <script src="js/UploadFile.js" type="text/javascript"></script>
@@ -184,12 +185,12 @@
                 <section class="content-header">
                     <h1>
                         Upload to Database
-                        <small>Upload Mortality Report here</small>
+                        <small>Upload Morbidity Report here</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><i class="fa fa-files-o"></i> Database</li>
                         <li>Health</li>
-                        <li class="active">Mortality Report</li>
+                        <li class="active">Morbidity Report</li>
                     </ol>
                 </section>
 

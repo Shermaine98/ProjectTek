@@ -134,6 +134,7 @@ public class ExcelToHtml {
             }
         }
         out.append("<table cellspacing='0' border='0' style='border-spacing:0; border-collapse:collapse;' class=\"table table-striped\">\n");
+        out.append("<tr><th>Location</th><th>Age Group</th><th>Both Sexes</th><th>Male</th><th>Female</th</tr>");
         for (rowIndex = 6; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
             HSSFRow row = sheet.getRow(rowIndex);
             if(row!=null){
@@ -179,7 +180,7 @@ public class ExcelToHtml {
                     row.getCell(1) == null &&
                     row.getCell(2) == null &&
                     row.getCell(3) == null){
-                    out.append("<tr><td></td></tr>");
+                    out.append("<tr><td name='nullValues'></td></tr>");
                     return;
         }
         
@@ -248,7 +249,7 @@ public class ExcelToHtml {
         }
         
         if(colIndex==0){
-                    out.append("<td>");
+                    out.append("<td name='location'>");
                     out.append(firstCell);
                     out.append("\n"
                         + "</td>");
@@ -257,7 +258,6 @@ public class ExcelToHtml {
         out.append("<td ");
         if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK) {
              out.append(" bgcolor='#f2dede' title='There is no value in this cell'");
-             
         }
         if (colspan > 1) {
             out.append("colspan='").append(colspan).append("' ");
@@ -267,12 +267,17 @@ public class ExcelToHtml {
             out.append("/>\n");
             return;
         }
+        //Check for incorrect/incomplete data.
         switch(colIndex){
             case 0: 
-                if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING)
+                out.append(" name='ageGroup'");
+                //Check if not String
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING){
                 out.append(" bgcolor='#f2dede' title='This cell should contain letters/words'");
+                }
                 break;
             case 1: 
+                out.append(" name='bothSexes'");
                 //check if incomplete
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
                 out.append(" bgcolor='#f2dede' title='This cell should contain numbers'");
@@ -310,15 +315,17 @@ public class ExcelToHtml {
                 }
                 break;
             case 2:
+                out.append(" name='male'");
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
                 out.append(" bgcolor='#f2dede' title='This cell should contain numbers'");
                 break;
             case 3: 
+                out.append(" name='female'");
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
                     out.append(" bgcolor='#f2dede' title='This cell should contain numbers'");                
                 break;
         }
-        out.append("'>");
+        out.append(">");
         String val = "";
         
         try {

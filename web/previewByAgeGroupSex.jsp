@@ -17,7 +17,7 @@
 
         <style>
             th{
-                text-align: center; 
+                
                 vertical-align:middle;
             }
             .table tbody td > td.success {
@@ -66,10 +66,12 @@
                              <%=temp%>
                         </div>
                         <center>
+                        <button onclick="goBack()" class="btn btn-default btn-flat">Go Back</button>
+                        &nbsp;&nbsp;
                         <%if(withError==true){%>
-                        <button class="btn btn-success" disabled="true" style='width:20%'>Next</button>
+                        <button class="btn btn-success btn-flat" disabled="true" style='width:20%'>Next</button>
                         <%} else{%>
-                        <button class="btn btn-success" disabled="true" style='width:20%'>Next</button>
+                        <button class="btn btn-success btn-flat" style='width:20%'>Next</button>
                         <%}%>
                         </center>
                         <br>
@@ -82,6 +84,10 @@
         </div>
         <!-- ./wrapper -->
     </body>
-
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     <%@ include file="footer.html" %>
 </html>

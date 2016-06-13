@@ -29,6 +29,13 @@ and open the template in the editor.
         <link rel="stylesheet" href="AdminLTE/plugins/daterangepicker/daterangepicker-bs3.css">
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+        
+        <style>
+            .circles-small{
+                font-size: 60%;
+            }
+        </style>
+        
     </head>
 
 
@@ -168,17 +175,6 @@ and open the template in the editor.
             <aside class="main-sidebar">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
-                    <!-- search form -->
-                    <form action="#" method="get" class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </form>
-                    <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li class="active header">MAIN NAVIGATION</li>
@@ -187,45 +183,43 @@ and open the template in the editor.
                                 <i class="fa fa-dashboard"></i><span>Dashboard</span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li>
                             <a href="#">
                                 <i class="fa fa-files-o"></i>
-                                <span>Import to Database</span>
-                                <span class="fa fa-angle-left pull-right"></span>
+                                <span>Reports Library</span>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i>Education<span class="fa fa-angle-left pull-right"></span></a>
+                            <ul>
+                                <li style="font-size: 110%; padding-bottom: 8px; color: #cc5200"><a href="#" style="color: #cc5200">Education<span class="fa fa-angle-left" style="float: right"></span></a>
                                     <ul class="treeview-menu">
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Kindergarten Data in<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Public Elementary School</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Enrollment in Private<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Elementary Schools</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Enrollment in Private<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   KinderSchools</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Elementary Schools</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Secondary Schools (?)</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Total Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Secondary Schools</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools - Teacher<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Deployment</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Classroom Furnitures for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Instructional Rooms for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Elementary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Instructional Rooms for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Kindergarten Data in<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Public Elementary School</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Enrollment in Private<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Elementary Schools</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Enrollment in Private<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   KinderSchools</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Elementary Schools</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Secondary Schools (?)</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Total Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Secondary Schools</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools - Teacher<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Deployment</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Classroom Furnitures for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Instructional Rooms for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Elementary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Instructional Rooms for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
                                         </ul>
                                 </li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i>Demographics<span class="fa fa-angle-left pull-right"></span></a>
+                                <li style="font-size: 110%; padding-bottom: 8px; color: #cc5200"><a href="#" style="color: #cc5200">Demographics<span class="fa fa-angle-left" style="float: right"></span></a>
                                     <ul class="treeview-menu">
-                                        <li><a href="byAgeGroupSex.jsp"><i class="fa fa-circle-o"></i>Household Population by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Age Group and Sex</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Household Population 5<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Highest<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grade/Year Completed,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age group and sex</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Household Population 10<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Age<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Group, Sex, and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Marital Status </a></li>
+                                        <li style="margin-left: -20px;"><a href="byAgeGroupSex.jsp"><i class="fa fa-circle-o circles-small"></i>Household Population by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Age Group and Sex</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Household Population 5<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Highest<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grade/Year Completed,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age group and sex</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Household Population 10<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Age<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Group, Sex, and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Marital Status </a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#"><i class="fa fa-circle-o"></i>Health<span class="fa fa-angle-left pull-right"></span></a>
+                                <li style="font-size: 110%; padding-bottom: 8px; color: #cc5200"><a href="#" style="color: #cc5200">Health<span class="fa fa-angle-left" style="float: right"></span></a>
                                     <ul class="treeview-menu">
-                                        <li><a href="liveBirths.jsp"><i class="fa fa-circle-o"></i>Live Birth Per Day</a></li>
-                                        <li><a href="hMortalityReport.jsp"><i class="fa fa-circle-o"></i>Mortality Report</a></li>
-                                        <li><a href="hMorbidityReport.jsp"><i class="fa fa-circle-o"></i>Morbidity Report</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>Percentage Distribution of<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elementary School
+                                        <li style="margin-left: -20px;"><a href="liveBirths.jsp"><i class="fa fa-circle-o circles-small"></i>Live Birth Per Day</a></li>
+                                        <li style="margin-left: -20px;"><a href="hMortalityReport.jsp"><i class="fa fa-circle-o circles-small"></i>Mortality Report</a></li>
+                                        <li style="margin-left: -20px;"><a href="hMorbidityReport.jsp"><i class="fa fa-circle-o circles-small"></i>Morbidity Report</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>Percentage Distribution of<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elementary School
                                                 Children<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in Each District in the<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division of
                                                 Caloocan by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nutritional Status/By Gender</a></li>
-                                        <!--<li><a href=""><i class="fa fa-circle-o"></i>List of Health Centers</a></li>-->
-                                        <li><a href="numOfDocsNursesMidwives.jsp"><i class="fa fa-circle-o"></i>Total Number of Doctors,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nurses, Midwives</a></li>
-                                        <li><a href=""><i class="fa fa-circle-o"></i>List of Private and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Government Hospitals</a></li>
+                                        <li style="margin-left: -20px;"><a href="numOfDocsNursesMidwives.jsp"><i class="fa fa-circle-o circles-small"></i>Total Number of Doctors,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nurses, Midwives</a></li>
+                                        <li style="margin-left: -20px;"><a href=""><i class="fa fa-circle-o circles-small"></i>List of Private and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Government Hospitals</a></li>
                                     </ul>
                                 </li>          
                             </ul>

@@ -9,6 +9,8 @@ package DemoDAO;
  *
  * @author shermainesy
  */
-public class byAgeGroupSex {
+public class byAgeGroupSexDAO {
+    
+    
     
 }

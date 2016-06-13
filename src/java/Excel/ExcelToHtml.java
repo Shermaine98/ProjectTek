@@ -1,5 +1,6 @@
 package Excel;
 
+import ModelReportDemo.byAgeGroupSex;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -35,6 +36,9 @@ import org.apache.poi.ss.util.CellRangeAddress;
  * @author howard
  */
 public class ExcelToHtml {
+    //GIAN LOL
+    private ArrayList<byAgeGroupSex> byAgeGroupSexObject = new ArrayList<>();;
+    private byAgeGroupSex byAgeGroupSex;
     final private StringBuilder out = new StringBuilder(65536);
     final private SimpleDateFormat sdf;
     final private HSSFWorkbook book;
@@ -138,7 +142,10 @@ public class ExcelToHtml {
         for (rowIndex = 6; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
             HSSFRow row = sheet.getRow(rowIndex);
             if(row!=null){
-                tr(row);
+                 byAgeGroupSex = new byAgeGroupSex();
+                tr(row,byAgeGroupSex);
+                
+                System.out.println("HELLOOOOOOOOOOOOOO");
             }
         }
         //System.out.println("end");
@@ -153,7 +160,7 @@ public class ExcelToHtml {
      * @param row
      *            The Excel row.
      */
-    private void tr(final HSSFRow row) {
+    private void tr(final HSSFRow row, byAgeGroupSex byAgeGroupSex) {
         if (row == null) {
             return;
         }
@@ -168,10 +175,13 @@ public class ExcelToHtml {
                 }
                 else if(row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")){
                     firstCell="<b>Caloocan City</b>";
+                    byAgeGroupSex.setLocation(firstCell);
                     return;
                 }
                 else if(row.getCell(0).getStringCellValue().contains("Barangay")){
                     firstCell="<b>"+row.getCell(0).getStringCellValue()+"</b>";
+                    System.out.println("PRINT BARANGAY: "+row.getCell(0).getStringCellValue());
+                    byAgeGroupSex.setLocation(firstCell);
                     return;
                 }
             }
@@ -208,7 +218,7 @@ public class ExcelToHtml {
         out.append("'>\n");
         
         for (colIndex = 0; colIndex <4; ++colIndex) {
-                td(row.getCell(colIndex));
+                td(row.getCell(colIndex),byAgeGroupSex);
         }
         out.append("</tr>\n");
     }
@@ -221,7 +231,9 @@ public class ExcelToHtml {
      * @param cell
      *            The Excel cell.
      */
-    private void td(final HSSFCell cell) {
+    private void td(final HSSFCell cell, byAgeGroupSex byAgeGroupSex) {
+     //GIAN    
+       
         if(cell == null){
                 out.append("<td bgcolor='#f2dede' title='There is no value in this cell'></td>");
                 return;
@@ -327,12 +339,15 @@ public class ExcelToHtml {
         }
         out.append(">");
         String val = "";
-        
+        //GIAN WAT IS THIS
+           ArrayList<Integer> arryNumeric = new ArrayList<Integer>();
         try {
             switch (cell.getCellType()) {
             case HSSFCell.CELL_TYPE_STRING:
                 
                 val = cell.getStringCellValue();
+                System.out.println("PRINT THIS STRING:" + val);
+                byAgeGroupSex.setAgeGroup(val);
                 break;
             case HSSFCell.CELL_TYPE_NUMERIC:
                 // POI does not distinguish between integer and double, thus:
@@ -343,6 +358,7 @@ public class ExcelToHtml {
                 } else {
                     val = String.valueOf(original);
                 }
+                    
                 break;
             case HSSFCell.CELL_TYPE_FORMULA:
                 final CellValue cv = evaluator.evaluate(cell);

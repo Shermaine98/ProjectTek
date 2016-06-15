@@ -9,13 +9,21 @@ package ModelReportDemo;
  *
  * @author shermainesy
  */
-public class byAgeGroupSex {
+public class ModelByAgeGroupSex {
   private int year;
   private String AgeGroup;
-  private int bothSex;
-  private String location;
+  private String barangay;
   private int femaleCount;
   private int maleCount;
+  private int bothSex;
+
+    public int getBothSex() {
+        return bothSex;
+    }
+
+    public void setBothSex(int bothSex) {
+        this.bothSex = bothSex;
+    }
 
     /**
      * @return the year
@@ -34,15 +42,15 @@ public class byAgeGroupSex {
     /**
      * @return the barangay
      */
-    public String getLocation() {
-        return location;
+    public String getBarangay() {
+        return barangay;
     }
 
     /**
      * @param barangay the barangay to set
      */
-    public void setLocation(String location) {
-        this.location = location;
+    public void setBarangay(String barangay) {
+        this.barangay = barangay;
     }
 
     /**
@@ -85,19 +93,5 @@ public class byAgeGroupSex {
      */
     public void setAgeGroup(String AgeGroup) {
         this.AgeGroup = AgeGroup;
-    }
-
-    /**
-     * @return the bothSex
-     */
-    public int getBothSex() {
-        return bothSex;
-    }
-
-    /**
-     * @param bothSex the bothSex to set
-     */
-    public void setBothSex(int bothSex) {
-        this.bothSex = bothSex;
     }
 }

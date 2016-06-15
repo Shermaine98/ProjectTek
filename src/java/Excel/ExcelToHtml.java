@@ -1,6 +1,5 @@
 package Excel;
 
-import ModelReportDemo.byAgeGroupSex;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
@@ -37,8 +36,6 @@ import org.apache.poi.ss.util.CellRangeAddress;
  */
 public class ExcelToHtml {
     //GIAN LOL
-    private ArrayList<byAgeGroupSex> byAgeGroupSexObject = new ArrayList<>();;
-    private byAgeGroupSex byAgeGroupSex;
     final private StringBuilder out = new StringBuilder(65536);
     final private SimpleDateFormat sdf;
     final private HSSFWorkbook book;
@@ -52,6 +49,7 @@ public class ExcelToHtml {
     private Boolean isSecond = false;
     private boolean isMerged = false;
     private HSSFSheet sheet;
+    String errors;
     /**
      * Generates HTML from the InputStream of an Excel file. Generates sheet
      * name in HTML h1 element.
@@ -90,6 +88,11 @@ public class ExcelToHtml {
         sheet = book.getSheetAt(1);
         table(sheet);
     }
+
+    public String getErrors() {
+        return errors;
+    }
+    
     
     
 
@@ -137,15 +140,14 @@ public class ExcelToHtml {
                 }
             }
         }
+       
         out.append("<table cellspacing='0' border='0' style='border-spacing:0; border-collapse:collapse;' class=\"table table-striped\">\n");
         out.append("<tr><th>Location</th><th>Age Group</th><th>Both Sexes</th><th>Male</th><th>Female</th</tr>");
+        
         for (rowIndex = 6; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
             HSSFRow row = sheet.getRow(rowIndex);
             if(row!=null){
-                 byAgeGroupSex = new byAgeGroupSex();
-                tr(row,byAgeGroupSex);
-                
-                System.out.println("HELLOOOOOOOOOOOOOO");
+                //validation.checker;
             }
         }
         //System.out.println("end");
@@ -160,7 +162,7 @@ public class ExcelToHtml {
      * @param row
      *            The Excel row.
      */
-    private void tr(final HSSFRow row, byAgeGroupSex byAgeGroupSex) {
+    private void tr(final HSSFRow row) {
         if (row == null) {
             return;
         }
@@ -175,13 +177,10 @@ public class ExcelToHtml {
                 }
                 else if(row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")){
                     firstCell="<b>Caloocan City</b>";
-                    byAgeGroupSex.setLocation(firstCell);
                     return;
                 }
                 else if(row.getCell(0).getStringCellValue().contains("Barangay")){
                     firstCell="<b>"+row.getCell(0).getStringCellValue()+"</b>";
-                    System.out.println("PRINT BARANGAY: "+row.getCell(0).getStringCellValue());
-                    byAgeGroupSex.setLocation(firstCell);
                     return;
                 }
             }
@@ -218,7 +217,7 @@ public class ExcelToHtml {
         out.append("'>\n");
         
         for (colIndex = 0; colIndex <4; ++colIndex) {
-                td(row.getCell(colIndex),byAgeGroupSex);
+                td(row.getCell(colIndex));
         }
         out.append("</tr>\n");
     }
@@ -231,11 +230,10 @@ public class ExcelToHtml {
      * @param cell
      *            The Excel cell.
      */
-    private void td(final HSSFCell cell, byAgeGroupSex byAgeGroupSex) {
-     //GIAN    
-       
+    
+    private void td(final HSSFCell cell) {
         if(cell == null){
-                out.append("<td bgcolor='#f2dede' title='There is no value in this cell'></td>");
+                out.append("<td contenteditable='true' bgcolor='#f2dede' title='There is no value in this cell'></td>");
                 return;
         }
         //checks if HH Pop Age Group & Sex
@@ -269,7 +267,7 @@ public class ExcelToHtml {
         }
         out.append("<td ");
         if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK) {
-             out.append(" bgcolor='#f2dede' title='There is no value in this cell'");
+             out.append(" contenteditable='true' bgcolor='#f2dede' title='There is no value in this cell'");
         }
         if (colspan > 1) {
             out.append("colspan='").append(colspan).append("' ");
@@ -285,14 +283,14 @@ public class ExcelToHtml {
                 out.append(" name='ageGroup'");
                 //Check if not String
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING){
-                out.append(" bgcolor='#f2dede' title='This cell should contain letters/words'");
+                out.append(" contenteditable='true bgcolor='#f2dede' title='This cell should contain letters/words'");
                 }
                 break;
             case 1: 
                 out.append(" name='bothSexes'");
                 //check if incomplete
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
-                out.append(" bgcolor='#f2dede' title='This cell should contain numbers'");
+                out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
                 }
                 //check if incorrect total
                 if(cell.getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
@@ -301,13 +299,13 @@ public class ExcelToHtml {
                     //checks if columns 2 or 3 are null
                     if(sheet.getRow(rowIndex).getCell(2)== null ||
                             sheet.getRow(rowIndex).getCell(3)==null){
-                            out.append(" bgcolor='#f2dede' title='Incorrect total'");
+                            out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
                             break;
                     }
                     //checks if columns 2 and/or 3 are not numeric
                     if(sheet.getRow(rowIndex).getCell(2).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC ||
                         sheet.getRow(rowIndex).getCell(3).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
-                        out.append(" bgcolor='#f2dede' title='Incorrect total'");
+                        out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
                         break;
                     }
                     //checks total
@@ -317,11 +315,11 @@ public class ExcelToHtml {
                         double female=sheet.getRow(rowIndex).getCell(3).getNumericCellValue();
                         total=male+female;
                         if(total!=cell.getNumericCellValue()){
-                            out.append(" bgcolor='#f2dede' title='Incorrect total'");
+                            out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
                         }
                     }
                     else{
-                        out.append(" bgcolor='#f2dede' title='This cell should contain numbers'");
+                        out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
                     }
                 
                 }
@@ -329,12 +327,12 @@ public class ExcelToHtml {
             case 2:
                 out.append(" name='male'");
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
-                out.append(" bgcolor='#f2dede' title='This cell should contain numbers'");
+                out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
                 break;
             case 3: 
                 out.append(" name='female'");
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
-                    out.append(" bgcolor='#f2dede' title='This cell should contain numbers'");                
+                    out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");                
                 break;
         }
         out.append(">");
@@ -346,8 +344,6 @@ public class ExcelToHtml {
             case HSSFCell.CELL_TYPE_STRING:
                 
                 val = cell.getStringCellValue();
-                System.out.println("PRINT THIS STRING:" + val);
-                byAgeGroupSex.setAgeGroup(val);
                 break;
             case HSSFCell.CELL_TYPE_NUMERIC:
                 // POI does not distinguish between integer and double, thus:

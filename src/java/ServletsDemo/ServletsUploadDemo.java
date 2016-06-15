@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ServletsUpload;
+package ServletsDemo;
 
 
 import com.google.gson.Gson;
@@ -25,7 +25,7 @@ import org.apache.poi.poifs.filesystem.POIFSFileSystem;
  
 @WebServlet("/uploadServlet")
 @MultipartConfig(maxFileSize = 16177215)    // upload file's size up to 16MB
-public class UploadServlet extends HttpServlet {
+public class ServletsUploadDemo extends HttpServlet {
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {

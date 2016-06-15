@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ModelReportDemo;
+package ModelDemo;
 
 /**
  *
  * @author shermainesy
  */
-public class HouseHoldPop10 {
+public class HouseHoldPop5 {
     
 }

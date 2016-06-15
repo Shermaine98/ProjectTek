@@ -57,7 +57,7 @@ public class UploadToDatabase extends HttpServlet {
    
             
             ServletContext context= getServletContext();
-            RequestDispatcher rd= context.getRequestDispatcher("/previewByAgeGroupSex.jsp");
+            RequestDispatcher rd= context.getRequestDispatcher("/Demo/previewByAgeGroupSex");
             rd.forward(request, response);
 
              

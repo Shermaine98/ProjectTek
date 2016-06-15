@@ -9,11 +9,21 @@ package ModelReportDemo;
  *
  * @author shermainesy
  */
-public class byAgeGroupSex {
+public class ModelByAgeGroupSex {
   private int year;
+  private String AgeGroup;
   private String barangay;
   private int femaleCount;
   private int maleCount;
+  private int bothSex;
+
+    public int getBothSex() {
+        return bothSex;
+    }
+
+    public void setBothSex(int bothSex) {
+        this.bothSex = bothSex;
+    }
 
     /**
      * @return the year
@@ -69,5 +79,19 @@ public class byAgeGroupSex {
      */
     public void setMaleCount(int maleCount) {
         this.maleCount = maleCount;
+    }
+
+    /**
+     * @return the AgeGroup
+     */
+    public String getAgeGroup() {
+        return AgeGroup;
+    }
+
+    /**
+     * @param AgeGroup the AgeGroup to set
+     */
+    public void setAgeGroup(String AgeGroup) {
+        this.AgeGroup = AgeGroup;
     }
 }

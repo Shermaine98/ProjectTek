@@ -24,26 +24,15 @@
                     <h1 style='font-family:"Trebuchet MS", Helvetica, sans-serif'><i class="fa fa-files-o"></i> Reports Library</h1>
                 </section>
 
-                <ol class="breadcrumb" style='background: transparent; margin-left: 3%; font-size: 120%;font-family: "Trebuchet MS", Helvetica, sans-serif'>
+                <ol class="breadcrumb" style='background: transparent; margin-left: 3%; font-size: 120%;'>
                     <li>Education</li>
                     <li class="active">Kindergarten Data in Public Elementary School</li>
                 </ol>
                 <!-- Main content -->
                 <section class="content">
-                    <br>
-                    <form action="UploadToDatabase" method="post" enctype="multipart/form-data">
-                        <input id="file1" name="file1" type="file" />
-
-                        <div class="paragraph">
-                            <b>Choose sheet:</b> <br />
-                            <div id="table1">
-                                <!--radio button-->
-                            </div>
-                            <br>
-                            <input class="btn btn-flat btn-success" type="submit" value="Submit"/>
-                            <input id="SheetValue"  name="SheetValue" type="hidden" value="-1" />
-                            <span style=color:red id="radio_error"></span>
-                        </div>
+                    <form action="UploadKinderPublic" method="post" enctype="multipart/form-data">
+                        <input id="file1" name="file1" type="file" /><br/>
+                        <input class="btn btn-flat btn-success" type="submit" value="Submit"/>
                     </form>
                     <!--/form>-->
                     <br>

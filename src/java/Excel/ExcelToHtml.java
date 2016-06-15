@@ -35,6 +35,7 @@ import org.apache.poi.ss.util.CellRangeAddress;
  * @author howard
  */
 public class ExcelToHtml {
+    //GIAN LOL
     final private StringBuilder out = new StringBuilder(65536);
     final private SimpleDateFormat sdf;
     final private HSSFWorkbook book;
@@ -147,7 +148,6 @@ public class ExcelToHtml {
             HSSFRow row = sheet.getRow(rowIndex);
             if(row!=null){
                 //validation.checker;
-                tr(row);
             }
         }
         //System.out.println("end");
@@ -337,7 +337,8 @@ public class ExcelToHtml {
         }
         out.append(">");
         String val = "";
-        
+        //GIAN WAT IS THIS
+           ArrayList<Integer> arryNumeric = new ArrayList<Integer>();
         try {
             switch (cell.getCellType()) {
             case HSSFCell.CELL_TYPE_STRING:
@@ -353,6 +354,7 @@ public class ExcelToHtml {
                 } else {
                     val = String.valueOf(original);
                 }
+                    
                 break;
             case HSSFCell.CELL_TYPE_FORMULA:
                 final CellValue cv = evaluator.evaluate(cell);

@@ -51,14 +51,18 @@
                 margin-top: 15%;
                 font-weight: bold;
                 font-size: 250%;
-                color: #000
             }
-
+            a{
+                color: #fff
+            }
+            a:hover {
+                color: #9999ff 
+            }
         </style>
 
     </head>
     <body>
-        <img src='https://secure.static.tumblr.com/74d2f4dd51e8cbb2a8ad25419533a5b3/ypppws5/oLWn0dbq1/tumblr_static_blurred-background-5-2000x1250.jpg' style='position:fixed;top:0px;left:0px;width:100%;z-index:-1; '>
+        <img src='index_template/background.jpeg' style='position:fixed;top:0px;left:0px;width:100%;z-index:-1; -webkit-filter: blur(1px);'>
         <div class="container">
             <div class="col-sm-5">
 
@@ -67,8 +71,7 @@
                         <div class="post-thumb">
                             <img src="index_template/Ph_seal_ncr_caloocan.png" width="130px"  /></div>
                         <div class="post-content">    
-                            <h3 class="post-title">City Planning Department</h3>
-                            <p>Let's get planning!</p></div>
+                            <h3 class="post-title">City Planning Department</h3></div>
                     </div>
                     <div class="form-bottom">
                         <form role="form" action="login" method="post" class="login-form">
@@ -80,7 +83,7 @@
                                 <label class="sr-only" for="form-password">Password</label>
                                 <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
                             </div>
-                            <button type="submit" class="btn">Log in!</button>
+                            <button type="submit" class="btn">Log in</button>
                         </form><br/>
                         <center><a href="register.jsp">No account yet? Register now!</a></center>
                     </div>
@@ -93,6 +96,6 @@
         <script src="index_template/assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="index_template/assets/js/jquery.backstretch.min.js"></script>
         <script src="index_template/assets/js/scripts.js"></script>
-        
+
     </body>
 </html>

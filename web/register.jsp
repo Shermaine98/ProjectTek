@@ -58,7 +58,6 @@
                 margin-top: 15%;
                 font-weight: bold;
                 font-size: 250%;
-                color: #000
             }
             .form_element{
                 padding: 0 20px;
@@ -72,18 +71,25 @@
                 line-height: 50px;
                 color: #888;
             }
-            .form-group p{
-                color: #000;
-            }
             .form-title {
                 font-weight: bold;
-                font-size: 150%;
-                color: #000
+                font-size: 130%;
+                COLOR: #1a1a1a
+            }
+            p{
+                COLOR: #f2f2f2;
+                margin-bottom: -20px;
+            }
+            a{
+                color: #fff
+            }
+            a:hover {
+                color: #9999ff 
             }
         </style>
     </head>
     <body>
-        <img src='https://secure.static.tumblr.com/74d2f4dd51e8cbb2a8ad25419533a5b3/ypppws5/oLWn0dbq1/tumblr_static_blurred-background-5-2000x1250.jpg' style='position:fixed;top:0px;left:0px;width:100%;z-index:-1; '>
+        <img src='index_template/background.jpeg' style='position:fixed;top:0px;left:0px;width:100%;z-index:-1; -webkit-filter: blur(1px);'>
         <div class="container">
             <div class="col-sm-5">
 
@@ -92,8 +98,7 @@
                         <div class="post-thumb">
                             <img src="index_template/Ph_seal_ncr_caloocan.png" width="130px"  /></div>
                         <div class="post-content">    
-                            <h3 class="post-title">City Planning Department</h3>
-                            <p>Join the department!</p></div>
+                            <h3 class="post-title">City Planning Department</h3></div>
                     </div>
                     <div class="form-bottom">
                         <form role="form" action="register" method="post">

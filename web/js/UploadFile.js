@@ -12,7 +12,7 @@ $(document).on('submit', '#UploadExcel', function (e) {
         return;
     } else {
         $.ajax({
-            url: 'UploadServlet',
+            url: 'ServletsUploadDemo',
             type: 'POST',
             enctype: "multipart/form-data",
             dataType: 'json',
@@ -20,12 +20,20 @@ $(document).on('submit', '#UploadExcel', function (e) {
             processData: false,
             contentType: false,
             success: function (data) {
+                $(".table1 div").empty('');
                 var i;
+                var text= $('<b>Choose the Age by Group Sex Sheet</b> <br />');
+                  text.appendTo('#table1');
                 $("#ShowSheets").modal("show");
                 for (i = 0; i < data.length; i++) {
                     var radioBtn = $('<input type="radio" name="rbtnCount" value =' + data[i] + '>' + data[i] + '<br/>');
                     radioBtn.appendTo('#table1');
                 }
+//                var $this = $(this), $clone = $this.clone();
+//                $this.after($clone).appendTo(hiddenform);
+//                $('input.file1').val("HELLO");
+//                var file = document.('file');
+                
             }
         });
         return false;
@@ -33,81 +41,26 @@ $(document).on('submit', '#UploadExcel', function (e) {
 });
 
 
-
 $(document).on('submit', '#UploadToDatabase', function (e) {
     e.preventDefault();
-
-    var fd = new FormData();
-    
-    var file_data = object.get(0).files[i]; // for multiple files
-    var other_data = $('UploadToDatabase').serialize();
-    
-    fd.append("file", file_data);
-    fd.append("UploadToDatabase", other_data);
-        
-    console.log(other_data);
-
-    var rbtnCounts = document.getElementsByName('file');
     var rbtnCounts = document.getElementsByName('rbtnCount');
-
+    console.log("HELLO");
     var rate_value;
-    var intCount;
-    window.alert(rbtnCounts.length);
+    var intCount = -1;
     for (var i = 0; i < rbtnCounts.length; i++) {
         if (rbtnCounts[i].checked) {
             rate_value = rbtnCounts[i].value;
             intCount = i;
             console.log(intCount);
             console.log(rbtnCounts.value);
-            $('input.SheetValue').val(intCount);
+            console.log("HELLO");
+            $('input.SheetValue').val(intCount);     
         }
+    }  
+    if (intCount<-1) {
+        alert("Choose Sheet to Upload");
+        return false;
+    }else{
+          $("#UploadToDatabase").submit();
     }
-    
-    
-
-//    $.ajax({
-//        url: 'UploadToDatabase',
-//        type: 'POST',
-//       // enctype: "multipart/form-data",
-//        // dataType:'json',
-//        data: fd,
-//        processData: false,
-//        contentType: false,
-//        success: function () {
-//        }
-//    });
-    return false;
 });
-
-
-//function validate() {
-//	    var radioError = checkRadio();
-//		
-//		if (radioError) {
-//		  document.frmOne.submit();
-//		}
-//		else {
-//		  return false;
-//		}
-//	  }
-//	  function checkRadio() {
-//	    var headphone = "";
-//		var len = document.frmOne.headphone.length;
-//		var i;
-//		
-//		for (i = 0; i < len; i++) {
-//		  if (document.frmOne.headphone[i].checked) {
-//		    headphone = document.frmOne.headphone[i].value;
-//			break;
-//	      }
-//		}
-//		
-//		if (headphone == "") {
-//		  document.getElementById("radio_error").innerHTML = "You do not have a choice selected.  Please select a choice.";
-//		  return false;
-//		}
-//		else {
-//		  document.getElementById("radio_error").innerHTML = "";
-//		  return true;
-//		}
-//	  }

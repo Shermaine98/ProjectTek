@@ -4,8 +4,8 @@
     Author     : Geraldine Atayan
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!--IMPORTING HTML IMPORTS (bootstrap + scripts)-->
-<%@ include file="importsAide.html" %>
+<!--IMPORTING HTML I../JSPImports/importsAide.htmlMPORTS (bootstrap + scripts)-->
+<%@ include file="../JSPImports/importsAide.html" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -3258,6 +3258,5 @@
         </div>
         <!-- ./wrapper -->
 </body>
-
-<%@ include file="footer.html" %>
+  <%@ include file="../JSPImports/footer.html" %>
 </html>

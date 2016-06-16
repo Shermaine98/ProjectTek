@@ -5,7 +5,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!--IMPORTING HTML IMPORTS (bootstrap + scripts)-->
-<%@ include file="importsAide.html" %>
+<%@ include file="../JSPImports/importsAide.html" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -382,5 +382,5 @@
     });
 </script>
 
-<%@ include file="footer.html" %>
+<%@ include file="../JSPImports/footer.html" %>
 </html>

@@ -46,6 +46,7 @@ public class login extends HttpServlet {
                 Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
             }
             session.setAttribute("user", user);
+            session.setAttribute("successful", "successful");
             RequestDispatcher rd = context.getRequestDispatcher("/home.jsp");
             rd.forward(request, response);
         } else {

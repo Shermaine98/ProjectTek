@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="importsAide.html" %>
+<%@ include file="../JSPImports/importsAide.html" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -89,5 +89,5 @@
             window.history.back();
         }
     </script>
-    <%@ include file="footer.html" %>
+      <%@ include file="../JSPImports/footer.html" %>
 </html>

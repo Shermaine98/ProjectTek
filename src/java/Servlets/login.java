@@ -47,7 +47,7 @@ public class login extends HttpServlet {
             }
             session.setAttribute("user", user);
             session.setAttribute("successful", "successful");
-            RequestDispatcher rd = context.getRequestDispatcher("/home.jsp");
+            RequestDispatcher rd = context.getRequestDispatcher("/WEB-INF/home.jsp");
             rd.forward(request, response);
         } else {
             out.print("Sorry, username or password error!");

@@ -302,7 +302,7 @@
                     </div>
                     <br>
                     <input class="btn btn-flat btn-success" type="submit" value="Submit"/>
-                    <input id="SheetValue"  name="SheetValue" type="hidden" value="-1" />
+                    <input  name="AgeGroup" type="hidden" value="AgeGroup" />
                     <span style=color:red id="radio_error"></span>
                 </div>
             </form>

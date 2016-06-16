@@ -9,11 +9,11 @@
         <servlet-class>Servlets.register</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ServletsDemo</servlet-name>
+        <servlet-name>ServletsUploadDemo</servlet-name>
         <servlet-class>ServletsDemo.ServletsUploadDemo</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ServletsDemo</servlet-name>
+        <servlet-name>UploadToDatabase</servlet-name>
         <servlet-class>ServletsDemo.UploadToDatabase</servlet-class>
     </servlet>
     <servlet>
@@ -21,12 +21,12 @@
         <servlet-class>Servlets.logout</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ServletsDemo</servlet-name>
+        <servlet-name>UploaderServlet</servlet-name>
         <servlet-class>ServletsDemo.UploaderServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SerlvetAccess</servlet-name>
-        <servlet-class>ServletAccess.SerlvetAccess</servlet-class>
+        <servlet-name>ServletAccess</servlet-name>
+        <servlet-class>ServletAccess.ServletAccess</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ValiAgeByGrpServ</servlet-name>
@@ -61,8 +61,8 @@
         <url-pattern>/UploaderServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>SerlvetAccess</servlet-name>
-        <url-pattern>/SerlvetAccess</url-pattern>
+        <servlet-name>ServletAccess</servlet-name>
+        <url-pattern>/ServletAccess</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ValiAgeByGrpServ</servlet-name>

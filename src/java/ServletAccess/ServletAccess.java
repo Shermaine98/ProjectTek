@@ -26,7 +26,10 @@ public class ServletAccess extends BaseServlet {
      */
     @Override
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+           
             String redirect = request.getParameter("redirect");
+            System.out.println("HELLO" + redirect);
+            
     //Accessing Pages
     
     //Demo
@@ -91,6 +94,9 @@ public class ServletAccess extends BaseServlet {
             ServletContext context= getServletContext();
             RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPEducation/?");
             rd.forward(request, response);
+            }else{
+           
+            request.getRequestDispatcher("login.html").include(request, response);
             }
           
 }

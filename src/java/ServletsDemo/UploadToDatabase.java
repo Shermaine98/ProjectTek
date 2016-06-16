@@ -36,11 +36,12 @@ public class UploadToDatabase extends HttpServlet {
      
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
+     
         HttpSession session = request.getSession();
         InputStream inputStream = null; // input stream of the upload file
 
-            String sheetNumber = request.getParameter("SheetValue"); 
-            System.out.println(sheetNumber);
+              int sheetNumber = -1;
+//            System.out.println(sheetNumber);
        
             // obtains the upload file part in this multipart request
             Part filePart = request.getPart("file1");
@@ -50,19 +51,36 @@ public class UploadToDatabase extends HttpServlet {
             POIFSFileSystem fs = new POIFSFileSystem(inputStream);
             //TODO can be changed into xssf      
             HSSFWorkbook wb = new HSSFWorkbook(fs);
-
-            String table = new ExcelToHtml(wb).getHTML();
-          
-            session.setAttribute("table", table);
-   
+            int numberSheet = wb.getNumberOfSheets();
+             System.out.println("AgeGroup " + numberSheet);
+             
+            String uploadFile = request.getParameter("AgeGroup");
+             System.out.println("AgeGroup " + uploadFile);
             
-            ServletContext context= getServletContext();
-            RequestDispatcher rd= context.getRequestDispatcher("/Demo/previewByAgeGroupSex");
-            rd.forward(request, response);
+             for(int i=0;  i < numberSheet;i++){
+                              System.out.println("AgeGroup " + wb.getSheetName(i).replaceAll(" ", ""));
 
+                      if(uploadFile.equalsIgnoreCase(wb.getSheetName(i).replaceAll(" ", ""))){
+                          sheetNumber = i;
+                          System.out.println("SHEET NAME" + wb.getSheetName(i).replaceAll(" ", ""));
+                      }
+                }
+             
+            if(sheetNumber>-1){
+            String table = new ExcelToHtml(wb, sheetNumber).getHTML();
+            session.setAttribute("table", table);
+            System.out.print(table);
+            ServletContext context= getServletContext();
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewByAgeGroupSex.jsp");
+            rd.forward(request, response);
+            }else{
+            session.setAttribute("table", "ERROR");
+            ServletContext context= getServletContext();
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewByAgeGroupSex.jsp");
+            rd.forward(request, response);
              
              }                        
-                
+    }  
 }
    
 

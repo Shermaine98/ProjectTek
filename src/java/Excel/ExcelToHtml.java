@@ -59,7 +59,7 @@ public class ExcelToHtml {
      * @throws IOException
      *             When POI cannot read from the input stream.
      */
-    public ExcelToHtml(final InputStream in) throws IOException {
+    public ExcelToHtml(final InputStream in, int sheetNumber) throws IOException {
         sdf = new SimpleDateFormat("dd/MM/yyyy");
         if (in == null) {
             book = null;
@@ -73,11 +73,11 @@ public class ExcelToHtml {
         //for (int i = 0; i < book.getNumberOfSheets(); ++i) {
         //    table(book.getSheetAt(i));
         //}
-        sheet = book.getSheetAt(1);
+        sheet = book.getSheetAt(sheetNumber);
         table(sheet);
     }
     
-    public ExcelToHtml(final HSSFWorkbook book) throws IOException {
+    public ExcelToHtml(final HSSFWorkbook book, int sheetNumber) throws IOException {
         sdf = new SimpleDateFormat("dd/MM/yyyy");
         this.book = book;
         palette = book.getCustomPalette();
@@ -85,7 +85,7 @@ public class ExcelToHtml {
         //for (int i = 0; i < book.getNumberOfSheets(); ++i) {
         //    table(book.getSheetAt(i));
         //}
-        sheet = book.getSheetAt(1);
+        sheet = book.getSheetAt(sheetNumber);
         table(sheet);
     }
 
@@ -147,6 +147,7 @@ public class ExcelToHtml {
         for (rowIndex = 6; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
             HSSFRow row = sheet.getRow(rowIndex);
             if(row!=null){
+                tr(row);
                 //validation.checker;
             }
         }

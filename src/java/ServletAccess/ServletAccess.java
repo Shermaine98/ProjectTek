@@ -28,30 +28,31 @@ public class ServletAccess extends BaseServlet {
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
            
             String redirect = request.getParameter("redirect");
-            System.out.println("HELLO" + redirect);
             
     //Accessing Pages
     
-    //Demo
+    //HOME
             if(redirect.equalsIgnoreCase("home")){
             request.setAttribute("page", "home");
             ServletContext context= getServletContext();
             RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/home.jsp");
             rd.forward(request, response);
-            }else if(redirect.equalsIgnoreCase("byAgeGroupSex")){
+            }
+    //Demo        
+            else if(redirect.equalsIgnoreCase("byAgeGroupSex")){
             request.setAttribute("page", "byAgeGroupSex");
             ServletContext context= getServletContext();
             RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/byAgeGroupSex.jsp");
             rd.forward(request, response);
-            } else if(redirect.equalsIgnoreCase("?")){
-            request.setAttribute("page", "?");
+            } else if(redirect.equalsIgnoreCase("MaritalStatus")){
+            request.setAttribute("page", "MaritalStatus");
             ServletContext context= getServletContext();
-            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/?");
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/maritalStatus.jsp");
             rd.forward(request, response);
-            } else if(redirect.equalsIgnoreCase("?")){
-            request.setAttribute("page", "?");
+            } else if(redirect.equalsIgnoreCase("HighestCompleted")){
+            request.setAttribute("page", "HighestCompleted");
             ServletContext context= getServletContext();
-            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/?");
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/HighestCompleted.jsp");
             rd.forward(request, response);
             } 
             
@@ -75,6 +76,11 @@ public class ServletAccess extends BaseServlet {
             request.setAttribute("page", "?");
             ServletContext context= getServletContext();
             RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPHealth/?");
+            rd.forward(request, response);
+            }else if(redirect.equalsIgnoreCase("numOfDocsNursesMidwives")){
+            request.setAttribute("page", "numOfDocsNursesMidwives");
+            ServletContext context= getServletContext();
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPHealth/numOfDocsNursesMidwives.jsp");
             rd.forward(request, response);
             } else if(redirect.equalsIgnoreCase("numOfDocsNursesMidwives")){
             request.setAttribute("page", "numOfDocsNursesMidwives");

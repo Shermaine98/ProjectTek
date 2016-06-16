@@ -268,7 +268,7 @@ public class ExcelToHtml {
         }
         out.append("<td ");
         if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK) {
-             out.append(" contenteditable='true' bgcolor='#f2dede' title='There is no value in this cell'");
+             out.append(" bgcolor='#f2dede' title='There is no value in this cell'");
         }
         if (colspan > 1) {
             out.append("colspan='").append(colspan).append("' ");
@@ -284,14 +284,14 @@ public class ExcelToHtml {
                 out.append(" name='ageGroup'");
                 //Check if not String
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING){
-                out.append(" contenteditable='true bgcolor='#f2dede' title='This cell should contain letters/words'");
+                out.append(" bgcolor='#f2dede' title='This cell should contain letters/words'");
                 }
                 break;
             case 1: 
                 out.append(" name='bothSexes'");
                 //check if incomplete
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
-                out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
+                out.append("  bgcolor='#f2dede' title='This cell should contain numbers'");
                 }
                 //check if incorrect total
                 if(cell.getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
@@ -300,13 +300,13 @@ public class ExcelToHtml {
                     //checks if columns 2 or 3 are null
                     if(sheet.getRow(rowIndex).getCell(2)== null ||
                             sheet.getRow(rowIndex).getCell(3)==null){
-                            out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
+                            out.append(" bgcolor='#f2dede' title='Incorrect total'");
                             break;
                     }
                     //checks if columns 2 and/or 3 are not numeric
                     if(sheet.getRow(rowIndex).getCell(2).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC ||
                         sheet.getRow(rowIndex).getCell(3).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
-                        out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
+                        out.append("  bgcolor='#f2dede' title='Incorrect total'");
                         break;
                     }
                     //checks total
@@ -316,11 +316,11 @@ public class ExcelToHtml {
                         double female=sheet.getRow(rowIndex).getCell(3).getNumericCellValue();
                         total=male+female;
                         if(total!=cell.getNumericCellValue()){
-                            out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
+                            out.append("  bgcolor='#f2dede' title='Incorrect total'");
                         }
                     }
                     else{
-                        out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
+                        out.append("  bgcolor='#f2dede' title='This cell should contain numbers'");
                     }
                 
                 }
@@ -328,12 +328,12 @@ public class ExcelToHtml {
             case 2:
                 out.append(" name='male'");
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
-                out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
+                out.append("  bgcolor='#f2dede' title='This cell should contain numbers'");
                 break;
             case 3: 
                 out.append(" name='female'");
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
-                    out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");                
+                    out.append(" e bgcolor='#f2dede' title='This cell should contain numbers'");                
                 break;
         }
         out.append(">");

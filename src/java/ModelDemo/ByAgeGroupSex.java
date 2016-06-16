@@ -9,7 +9,7 @@ package ModelDemo;
  *
  * @author shermainesy
  */
-public class ModelByAgeGroupSex {
+public class ByAgeGroupSex {
   private int year;
   private String AgeGroup;
   private String barangay;

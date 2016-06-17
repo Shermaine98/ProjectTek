@@ -16,6 +16,7 @@ public class ByAgeGroupSex {
   private int femaleCount;
   private int maleCount;
   private int bothSex;
+  private boolean approved;
 
     public int getBothSex() {
         return bothSex;
@@ -93,5 +94,19 @@ public class ByAgeGroupSex {
      */
     public void setAgeGroup(String AgeGroup) {
         this.AgeGroup = AgeGroup;
+    }
+
+    /**
+     * @return the approved
+     */
+    public boolean isApproved() {
+        return approved;
+    }
+
+    /**
+     * @param approved the approved to set
+     */
+    public void setApproved(boolean approved) {
+        this.approved = approved;
     }
 }

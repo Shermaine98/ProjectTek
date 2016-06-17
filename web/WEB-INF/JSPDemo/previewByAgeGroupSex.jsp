@@ -61,9 +61,13 @@
                                         <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
                                     </div>
                             <%
-                                }
+                                }else{
                             %>
-                             <%=temp%>
+                                    <div class="callout callout-success">
+                                        <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                                    </div>
+                            <%}%>
+                            <%=temp%>  
                         </div>
                         <center>
                         <button onclick="goBack()" class="btn btn-default btn-flat">Go Back</button>

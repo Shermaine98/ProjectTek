@@ -5,8 +5,9 @@
  */
 package ServletsDemo;
 
+
+
 import Excel.ExcelToHtml;
-import Servlets.BaseServlet;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
-
+ 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -28,64 +29,56 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+ 
 
 @MultipartConfig(maxFileSize = 16177215)    // upload file's size up to 16MB
-public class UploadToDatabase extends BaseServlet {
+public class UploadToDatabase extends HttpServlet {
+     
+    protected void doPost(HttpServletRequest request,
+            HttpServletResponse response) throws ServletException, IOException {
+     
+        HttpSession session = request.getSession();
+        InputStream inputStream = null; // input stream of the upload file
 
-    public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+              int sheetNumber = -1;
+//            System.out.println(sheetNumber);
+       
+            // obtains the upload file part in this multipart request
+            Part filePart = request.getPart("file1");
+            // obtains input stream of the upload file
+            inputStream = filePart.getInputStream();
+        
+            POIFSFileSystem fs = new POIFSFileSystem(inputStream);
+            //TODO can be changed into xssf      
+            HSSFWorkbook wb = new HSSFWorkbook(fs);
+            int numberSheet = wb.getNumberOfSheets();
+             System.out.println("AgeGroup " + numberSheet);
+             
+            String uploadFile = request.getParameter("UploadFile");
+             System.out.println("AgeGroup " + uploadFile);
+            
+             for(int i=0;  i < numberSheet;i++){
+                              System.out.println("AgeGroup " + wb.getSheetName(i).replaceAll(" ", ""));
 
-        InputStream inputStream = null;
-
-        int sheetNumber = -1;
-
-        Part filePart = request.getPart("file1");
-        inputStream = filePart.getInputStream();
-        POIFSFileSystem fs = new POIFSFileSystem(inputStream);
-        HSSFWorkbook wb = new HSSFWorkbook(fs);
-        int numberSheet = wb.getNumberOfSheets();
-        String uploadFile = request.getParameter("UploadFile");
-
-        for (int i = 0; i < numberSheet; i++) {
-            if (uploadFile.equalsIgnoreCase(wb.getSheetName(i).replaceAll(" ", ""))) {
-                sheetNumber = i;
-            }
-        }
-        if (sheetNumber != -1) {
-              request.setAttribute("SheetName", "True");
-            if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("AgeGroup")) {
-                String table = new ExcelToHtml(wb, sheetNumber).getHTML();
-                request.setAttribute("table", table);
-                ServletContext context = getServletContext();
-                RequestDispatcher rd = context.getRequestDispatcher("/WEB-INF/JSPDemo/previewByAgeGroupSex.jsp");
-                rd.forward(request, response);
-            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("")) {
-                String table = new ExcelToHtml(wb, sheetNumber).getHTML();
-                request.setAttribute("table", table);
-                ServletContext context = getServletContext();
-                RequestDispatcher rd = context.getRequestDispatcher("/WEB-INF/JSPDemo/.jsp");
-                rd.forward(request, response);
-            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("")) {
-                String table = new ExcelToHtml(wb, sheetNumber).getHTML();
-                request.setAttribute("table", table);
-                ServletContext context = getServletContext();
-                RequestDispatcher rd = context.getRequestDispatcher("/WEB-INF/JSPDemo/.jsp");
-                rd.forward(request, response);
-            }
-        } else {
-            ArrayList<String> arrSheet = new ArrayList<String>();
-            for (int i = 0; i < numberSheet; i++) {
-                arrSheet.add(wb.getSheetName(i));
-                request.setAttribute("SheetName", "False");
-                request.setAttribute("SheetName", arrSheet);
-            }
-        }
-
-        //ERROR
-//        else {
-//            request.setAttribute("table", "ERROR");
-//            ServletContext context = getServletContext();
-//            RequestDispatcher rd = context.getRequestDispatcher("/WEB-INF/JSPDemo/ER");
-//            rd.forward(request, response);
-//        }
-    }
+                      if(uploadFile.equalsIgnoreCase(wb.getSheetName(i).replaceAll(" ", ""))){
+                          sheetNumber = i;
+                          System.out.println("SHEET NAME" + wb.getSheetName(i).replaceAll(" ", ""));
+                      }
+                }
+             
+            if(sheetNumber>-1){
+            String table = new ExcelToHtml(wb, sheetNumber).getHTML();
+            session.setAttribute("table", table);
+            System.out.print(table);
+            ServletContext context= getServletContext();
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewByAgeGroupSex.jsp");
+            rd.forward(request, response);
+            }else{
+            session.setAttribute("table", "ERROR");
+            ServletContext context= getServletContext();
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewByAgeGroupSex.jsp");
+            rd.forward(request, response);
+             
+             }                        
+    }  
 }

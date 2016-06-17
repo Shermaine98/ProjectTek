@@ -49,7 +49,10 @@ public class ExcelToHtml {
     private Boolean isSecond = false;
     private boolean isMerged = false;
     private HSSFSheet sheet;
-    String errors;
+    String errors = "";
+    String errorstable = "";
+    int errorcounter;
+    int errorrow;
     /**
      * Generates HTML from the InputStream of an Excel file. Generates sheet
      * name in HTML h1 element.
@@ -92,10 +95,11 @@ public class ExcelToHtml {
     public String getErrors() {
         return errors;
     }
-    
-    
-    
 
+    public String getErrorstable() {
+        return errorstable;
+    }
+    
     /**
      * (Each Excel sheet produces an HTML table) Generates an HTML table with no
      * cell, border spacing or padding.
@@ -141,21 +145,91 @@ public class ExcelToHtml {
             }
         }
        
-        out.append("<table cellspacing='0' border='0' style='border-spacing:0; border-collapse:collapse;' class=\"table table-striped\">\n");
+        out.append("<br><h3><center><b>Preview of Household Population by Age Group and Sex</b><center></h3>"
+                + "<table cellspacing='0' id='dataTable' border='0' style='border-spacing:0; border-collapse:collapse;' class=\"table table-striped\">\n");
         out.append("<tr><th>Location</th><th>Age Group</th><th>Both Sexes</th><th>Male</th><th>Female</th</tr>");
         
-        for (rowIndex = 6; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
+        for (rowIndex = 0; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
             HSSFRow row = sheet.getRow(rowIndex);
             if(row!=null){
                 tr(row);
-                //validation.checker;
+                if(loopChecker(row)==true){
+                    errorstable+="<tr>";
+                    trError(row);
+                    errorstable+="</tr>";
+                }
             }
+        }
+        if(!errors.isEmpty()){
+            errorstable+="<h3><center><b>Summary of Errors</b></center></h3>\n"
+                    + "<table cellspacing='0' id='errorsTable' border='0' style='border-spacing:0; border-collapse:collapse;' class=\"table table-striped\">\n";
+            errorstable+="<tr><th>Location</th><th>Age Group</th><th>Both Sexes</th><th>Male</th><th>Female</th></tr>";
+            errorstable+=errors;
+            errorstable+="</table>";
         }
         //System.out.println("end");
         out.append("</table>\n");
+        out.append("\n"+errorstable);
         //System.out.println("end");
     }
-
+    
+    public boolean loopChecker(HSSFRow row){
+        boolean isError = false;
+        for(errorrow= 0; errorrow < 4; ++errorrow){
+            if(checkError(row.getCell(errorrow))){
+                return true;
+            }
+        }
+        return isError;
+    }
+    
+    private void trError(final HSSFRow row){
+    if (row == null) {
+            return;
+        }
+        //checks if null and if it contains the location
+        if(row.getCell(0)!= null &&row.getCell(0).getCellType() == HSSFCell.CELL_TYPE_STRING) {
+            if(row.getCell(0).getStringCellValue().contains("Age Group") ||
+                    row.getCell(0).getStringCellValue().contains("Barangay") || 
+                    row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")){
+                if(row.getCell(0).getStringCellValue().contains("Age Group")){
+                    return;
+                }
+                else if(row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")){
+                    firstCell="<b>Caloocan City</b>";
+                    return;
+                }
+                else if(row.getCell(0).getStringCellValue().contains("Barangay")){
+                    firstCell="<b>"+row.getCell(0).getStringCellValue()+"</b>";
+                    return;
+                }
+            }
+        }
+        if(row.getCell(0) == null &&
+                    row.getCell(1) == null &&
+                    row.getCell(2) == null &&
+                    row.getCell(3) == null){
+                    return;
+        }
+        
+        errors+="<tr ";
+        // Find merged cells in current row.
+        errors+="style='";
+        if (row.getHeight() != -1) {
+            errors+="height: "
+                    +(Math.round(row.getHeight() / 20.0 * 1.33333))
+                    +"px; ";
+        }
+        errors+="'>\n";
+        
+        for (errorcounter = 0; errorcounter <4; ++errorcounter) {
+            HSSFCell cell = row.getCell(errorcounter);
+            getError(cell);
+            
+        }
+        errors+="</tr>\n";    
+    }
+    
     /**
      * (Each Excel sheet row becomes an HTML table row) Generates an HTML table
      * row which has the same height as the Excel row.
@@ -190,7 +264,6 @@ public class ExcelToHtml {
                     row.getCell(1) == null &&
                     row.getCell(2) == null &&
                     row.getCell(3) == null){
-                    out.append("<tr><td name='nullValues'></td></tr>");
                     return;
         }
         
@@ -218,9 +291,12 @@ public class ExcelToHtml {
         out.append("'>\n");
         
         for (colIndex = 0; colIndex <4; ++colIndex) {
-                td(row.getCell(colIndex));
+            HSSFCell cell = row.getCell(colIndex);
+            td(cell);
+            
         }
         out.append("</tr>\n");
+        
     }
 
     /**
@@ -232,12 +308,223 @@ public class ExcelToHtml {
      *            The Excel cell.
      */
     
-    private void td(final HSSFCell cell) {
+    public boolean checkError(HSSFCell cell){
+        boolean isError = false;
         if(cell == null){
-                out.append("<td contenteditable='true' bgcolor='#f2dede' title='There is no value in this cell'></td>");
+            return true;
+        }
+        switch(errorrow){
+            case 0: 
+                //Check if not String
+                if(cell == null){
+                    return true;
+                }
+                if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK){
+                    return true;
+                }
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING){
+                    return true;
+                }
+                if(cell.getCellType()==HSSFCell.CELL_TYPE_STRING){
+                    return false;
+                }
+                break;
+            case 1: 
+                //check if incomplete
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
+                    return true;
+                }
+                //check if incorrect total
+                if(cell.getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
+                    double total=0;
+                    
+                    //checks if columns 2 or 3 are null
+                    if(sheet.getRow(rowIndex).getCell(2)== null ||
+                            sheet.getRow(rowIndex).getCell(3)==null){
+                            return true;
+                    }
+                    //checks if columns 2 and/or 3 are not numeric
+                    if(sheet.getRow(rowIndex).getCell(2).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC ||
+                        sheet.getRow(rowIndex).getCell(3).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
+                        return true;
+                    }
+                    //checks total
+                    else if(sheet.getRow(rowIndex).getCell(2).getCellType()==HSSFCell.CELL_TYPE_NUMERIC &&
+                            sheet.getRow(rowIndex).getCell(3).getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
+                        double male=sheet.getRow(rowIndex).getCell(2).getNumericCellValue();
+                        double female=sheet.getRow(rowIndex).getCell(3).getNumericCellValue();
+                        total=male+female;
+                        if(total!=cell.getNumericCellValue()){
+                            return true;
+                        }
+                    }
+//                    else{
+//                        out.append("  bgcolor='#f2dede' title='This cell should contain numbers'");
+//                    }
+                }
+                break;
+            case 2:
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
+                    return true;
+                break;
+            case 3: 
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
+                    return true;
+                break;
+        }
+        return isError;
+    }
+    
+    private void getError(final HSSFCell cell) {
+        
+        //checks if HH Pop Age Group & Sex
+//        if(cell.getCellType() == HSSFCell.CELL_TYPE_STRING) {
+//             if(cell.getStringCellValue().contains("Household Population by Age Group and Sex:")){
+//                 return;
+//             }
+//        }        
+        if(errorcounter==0){
+                    errors+="<td>";
+                    errors+=firstCell;
+                    errors+="\n"
+                        + "</td>";
+            
+        }
+        if(cell == null){
+                errors+="<td bgcolor='#f2dede' title='There is no value in this cell'></td>";
                 return;
         }
-        //checks if HH Pop Age Group & Sex
+        errors+="<td ";
+        if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK) {
+             errors+=" bgcolor='#f2dede' title='There is no value in this cell'";
+        }
+        if (cell == null) {
+            errors+="/>\n";
+            return;
+        }
+        //Check for incorrect/incomplete data.
+        switch(errorcounter){
+            case 0: 
+                //Check if not String
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING){
+                errors+=" bgcolor='#f2dede' title='This cell should contain letters/words'";
+                }
+                break;
+            case 1: 
+                //check if incomplete
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
+                errors+=" bgcolor='#f2dede' title='This cell should contain numbers'";
+                }
+                //check if incorrect total
+                if(cell.getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
+                    double total=0;
+                    
+                    //checks if columns 2 or 3 are null
+                    if(sheet.getRow(rowIndex).getCell(2)== null ||
+                            sheet.getRow(rowIndex).getCell(3)==null){
+                            errors+=" bgcolor='#f2dede' title='Incorrect total'";
+                            break;
+                    }
+                    //checks if columns 2 and/or 3 are not numeric
+                    if(sheet.getRow(rowIndex).getCell(2).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC ||
+                        sheet.getRow(rowIndex).getCell(3).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
+                        errors+=" bgcolor='#f2dede' title='Incorrect total'";
+                        break;
+                    }
+                    //checks total
+                    else if(sheet.getRow(rowIndex).getCell(2).getCellType()==HSSFCell.CELL_TYPE_NUMERIC &&
+                            sheet.getRow(rowIndex).getCell(3).getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
+                        double male=sheet.getRow(rowIndex).getCell(2).getNumericCellValue();
+                        double female=sheet.getRow(rowIndex).getCell(3).getNumericCellValue();
+                        total=male+female;
+                        if(total!=cell.getNumericCellValue()){
+                            errors+=" bgcolor='#f2dede' title='Incorrect total'";
+                        }
+                    }
+                    else{
+                        errors+=" bgcolor='#f2dede' title='This cell should contain numbers'";
+                    }
+                
+                }
+                break;
+            case 2:
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
+                errors+=" bgcolor='#f2dede' title='This cell should contain numbers'";
+                break;
+            case 3: 
+                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
+                    errors+=" bgcolor='#f2dede' title='This cell should contain numbers'";                
+                break;
+        }
+        errors+=">";
+        String val = "";
+        try {
+            switch (cell.getCellType()) {
+            case HSSFCell.CELL_TYPE_STRING:
+                
+                val = cell.getStringCellValue();
+                break;
+            case HSSFCell.CELL_TYPE_NUMERIC:
+                // POI does not distinguish between integer and double, thus:
+                final double original = cell.getNumericCellValue(),
+                rounded = Math.round(original);
+                if (Math.abs(rounded - original) < 0.00000000000000001) {
+                    val = String.valueOf((int) rounded);
+                } else {
+                    val = String.valueOf(original);
+                }
+                    
+                break;
+            case HSSFCell.CELL_TYPE_FORMULA:
+                final CellValue cv = evaluator.evaluate(cell);
+                switch (cv.getCellType()) {
+                case Cell.CELL_TYPE_BOOLEAN:
+                    errors+=cv.getBooleanValue();
+                    break;
+                case Cell.CELL_TYPE_NUMERIC:
+                    errors+=cv.getNumberValue();
+                    break;
+                case Cell.CELL_TYPE_STRING:
+                    errors+=cv.getStringValue();
+                    break;
+                case Cell.CELL_TYPE_BLANK:
+                    
+                    break;
+                case Cell.CELL_TYPE_ERROR:
+                    break;
+                default:
+                    break;
+                }
+                break;
+            default:
+                // Neither string or number? Could be a date.
+                try {
+                    val = sdf.format(cell.getDateCellValue());
+                } catch (final Exception e1) {
+                }
+            }
+        } catch (final Exception e) {
+            val = e.getMessage();
+        }
+        if ("null".equals(val)) {
+            val = "";
+        }
+        if(val.toLowerCase().contains("age group") ||
+                val.toLowerCase().contains("both sexes") ||
+                val.toLowerCase().contains("male")||
+                val.toLowerCase().contains("female")){
+                    errors+="<b>";
+                    errors+=val;
+                    errors+="</b>";
+                }
+        else{
+            errors+=val;
+        }
+        errors+="</td>\n";
+    }
+    
+    private void td(final HSSFCell cell) {
+//        //checks if HH Pop Age Group & Sex
 //        if(cell.getCellType() == HSSFCell.CELL_TYPE_STRING) {
 //             if(cell.getStringCellValue().contains("Household Population by Age Group and Sex:")){
 //                 return;
@@ -266,14 +553,22 @@ public class ExcelToHtml {
                         + "</td>");
             
         }
-        out.append("<td ");
-        if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK) {
-             out.append(" bgcolor='#f2dede' title='There is no value in this cell'");
+        if(cell == null){
+                out.append("<td");
+                if(colIndex==0){
+                    out.append(" bgcolor='#f2dede' title='This cell should contain an age group'>");
+                    out.append(" <input type='text' name='ageGroup' class='form-control' id='inputError' value=''>");
+                }
+                out.append("</td>");
+                return;
         }
+        out.append("<td ");
+//        if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK) {
+//             out.append("> id='noVal' bgcolor='#f2dede' title='There is no value in this cell'");
+//        }
         if (colspan > 1) {
             out.append("colspan='").append(colspan).append("' ");
         }
-        
         if (cell == null) {
             out.append("/>\n");
             return;
@@ -281,10 +576,28 @@ public class ExcelToHtml {
         //Check for incorrect/incomplete data.
         switch(colIndex){
             case 0: 
-                out.append(" name='ageGroup'");
                 //Check if not String
+                if(cell == null){
+                System.out.println("YASS");
+                out.append(" bgcolor='#f2dede' title='This cell should contain an age group'>");
+                out.append(" <input type='text' name='ageGroup' class='form-control' id='inputError' value=''>");
+                return;
+                }
+                if(cell.getCellType() == HSSFCell.CELL_TYPE_BLANK){
+                out.append(" bgcolor='#f2dede' title='This cell should contain an age group'>");
+                out.append(" <input type='text' name='ageGroup' class='form-control' id='inputError' value=''>");
+                return;
+                }
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING){
-                out.append(" bgcolor='#f2dede' title='This cell should contain letters/words'");
+                out.append(" bgcolor='#f2dede' title='This cell should contain an age group'>");
+                out.append(" <input type='text' name='ageGroup' class='form-control' id='inputError' ");
+                out.append(" value= '");
+                getValue(cell);
+                out.append("'>");
+                return;
+                }
+                if(cell.getCellType()==HSSFCell.CELL_TYPE_STRING){
+                    out.append(" name='ageGroup'");
                 }
                 break;
             case 1: 
@@ -333,13 +646,16 @@ public class ExcelToHtml {
             case 3: 
                 out.append(" name='female'");
                 if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
-                    out.append(" e bgcolor='#f2dede' title='This cell should contain numbers'");                
+                    out.append("  bgcolor='#f2dede' title='This cell should contain numbers'");                
                 break;
         }
         out.append(">");
-        String val = "";
-        //GIAN WAT IS THIS
-           ArrayList<Integer> arryNumeric = new ArrayList<Integer>();
+        String val = getValue(cell);
+        out.append("</td>\n");
+    }
+    
+    public String getValue(HSSFCell cell){
+        String val="";
         try {
             switch (cell.getCellType()) {
             case HSSFCell.CELL_TYPE_STRING:
@@ -402,10 +718,11 @@ public class ExcelToHtml {
         else{
             out.append(val);
         }
-        out.append("</td>\n");
+        return val;
     }
 
     public String getHTML() {
-        return out.toString();
+        //append errorstable in the start
+        return errorstable+out.toString();
     }
 }

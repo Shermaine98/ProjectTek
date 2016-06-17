@@ -27,12 +27,16 @@ public class byAgeGroupSexDAO {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             ArrayList<ByAgeGroupSex> ArrByAgeGroupSex = new ArrayList<ByAgeGroupSex>();
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * age_group");
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
                 ByAgeGroupSex temp = new ByAgeGroupSex();
-               
+                 temp.setAgeGroup(rs.getString("ageGroup"));
+                 temp.setYear(rs.getInt("censusYear"));
+                 temp.setMaleCount(rs.getInt("totalMale"));
+                 temp.setFemaleCount(rs.getInt("totalFemale"));
+                 temp.setApproved(rs.getBoolean("approved"));
                 ArrByAgeGroupSex.add(temp);
             }
             pstmt.close();
@@ -44,18 +48,20 @@ public class byAgeGroupSexDAO {
         return null;
     }
 
-     public boolean EncodeByAgeGroupSex(byAgeGroupSexDAO newByAgeGroupSexDAO) {
+     public boolean EncodeByAgeGroupSex(ByAgeGroupSex newByAgeGroupSex) {
         try {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
-            String query = "INSERT INTO _"
-                    + "(_) "
-                    + "VALUES (_);";
+            String query = "INSERT INTO age_group"
+                    + "(censusYear,ageGroup,totalMale,totalFemale,approved) "
+                    + "VALUES (?,?,?,?,?);";
             PreparedStatement pstmt = conn.prepareStatement(query);
 
-//            pstmt.setInt(1, newByAgeGroupSexDAO);
-//            pstmt.setDouble(2, newByAgeGroupSexDAO.());
-//            pstmt.setDouble(3, newByAgeGroupSexDAO.());
+            pstmt.setInt(1, newByAgeGroupSex.getYear());
+            pstmt.setString(2, newByAgeGroupSex.getAgeGroup());
+            pstmt.setInt(3, newByAgeGroupSex.getMaleCount());
+            pstmt.setInt(3, newByAgeGroupSex.getFemaleCount());
+            pstmt.setBoolean(3, newByAgeGroupSex.isApproved());
 
             int rows = pstmt.executeUpdate();
             pstmt.close();

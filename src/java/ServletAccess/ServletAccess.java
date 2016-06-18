@@ -52,7 +52,7 @@ public class ServletAccess extends BaseServlet {
             } else if(redirect.equalsIgnoreCase("HighestCompleted")){
             request.setAttribute("page", "HighestCompleted");
             ServletContext context= getServletContext();
-            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/HighestCompleted.jsp");
+            RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/highestCompleted.jsp");
             rd.forward(request, response);
             } 
             

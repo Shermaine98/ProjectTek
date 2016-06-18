@@ -53,14 +53,14 @@
 
                 <!-- Main content -->
                 <section class="content">
-                    <form action="UploadMaritalStatus" method="post" enctype="multipart/form-data">
+                    <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
                         <br>
                         <!--<form id="UploadExcel" >
                             <input id="file" name="file" type="file" />-->
-                        <label for="file1" id="filename" class="custom-file-upload btn btn-block btn-default">
+                        <label for="file" id="filename" class="custom-file-upload btn btn-block btn-default">
                             <i class="fa fa-cloud-upload"></i> Upload File
                         </label>
-                        <input id="file1" name="file1" type="file" onclick="showDiv()" />
+                        <input id="file" name="file" type="file" onclick="showDiv()" />
                             <input  name="UploadFile" type="hidden" value="MaritalStatus" />
                         <input class="btn btn-flat btn-success button-submit" id="submit" type="submit" value="Submit" style="display:none"/>
                     </form>                
@@ -74,7 +74,7 @@
         <!-- ./wrapper -->
     </body>
     <script>
-        document.getElementById('file1').onchange = uploadOnChange;
+        document.getElementById('file').onchange = uploadOnChange;
 
         function uploadOnChange() {
             var filename = this.value;

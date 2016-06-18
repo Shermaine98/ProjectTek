@@ -12,6 +12,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+         <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+       
+        <script>
+             $(document).ready(function () {
+                $('#dataTable').DataTable({
+                    "paging": true,
+                    "info": true
+                });
+                });
+            </script>
     </head>
     <body>
                 <%            
@@ -20,7 +31,7 @@
         %>
           <form action="ValiAgeByGrpServ" method="post">   
         <div align="center" class="container">
-        <table id="productionInventory" class="table table-bordered">
+        <table id="dataTable" class="table table-bordered">
             <thead>
                 <tr>
                     <th>Location</th>

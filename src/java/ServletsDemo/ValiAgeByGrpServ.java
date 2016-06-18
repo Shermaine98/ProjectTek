@@ -31,27 +31,26 @@ public class ValiAgeByGrpServ extends BaseServlet {
     
     @Override
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       // String[] location = request.getParameterValues("location");
+        String[] location = request.getParameterValues("location");
         String[] ageGroup = request.getParameterValues("ageGroup");
         String[] bothSexes = request.getParameterValues("bothSexes");
         String[] male = request.getParameterValues("male");
         String[] female = request.getParameterValues("female");
         
-        ArrayList<String> location = new ArrayList<String>(Arrays.asList(request.getParameterValues("location")));
-        System.out.println(location.size());ArrSize
+       // ArrayList<String> location = new ArrayList<String>(Arrays.asList(request.getParameterValues("location")));
+       
         ByAgeGroupSex byAgeGroupSex;
         byAgeGroupSexDAO ByAgeGroupSexDAO = new byAgeGroupSexDAO();
         ArrayList <ByAgeGroupSex> ArrByAgeGroupSex = new  ArrayList <ByAgeGroupSex>();
         boolean x = false;
-       for(int i = 0; i <location.size();i++){
+       for(int i = 0; i <location.length;i++){
            byAgeGroupSex = new ByAgeGroupSex();
            byAgeGroupSex.setYear(2007);
-           byAgeGroupSex.setBarangay(location.get(i));
+           byAgeGroupSex.setBarangay(location[i]);
            byAgeGroupSex.setAgeGroup(ageGroup[i]);
            byAgeGroupSex.setBothSex(Integer.parseInt(bothSexes[i].replaceAll(" ", "")));
            byAgeGroupSex.setFemaleCount(Integer.parseInt(male[i].replaceAll(" ", "")));
            byAgeGroupSex.setMaleCount(Integer.parseInt(female[i].replaceAll(" ", "")));
-           System.out.println("SIZE" +location.size());
            byAgeGroupSex.setApproved(false);
            ArrByAgeGroupSex.add(byAgeGroupSex);
        }

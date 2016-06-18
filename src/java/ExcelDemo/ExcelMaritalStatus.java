@@ -1,22 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ExcelDemo;
 
-import ModelDemo.ByAgeGroupSex;
-import ModelDemoError.byAgeGroupError;
+import ModelDemoError.MaritalStatusTemp;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFClientAnchor;
+import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFPalette;
 import org.apache.poi.hssf.usermodel.HSSFPicture;
 import org.apache.poi.hssf.usermodel.HSSFPictureData;
@@ -24,19 +22,22 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFShape;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.CellValue;
 import org.apache.poi.ss.usermodel.FormulaEvaluator;
 import org.apache.poi.ss.util.CellRangeAddress;
 
 /**
+ * Use Apache POI to read an Excel (.xls) file and output an HTML table per
+ * sheet.
  *
- * @author shermainesy
+ * @author howard
  */
-public class ExcelByAgeGroup {
+public class ExcelMaritalStatus {
 
-    //ArrayList
-         ArrayList<byAgeGroupError> ArrErrorByAgeGroupSex;
+    ArrayList<MaritalStatusTemp> ArrMaritalStatusTemp;
 
     final private StringBuilder out = new StringBuilder(65536);
     final private SimpleDateFormat sdf;
@@ -47,7 +48,8 @@ public class ExcelByAgeGroup {
     private int rowIndex, mergeStart, mergeEnd;
     // Row -> Column -> Pictures
     private Map<Integer, Map<Short, List<HSSFPictureData>>> pix = new HashMap<Integer, Map<Short, List<HSSFPictureData>>>();
-    private String firstCell = "Location";
+    private String firstCell = "<b>Caloocan City</b>";
+    private String secondCell = "Both Sexes";
     private Boolean isSecond = false;
     private boolean isMerged = false;
     private HSSFSheet sheet;
@@ -60,7 +62,7 @@ public class ExcelByAgeGroup {
      * @param in InputStream of the Excel file.
      * @throws IOException When POI cannot read from the input stream.
      */
-    public ExcelByAgeGroup(final InputStream in, int sheetNumber) throws IOException {
+    public ExcelMaritalStatus(final InputStream in, int sheetNumber) throws IOException {
         sdf = new SimpleDateFormat("dd/MM/yyyy");
         if (in == null) {
             book = null;
@@ -71,17 +73,27 @@ public class ExcelByAgeGroup {
         book = new HSSFWorkbook(in);
         palette = book.getCustomPalette();
         evaluator = book.getCreationHelper().createFormulaEvaluator();
+        //for (int i = 0; i < book.getNumberOfSheets(); ++i) {
+        //    table(book.getSheetAt(i));
+        //}
         sheet = book.getSheetAt(sheetNumber);
         table(sheet);
     }
 
-    public ExcelByAgeGroup(final HSSFWorkbook book, int sheetNumber) throws IOException {
+    public ExcelMaritalStatus(final HSSFWorkbook book, int sheetNumber) throws IOException {
         sdf = new SimpleDateFormat("dd/MM/yyyy");
         this.book = book;
         palette = book.getCustomPalette();
         evaluator = book.getCreationHelper().createFormulaEvaluator();
+        //for (int i = 0; i < book.getNumberOfSheets(); ++i) {
+        //    table(book.getSheetAt(i));
+        //}
         sheet = book.getSheetAt(sheetNumber);
         table(sheet);
+    }
+
+    public String getErrors() {
+        return errors;
     }
 
     /**
@@ -127,14 +139,21 @@ public class ExcelByAgeGroup {
                 }
             }
         }
-
-        ArrErrorByAgeGroupSex = new ArrayList<>();
+//       
+//        out.append("<table cellspacing='0' border='0' style='border-spacing:0; border-collapse:collapse;' class=\"table table-striped\">\n");
+//        out.append("<tr><th>Location</th><th>Sex</th><th>Age Group</th><th>Total</th><th>Single</th><th>Married</th><th>Widowed</th><th>Divorced/Separated</th><th>Common Law/Live-in</th><th>Unknown</th></tr>");
+//        
+        ArrMaritalStatusTemp = new ArrayList<MaritalStatusTemp>();
         for (rowIndex = 6; rowIndex < sheet.getLastRowNum(); ++rowIndex) {
             HSSFRow row = sheet.getRow(rowIndex);
             if (row != null) {
-                tr(row, ArrErrorByAgeGroupSex);
+                tr(row, ArrMaritalStatusTemp);
+                //validation.checker;
             }
         }
+//        //System.out.println("end");
+//        out.append("</table>\n");
+//        //System.out.println("end");
     }
 
     /**
@@ -143,7 +162,7 @@ public class ExcelByAgeGroup {
      *
      * @param row The Excel row.
      */
-    private void tr(final HSSFRow row, ArrayList<byAgeGroupError> ArrErrorByAgeGroupSex) {
+    private void tr(final HSSFRow row, ArrayList<MaritalStatusTemp> ArrMaritalStatusTemp) {
         if (row == null) {
             return;
         }
@@ -151,12 +170,24 @@ public class ExcelByAgeGroup {
         if (row.getCell(0) != null && row.getCell(0).getCellType() == HSSFCell.CELL_TYPE_STRING) {
             if (row.getCell(0).getStringCellValue().contains("Age Group")
                     || row.getCell(0).getStringCellValue().contains("Barangay")
-                    || row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")) {
+                    || row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")
+                    || row.getCell(0).getStringCellValue().contains("Both Sexes")
+                    || row.getCell(0).getStringCellValue().equalsIgnoreCase("Male")
+                    || row.getCell(0).getStringCellValue().equalsIgnoreCase("Female")) {
                 if (row.getCell(0).getStringCellValue().contains("Age Group")) {
                     rowIndex++;
                     return;
                 } else if (row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")) {
                     firstCell = "Caloocan City";
+                    return;
+                } else if (row.getCell(0).getStringCellValue().equalsIgnoreCase("Female")) {
+                    secondCell = "Female";
+                    return;
+                } else if (row.getCell(0).getStringCellValue().equalsIgnoreCase("Male")) {
+                    secondCell = "Male";
+                    return;
+                } else if (row.getCell(0).getStringCellValue().contains("Both Sexes")) {
+                    secondCell = "Both Sexes";
                     return;
                 } else if (row.getCell(0).getStringCellValue().contains("Barangay")) {
                     firstCell = row.getCell(0).getStringCellValue();
@@ -164,13 +195,14 @@ public class ExcelByAgeGroup {
                 }
             }
         }
-
-        //WHAT IS THIS FOR
         if (row.getCell(0) == null
                 && row.getCell(1) == null
                 && row.getCell(2) == null
-                && row.getCell(3) == null) {
-//                    out.append("<tr><td name='nullValues'></td></tr>");
+                && row.getCell(4) == null
+                && row.getCell(5) == null
+                && row.getCell(6) == null
+                && row.getCell(7) == null) {
+            rowIndex++;
             return;
         }
 
@@ -187,12 +219,13 @@ public class ExcelByAgeGroup {
                 isMerged = false;
             }
         }
-        
-        byAgeGroupError byAgeGroupError = new byAgeGroupError();
-        for (colIndex = 0; colIndex < 4; ++colIndex) {
-            td(row.getCell(colIndex), byAgeGroupError);
+
+        MaritalStatusTemp MaritalStatusTemp = new MaritalStatusTemp();
+        for (colIndex = 0; colIndex < 8; ++colIndex) {
+            td(row.getCell(colIndex), MaritalStatusTemp);
         }
-        ArrErrorByAgeGroupSex.add(byAgeGroupError);
+        ArrMaritalStatusTemp.add(MaritalStatusTemp);
+//        out.append("</tr>\n");
     }
 
     /**
@@ -202,13 +235,10 @@ public class ExcelByAgeGroup {
      *
      * @param cell The Excel cell.
      */
-    private void td(final HSSFCell cell, byAgeGroupError byAgeGroupError) {
-//        if (cell == null) {
-//            out.append("<td contenteditable='true' bgcolor='#f2dede' title='There is no value in this cell'></td>");
-//            return;
-//        }
+    private void td(final HSSFCell cell, MaritalStatusTemp MaritalStatusTemp) {
 
         int colspan = 1;
+
         if (colIndex == mergeStart) {
             // First cell in the merging region - set colspan.
             colspan = mergeEnd - mergeStart + 1;
@@ -224,31 +254,49 @@ public class ExcelByAgeGroup {
         }
 
         if (colIndex == 0) {
-            byAgeGroupError.setBarangay(firstCell);
+
         }
 
-        //Check for incorrect/incomplete data.
         switch (colIndex) {
-            case 0: //AGE GROUP
-                byAgeGroupError.setAgeGroup(GetFormat(cell));
+            case 0: //AGE GROUP and Location and Sex
+                MaritalStatusTemp.setLocation(firstCell);
+                MaritalStatusTemp.setBothSex(secondCell);
+                MaritalStatusTemp.setAgeGroup(getFormat(cell));
                 break;
-            case 1: //BOTH SEXES
-                byAgeGroupError.setBothSex(GetFormat(cell));
+            case 1: //BOTH TOTAL
+                MaritalStatusTemp.setTotal(getFormat(cell));
                 break;
-            case 2://MALE
-               byAgeGroupError.setMaleCount(GetFormat(cell));
-               break;
-            case 3://FEMALE
-                byAgeGroupError.setFemaleCount(GetFormat(cell));
+            case 2://SINGLE
+                MaritalStatusTemp.setSingle(getFormat(cell));
                 break;
-        }       
+            case 3://MARRIED
+                MaritalStatusTemp.setMarried(getFormat(cell));
+                break;
+            case 4://MARRIED
+                MaritalStatusTemp.setWidowed(getFormat(cell));
+                break;
+            case 5://MARRIED
+                MaritalStatusTemp.setDivorcedSeparated(getFormat(cell));
+                break;
+            case 6://MARRIED
+                MaritalStatusTemp.setCommonLawLiveIn(getFormat(cell));
+                break;
+            case 7://MARRIED
+                MaritalStatusTemp.setUnknown(getFormat(cell));
+                break;
+        }
+
     }
 
-    public String GetFormat(final HSSFCell cell) {
+    public String getFormat(final HSSFCell cell) {
+
         String val = "";
+        //GIAN WAT IS THIS
+        ArrayList<Integer> arryNumeric = new ArrayList<Integer>();
         try {
             switch (cell.getCellType()) {
                 case HSSFCell.CELL_TYPE_STRING:
+
                     val = cell.getStringCellValue();
                     break;
                 case HSSFCell.CELL_TYPE_NUMERIC:
@@ -259,30 +307,32 @@ public class ExcelByAgeGroup {
                         val = String.valueOf((int) rounded);
                     } else {
                         val = String.valueOf(original);
-                    } break;
+                    }
+
+                    break;
                 case HSSFCell.CELL_TYPE_FORMULA:
                     final CellValue cv = evaluator.evaluate(cell);
                     switch (cv.getCellType()) {
                         case Cell.CELL_TYPE_BOOLEAN:
-                            val = String.valueOf(cv.getBooleanValue());
+                             val = String.valueOf(cv.getBooleanValue());
                             break;
                         case Cell.CELL_TYPE_NUMERIC:
-                             val = String.valueOf(cv.getNumberValue());
+                           val = String.valueOf(cv.getNumberValue());
                             break;
                         case Cell.CELL_TYPE_STRING:
                              val = String.valueOf(cv.getStringValue());
                             break;
                         case Cell.CELL_TYPE_BLANK:
-                             val ="";
+                            val ="";
                             break;
                         case Cell.CELL_TYPE_ERROR:
-                             val ="";
+                            val ="";
                             break;
                         default:
                             break;
                     }
                     break;
-                        default:
+                default:
                     // Neither string or number? Could be a date.
                     try {
                         val = sdf.format(cell.getDateCellValue());
@@ -292,10 +342,10 @@ public class ExcelByAgeGroup {
         } catch (final Exception e) {
             val = e.getMessage();
         }
-return val;
+        return val;
     }
-    public ArrayList<byAgeGroupError> getHTML() {
-         
-        return ArrErrorByAgeGroupSex;
+
+    public ArrayList<MaritalStatusTemp> getHTML() {
+        return ArrMaritalStatusTemp;
     }
 }

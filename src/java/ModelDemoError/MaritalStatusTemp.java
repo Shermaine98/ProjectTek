@@ -3,41 +3,40 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ModelDemo;
+package ModelDemoError;
 
 /**
  *
  * @author shermainesy
  */
-public class MaritalStatus {
-
-    private int year;
-    private String AgeGroup;
-    private String maritalStatus;
-    private int femaleCount;
-    private int maleCount;
-    private int bothSex;
-    private boolean approved;
-    private String location;
-    private int total;
-    private int single;
-    private int married;
-    private int widowed;
-    private int divorcedSeparated;
-    private int commonLawLiveIn;
-    private int unknown;
+public class MaritalStatusTemp {
+      private String year;
+        private String location;
+  private String AgeGroup;
+  private String maritalStatus;
+  private String femaleCount;
+  private String maleCount;
+  private String bothSex;
+  private String approved;
+  private String total;
+  private String single;
+    private String married;
+    private String widowed;
+    private String divorcedSeparated;
+    private String commonLawLiveIn;
+    private String unknown;
 
     /**
      * @return the year
      */
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
     /**
      * @param year the year to set
      */
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
 
@@ -72,56 +71,56 @@ public class MaritalStatus {
     /**
      * @return the femaleCount
      */
-    public int getFemaleCount() {
+    public String getFemaleCount() {
         return femaleCount;
     }
 
     /**
      * @param femaleCount the femaleCount to set
      */
-    public void setFemaleCount(int femaleCount) {
+    public void setFemaleCount(String femaleCount) {
         this.femaleCount = femaleCount;
     }
 
     /**
      * @return the maleCount
      */
-    public int getMaleCount() {
+    public String getMaleCount() {
         return maleCount;
     }
 
     /**
      * @param maleCount the maleCount to set
      */
-    public void setMaleCount(int maleCount) {
+    public void setMaleCount(String maleCount) {
         this.maleCount = maleCount;
     }
 
     /**
      * @return the bothSex
      */
-    public int getBothSex() {
+    public String getBothSex() {
         return bothSex;
     }
 
     /**
      * @param bothSex the bothSex to set
      */
-    public void setBothSex(int bothSex) {
+    public void setBothSex(String bothSex) {
         this.bothSex = bothSex;
     }
 
     /**
      * @return the approved
      */
-    public boolean isApproved() {
+    public String getApproved() {
         return approved;
     }
 
     /**
      * @param approved the approved to set
      */
-    public void setApproved(boolean approved) {
+    public void setApproved(String approved) {
         this.approved = approved;
     }
 
@@ -142,98 +141,98 @@ public class MaritalStatus {
     /**
      * @return the total
      */
-    public int getTotal() {
+    public String getTotal() {
         return total;
     }
 
     /**
      * @param total the total to set
      */
-    public void setTotal(int total) {
+    public void setTotal(String total) {
         this.total = total;
     }
 
     /**
      * @return the single
      */
-    public int getSingle() {
+    public String getSingle() {
         return single;
     }
 
     /**
      * @param single the single to set
      */
-    public void setSingle(int single) {
+    public void setSingle(String single) {
         this.single = single;
     }
 
     /**
      * @return the married
      */
-    public int getMarried() {
+    public String getMarried() {
         return married;
     }
 
     /**
      * @param married the married to set
      */
-    public void setMarried(int married) {
+    public void setMarried(String married) {
         this.married = married;
     }
 
     /**
      * @return the widowed
      */
-    public int getWidowed() {
+    public String getWidowed() {
         return widowed;
     }
 
     /**
      * @param widowed the widowed to set
      */
-    public void setWidowed(int widowed) {
+    public void setWidowed(String widowed) {
         this.widowed = widowed;
     }
 
     /**
      * @return the divorcedSeparated
      */
-    public int getDivorcedSeparated() {
+    public String getDivorcedSeparated() {
         return divorcedSeparated;
     }
 
     /**
      * @param divorcedSeparated the divorcedSeparated to set
      */
-    public void setDivorcedSeparated(int divorcedSeparated) {
+    public void setDivorcedSeparated(String divorcedSeparated) {
         this.divorcedSeparated = divorcedSeparated;
     }
 
     /**
      * @return the commonLawLiveIn
      */
-    public int getCommonLawLiveIn() {
+    public String getCommonLawLiveIn() {
         return commonLawLiveIn;
     }
 
     /**
      * @param commonLawLiveIn the commonLawLiveIn to set
      */
-    public void setCommonLawLiveIn(int commonLawLiveIn) {
+    public void setCommonLawLiveIn(String commonLawLiveIn) {
         this.commonLawLiveIn = commonLawLiveIn;
     }
 
     /**
      * @return the unknown
      */
-    public int getUnknown() {
+    public String getUnknown() {
         return unknown;
     }
 
     /**
      * @param unknown the unknown to set
      */
-    public void setUnknown(int unknown) {
+    public void setUnknown(String unknown) {
         this.unknown = unknown;
     }
 }

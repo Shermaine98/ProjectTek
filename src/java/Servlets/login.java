@@ -51,7 +51,7 @@ public class login extends HttpServlet {
             rd.forward(request, response);
         } else {
             out.print("Sorry, username or password error!");
-            request.getRequestDispatcher("login.html").include(request, response);
+         //   request.getRequestDispatcher("login.html").include(request, response);
         }
         out.close();
 

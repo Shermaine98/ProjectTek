@@ -61,11 +61,10 @@
         </style>
 
     </head>
-    <body>
-        <img src='index_template/background.jpeg' style='position:fixed;top:0px;left:0px;width:100%;z-index:-1; -webkit-filter: blur(1px);'>
+    <body style="background-color: #4d4d4d">
+        <!--<img src='index_template/background.jpeg' style='position:fixed;top:0px;left:0px;width:100%;z-index:-1; -webkit-filter: blur(1px);'>-->
         <div class="container">
             <div class="col-sm-5">
-
                 <div class="form-box">
                     <div class="form-top">
                         <div class="post-thumb">

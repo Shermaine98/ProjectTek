@@ -292,18 +292,17 @@
         <h4 class="modal-title">Upload Excel here!</h4>
       </div>
 	<div class="modal-body">
-            <form action="UploadToDatabase" method="post" enctype="multipart/form-data">
-                <input id="file1" name="file1" type="file" />
+            <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
+                <input id="file" name="file" type="file" />
 
                 <div class="paragraph">
-                    <b>Choose the Age by Group Sex Sheet</b> <br />
                     <div id="table1">
+                    <b>Choose the Age by Group Sex Sheet</b> <br />
                     <!--radio button-->
                     </div>
                     <br>
                     <input class="btn btn-flat btn-success" type="submit" value="Submit"/>
                     <input  name="UploadFile" type="hidden" value="AgeGroup" />
-                    <span style=color:red id="radio_error"></span>
                 </div>
             </form>
         </div>

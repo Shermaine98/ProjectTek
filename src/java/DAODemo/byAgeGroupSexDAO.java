@@ -6,6 +6,7 @@
 package DAODemo;
 
 import DB.DBConnectionFactory;
+import DB.DBConnectionFactoryStorage;
 import ModelDemo.ByAgeGroupSex;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,7 +25,7 @@ public class byAgeGroupSexDAO {
     
     public ArrayList<ByAgeGroupSex> ViewByAgeGroupSex() throws ParseException {
         try {
-            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
+            DBConnectionFactoryStorage myFactory = DBConnectionFactoryStorage.getInstance();
             ArrayList<ByAgeGroupSex> ArrByAgeGroupSex = new ArrayList<ByAgeGroupSex>();
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("SELECT * age_group");
@@ -50,7 +51,7 @@ public class byAgeGroupSexDAO {
 
      public boolean EncodeByAgeGroupSex(ByAgeGroupSex newByAgeGroupSex) {
         try {
-            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
+            DBConnectionFactoryStorage myFactory = DBConnectionFactoryStorage.getInstance();
             Connection conn = myFactory.getConnection();
             String query = "INSERT INTO age_group"
                     + "(censusYear,ageGroup,totalMale,totalFemale,approved) "
@@ -60,8 +61,8 @@ public class byAgeGroupSexDAO {
             pstmt.setInt(1, newByAgeGroupSex.getYear());
             pstmt.setString(2, newByAgeGroupSex.getAgeGroup());
             pstmt.setInt(3, newByAgeGroupSex.getMaleCount());
-            pstmt.setInt(3, newByAgeGroupSex.getFemaleCount());
-            pstmt.setBoolean(3, newByAgeGroupSex.isApproved());
+            pstmt.setInt(4, newByAgeGroupSex.getFemaleCount());
+            pstmt.setBoolean(5, newByAgeGroupSex.isApproved());
 
             int rows = pstmt.executeUpdate();
             pstmt.close();

@@ -9,8 +9,8 @@
         <servlet-class>Servlets.register</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UploadToDatabase</servlet-name>
-        <servlet-class>ServletsDemo.UploadToDatabase</servlet-class>
+        <servlet-name>UploadToDatabaseDemo</servlet-name>
+        <servlet-class>ServletsDemo.UploadToDatabaseDemo</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>logout</servlet-name>
@@ -49,8 +49,8 @@
         <url-pattern>/logout</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UploadToDatabase</servlet-name>
-        <url-pattern>/UploadToDatabase</url-pattern>
+        <servlet-name>UploadToDatabaseDemo</servlet-name>
+        <url-pattern>/UploadToDatabaseDemo</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ServletAccess</servlet-name>

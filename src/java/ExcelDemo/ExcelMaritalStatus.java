@@ -48,7 +48,7 @@ public class ExcelMaritalStatus {
     private int rowIndex, mergeStart, mergeEnd;
     // Row -> Column -> Pictures
     private Map<Integer, Map<Short, List<HSSFPictureData>>> pix = new HashMap<Integer, Map<Short, List<HSSFPictureData>>>();
-    private String firstCell = "<b>Caloocan City</b>";
+    private String firstCell = "Caloocan City";
     private String secondCell = "Both Sexes";
     private Boolean isSecond = false;
     private boolean isMerged = false;
@@ -182,13 +182,10 @@ public class ExcelMaritalStatus {
                     return;
                 } else if (row.getCell(0).getStringCellValue().equalsIgnoreCase("Female")) {
                     secondCell = "Female";
-                    return;
                 } else if (row.getCell(0).getStringCellValue().equalsIgnoreCase("Male")) {
                     secondCell = "Male";
-                    return;
                 } else if (row.getCell(0).getStringCellValue().contains("Both Sexes")) {
                     secondCell = "Both Sexes";
-                    return;
                 } else if (row.getCell(0).getStringCellValue().contains("Barangay")) {
                     firstCell = row.getCell(0).getStringCellValue();
                     return;
@@ -338,6 +335,13 @@ public class ExcelMaritalStatus {
                         val = sdf.format(cell.getDateCellValue());
                     } catch (final Exception e1) {
                     }
+            }
+            if(colIndex==0){
+                if(val.toLowerCase().contains("both sexes") ||
+                    val.toLowerCase().contains("male")||
+                    val.toLowerCase().contains("female")){
+                        val = "10 years old and over";
+                }
             }
         } catch (final Exception e) {
             val = e.getMessage();

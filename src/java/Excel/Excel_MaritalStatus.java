@@ -308,7 +308,7 @@ public class Excel_MaritalStatus {
 //                }
                 break;
             case 1: 
-                out.append(" name='bothSexes'");
+                out.append(" name='total'");
 //                //check if incomplete
 //                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
 //                out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");

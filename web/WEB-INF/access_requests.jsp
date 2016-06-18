@@ -106,5 +106,5 @@
     </div>
     <!-- ./wrapper -->
 </body>
-<%@ include file="footer.html" %>
+<%@ include file="JSPImports/footer.html" %>
 </html>

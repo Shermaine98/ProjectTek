@@ -38,7 +38,7 @@ public class ValiAgeByGrpServ extends BaseServlet {
         String[] female = request.getParameterValues("female");
         
         ArrayList<String> location = new ArrayList<String>(Arrays.asList(request.getParameterValues("location")));
-       
+        System.out.println(location.size());ArrSize
         ByAgeGroupSex byAgeGroupSex;
         byAgeGroupSexDAO ByAgeGroupSexDAO = new byAgeGroupSexDAO();
         ArrayList <ByAgeGroupSex> ArrByAgeGroupSex = new  ArrayList <ByAgeGroupSex>();

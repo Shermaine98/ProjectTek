@@ -186,15 +186,12 @@ public class Excel_MaritalStatus {
                 }
                 else if(row.getCell(0).getStringCellValue().equalsIgnoreCase("Female")){
                     secondCell="Female";
-                    return;
                 }
                 else if(row.getCell(0).getStringCellValue().equalsIgnoreCase("Male")){
                     secondCell="Male";
-                    return;
                 }
                 else if(row.getCell(0).getStringCellValue().contains("Both Sexes")){
                     secondCell="Both Sexes";
-                    return;
                 }
                 else if(row.getCell(0).getStringCellValue().contains("Barangay")){
                     firstCell="<b>"+row.getCell(0).getStringCellValue()+"</b>";
@@ -298,65 +295,7 @@ public class Excel_MaritalStatus {
             out.append("/>\n");
             return;
         }
-        //Check for incorrect/incomplete data.
-        switch(colIndex){
-            case 0: 
-                out.append(" name='ageGroup'");
-                //Check if not String
-//                if(cell.getCellType()!=HSSFCell.CELL_TYPE_STRING){
-//                out.append(" contenteditable='true bgcolor='#f2dede' title='This cell should contain letters/words'");
-//                }
-                break;
-            case 1: 
-                out.append(" name='total'");
-//                //check if incomplete
-//                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
-//                out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
-//                }
-                //check if incorrect total
-                if(cell.getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
-//                    double total=0;
-                    
-                    //checks if columns 2 or 3 are null
-//                    if(sheet.getRow(rowIndex).getCell(2)== null ||
-//                            sheet.getRow(rowIndex).getCell(3)==null){
-//                            out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
-//                            break;
-//                    }
-                    //checks if columns 2 and/or 3 are not numeric
-//                    if(sheet.getRow(rowIndex).getCell(2).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC ||
-//                        sheet.getRow(rowIndex).getCell(3).getCellType()!=HSSFCell.CELL_TYPE_NUMERIC){
-//                        out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
-//                        break;
-//                    }
-                    //checks total
-//                    if(sheet.getRow(rowIndex).getCell(2).getCellType()==HSSFCell.CELL_TYPE_NUMERIC &&
-//                            sheet.getRow(rowIndex).getCell(3).getCellType()==HSSFCell.CELL_TYPE_NUMERIC){
-//                        double male=sheet.getRow(rowIndex).getCell(2).getNumericCellValue();
-//                        double female=sheet.getRow(rowIndex).getCell(3).getNumericCellValue();
-//                        total=male+female;
-//                        if(total!=cell.getNumericCellValue()){
-//                            out.append(" contenteditable='true' bgcolor='#f2dede' title='Incorrect total'");
-//                        }
-//                    }
-//                    else{
-//                        out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
-//                    }
-                    }
-                
-                
-                break;
-            case 2:
-//                out.append(" name='male'");
-//                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
-//                out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");
-//                break;
-            case 3: 
-//                out.append(" name='female'");
-//                if(cell.getCellType()!=HSSFCell.CELL_TYPE_NUMERIC)
-//                    out.append(" contenteditable='true' bgcolor='#f2dede' title='This cell should contain numbers'");                
-//                break;
-        }
+        
         out.append(">");
         String val = "";
         //GIAN WAT IS THIS
@@ -388,10 +327,9 @@ public class Excel_MaritalStatus {
                     out.append(cv.getNumberValue());
                     break;
                 case Cell.CELL_TYPE_STRING:
-                    out.append(cv.getStringValue());
+                        out.append(cv.getStringValue());
                     break;
                 case Cell.CELL_TYPE_BLANK:
-                    
                     break;
                 case Cell.CELL_TYPE_ERROR:
                     break;
@@ -412,14 +350,11 @@ public class Excel_MaritalStatus {
         if ("null".equals(val)) {
             val = "";
         }
-        if(val.toLowerCase().contains("age group") ||
-                val.toLowerCase().contains("both sexes") ||
+        if(val.toLowerCase().contains("both sexes") ||
                 val.toLowerCase().contains("male")||
                 val.toLowerCase().contains("female")){
-                    out.append("<b>");
-                    out.append(val);
-                    out.append("</b>");
-                }
+                    out.append("10 years old and over");
+        }
         else{
             out.append(val);
         }

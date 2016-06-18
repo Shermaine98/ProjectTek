@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ include file="importsAide.html" %>
+<%@ include file="../JSPImports/importsAide.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>

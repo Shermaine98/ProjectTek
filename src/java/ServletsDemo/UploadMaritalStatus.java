@@ -69,12 +69,12 @@ public class UploadMaritalStatus extends HttpServlet {
                 session.setAttribute("table", table);
                 System.out.print(table);
                 ServletContext context= getServletContext();
-                RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewByAgeGroupSex.jsp");
+                RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewMaritalStatus.jsp");
                 rd.forward(request, response);
             }else{
                 session.setAttribute("table", "ERROR");
                 ServletContext context= getServletContext();
-                RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewByAgeGroupSex.jsp");
+                RequestDispatcher rd= context.getRequestDispatcher("/WEB-INF/JSPDemo/previewMaritalStatus.jsp");
                 rd.forward(request, response);
              }                        
     }  

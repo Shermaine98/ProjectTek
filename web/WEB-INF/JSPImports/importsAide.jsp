@@ -1,3 +1,4 @@
+<%@page import="Model.User"%>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -136,11 +137,13 @@ and open the template in the editor.
                                 </ul>
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->
+                                        <% User user = (User) session.getAttribute("user"); %>
                             <li class="user user-menu">
                                 <a href="#" >
                                     <span class="hidden-xs">
                                         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        <b> Gian Roxas</b> - Planning Development Officer I</span>
+                                        <b><%= user.getFirstName() %> <%= user.getLastName() %></b> - <%= user.getPosition() %>
+                                    </span>
                                 </a>
                             </li>
                             <!-- Control Sidebar Toggle Button -->

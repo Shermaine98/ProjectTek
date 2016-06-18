@@ -4,8 +4,7 @@
     Author     : Gian
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!--IMPORTING HTML I../JSPImports/importsAide.htmlMPORTS (bootstrap + scripts)-->
-<%@ include file="../JSPImports/importsAide.html" %>
+<%@ include file="../JSPImports/importsAide.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>

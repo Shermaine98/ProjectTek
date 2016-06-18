@@ -61,9 +61,10 @@ public class UploadToDatabaseDemo extends BaseServlet {
              request.setAttribute("SheetName", "True");
             if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("AgeGroup")) {
              ArrayList<byAgeGroupError> arrTemp = new ArrayList<byAgeGroupError>();
-             System.out.print("ARR SIZE" +arrTemp.size());
+            
                 arrTemp = new ExcelByAgeGroup(wb, sheetNumber).getHTML();
-             request.setAttribute("arrayTemp", arrTemp);           
+             request.setAttribute("arrayTemp", arrTemp); 
+             System.out.print("ARR SIZE" +arrTemp.size());          
             RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/valiAgeBySex.jsp");
              rd.forward(request, response);               
             } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("MaritalStatus")) {

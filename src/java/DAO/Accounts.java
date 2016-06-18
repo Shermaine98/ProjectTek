@@ -117,21 +117,22 @@ public class Accounts {
             DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("select * from users where "
-                    + "username = ? and password = password(?)");
+                    + "username = ? and password = ?");
             pstmt.setString(1, username);
             pstmt.setString(2, password);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
 
                 User.setUserID(rs.getInt("userID"));
+                User.setEmail(rs.getString("email"));
+                User.setUsername(rs.getString("username"));
+                User.setPassword(rs.getString("password"));
                 User.setDivision(rs.getString("division"));
                 User.setFirstName(rs.getString("firstName"));
                 User.setLastName(rs.getString("lastName"));
                 User.setGender(rs.getString("gender"));
                 User.setBirthdate(rs.getString("birthdate"));
-                User.setEmail(rs.getString("email"));
-                User.setUsername(rs.getString("username"));
-                User.setPassword(rs.getString("password"));
+                User.setPosition(rs.getString("position"));
             }
 
             pstmt.close();

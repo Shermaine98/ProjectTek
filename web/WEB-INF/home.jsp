@@ -5,7 +5,7 @@
 --%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!--IMPORTING HTML IMPORTS (bootstrap + scripts)-->
-<%@ include file="JSPImports/importsAide.html" %>
+<%@ include file="JSPImports/importsAide.jsp" %>
 <!DOCTYPE html>
 <html>
     <head>

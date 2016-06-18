@@ -1,8 +1,10 @@
 package ServletsDemo;
 
 import Excel.ExcelToHtml;
-import Excel.Excel_MaritalStatus;
+import ExcelDemo.ExcelMaritalStatus;
 import ExcelDemo.ExcelByAgeGroup;
+import ModelDemo.MaritalStatus;
+import ModelDemoError.MaritalStatusTemp;
 import ModelDemoError.byAgeGroupError;
 import Servlets.BaseServlet;
 import java.io.IOException;
@@ -65,9 +67,10 @@ public class UploadToDatabaseDemo extends BaseServlet {
             RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/valiAgeBySex.jsp");
              rd.forward(request, response);               
             } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("MaritalStatus")) {
-                String table = new Excel_MaritalStatus(wb, sheetNumber).getHTML();
-                request.setAttribute("table", table);
-                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/previewMaritalStatus.jsp");
+               ArrayList<MaritalStatusTemp> arrTemp = new ArrayList<MaritalStatusTemp>();
+                 arrTemp = new ExcelMaritalStatus(wb, sheetNumber).getHTML();
+                request.setAttribute("arrTempMarital", arrTemp);
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/valiMaritalStatus.jsp");
                 rd.forward(request, response);
             } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("HighestAttainment")) {
                 String table = new ExcelToHtml(wb, sheetNumber).getHTML();

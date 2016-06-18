@@ -54,7 +54,7 @@
 
                 <!-- Main content -->
                 <section class="content">
-                    <form action="UploadMaritalStatus" method="post" enctype="multipart/form-data">
+                    <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
                         <br>
                         <!--<form id="UploadExcel" >
                             <input id="file" name="file" type="file" />-->

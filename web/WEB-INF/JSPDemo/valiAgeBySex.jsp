@@ -21,6 +21,7 @@
                     "paging": true,
                     "info": true
                 });
+                });
             </script>
     </head>
     <body>

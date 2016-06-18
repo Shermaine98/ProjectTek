@@ -273,8 +273,10 @@ public class ExcelByAgeGroup {
                              val = String.valueOf(cv.getStringValue());
                             break;
                         case Cell.CELL_TYPE_BLANK:
+                             val ="";
                             break;
                         case Cell.CELL_TYPE_ERROR:
+                             val ="";
                             break;
                         default:
                             break;

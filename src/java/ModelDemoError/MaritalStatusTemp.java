@@ -18,6 +18,13 @@ public class MaritalStatusTemp {
   private String maleCount;
   private String bothSex;
   private String approved;
+  private String total;
+  private String single;
+    private String married;
+    private String widowed;
+    private String divorcedSeparated;
+    private String commonLawLiveIn;
+    private String unknown;
 
     /**
      * @return the year
@@ -129,5 +136,103 @@ public class MaritalStatusTemp {
      */
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    /**
+     * @return the total
+     */
+    public String getTotal() {
+        return total;
+    }
+
+    /**
+     * @param total the total to set
+     */
+    public void setTotal(String total) {
+        this.total = total;
+    }
+
+    /**
+     * @return the single
+     */
+    public String getSingle() {
+        return single;
+    }
+
+    /**
+     * @param single the single to set
+     */
+    public void setSingle(String single) {
+        this.single = single;
+    }
+
+    /**
+     * @return the married
+     */
+    public String getMarried() {
+        return married;
+    }
+
+    /**
+     * @param married the married to set
+     */
+    public void setMarried(String married) {
+        this.married = married;
+    }
+
+    /**
+     * @return the widowed
+     */
+    public String getWidowed() {
+        return widowed;
+    }
+
+    /**
+     * @param widowed the widowed to set
+     */
+    public void setWidowed(String widowed) {
+        this.widowed = widowed;
+    }
+
+    /**
+     * @return the divorcedSeparated
+     */
+    public String getDivorcedSeparated() {
+        return divorcedSeparated;
+    }
+
+    /**
+     * @param divorcedSeparated the divorcedSeparated to set
+     */
+    public void setDivorcedSeparated(String divorcedSeparated) {
+        this.divorcedSeparated = divorcedSeparated;
+    }
+
+    /**
+     * @return the commonLawLiveIn
+     */
+    public String getCommonLawLiveIn() {
+        return commonLawLiveIn;
+    }
+
+    /**
+     * @param commonLawLiveIn the commonLawLiveIn to set
+     */
+    public void setCommonLawLiveIn(String commonLawLiveIn) {
+        this.commonLawLiveIn = commonLawLiveIn;
+    }
+
+    /**
+     * @return the unknown
+     */
+    public String getUnknown() {
+        return unknown;
+    }
+
+    /**
+     * @param unknown the unknown to set
+     */
+    public void setUnknown(String unknown) {
+        this.unknown = unknown;
     }
 }

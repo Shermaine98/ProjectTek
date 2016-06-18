@@ -24,11 +24,15 @@
             <thead>
                 <tr>
                     <th>Location</th>
-                    <th>AgeGroup</th>
-                     <th>Marital Status</th>
-                    <th>Both Sex</th>
-                    <th>Male</th>
-                    <th>Female</th>
+                    <th>Sex</th>
+                     <th>Age Group</th>
+                    <th>Single</th>
+                    <th>Married</th>
+                    <th>Windowed</th>
+                     <th>Divorced/Separated</th>
+                    <th>Common Law/ Live-in</th>
+                     <th>Unknown</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,17 +41,19 @@
                         
                 %>
                 <tr>
-                    
                     <td><input name="location" type="text" value="<%=MaritalStatusTemp.get(i).getLocation()%>" /></td>
+                    <td><input name="sex" type="text" value="<%=MaritalStatusTemp.get(i).getBothSex()%>" /></td>
                     <td><input name="ageGroup" type="text" value="<%=MaritalStatusTemp.get(i).getAgeGroup()%>" /></td>
-                    <td><input name="bothSexes" type="text" value="<%=MaritalStatusTemp.get(i).getMaritalStatus()%>" /></td>
-                    <td><input name="bothSexes" type="text" value="<%=MaritalStatusTemp.get(i).getBothSex()%>" /></td>
-                    <td><input name="male" type="text" value="<%=MaritalStatusTemp.get(i).getMaleCount()%>" /></td>
-                     <td><input name="female" type="text" value="<%=MaritalStatusTemp.get(i).getFemaleCount()%>" /></td>
+                    <td><input name="single" type="text" value="<%=MaritalStatusTemp.get(i).getSingle()%>" /></td>
+                    <td><input name="married" type="text" value="<%=MaritalStatusTemp.get(i).getMarried() %>" /></td>
+                     <td><input name="windowed" type="text" value="<%=MaritalStatusTemp.get(i).getWidowed()%>" /></td>
+                     <td><input name="divorcedSeparated" type="text" value="<%=MaritalStatusTemp.get(i).getDivorcedSeparated()%>" /></td>
+                     <td><input name="commonLawLiveIn" type="text" value="<%=MaritalStatusTemp.get(i).getCommonLawLiveIn()%>" /></td>
+                     <td><input name="unknown" type="text" value="<%=MaritalStatusTemp.get(i).getUnknown()%>" /></td>
+                      <td><input name="total" type="text" value="<%=MaritalStatusTemp.get(i).getTotal()%>" /></td>
                 </tr>
                <%
-                      
-                    }
+                   }
                 %>
             </tbody>
         </table>

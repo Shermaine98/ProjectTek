@@ -18,7 +18,7 @@
                     
                     ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("arrayTemp");
         %>
-          <form action="valiAgeByGrpServ" method="post">   
+          <form action="ValiAgeByGrpServ" method="post">   
         <div align="center" class="container">
         <table id="productionInventory" class="table table-bordered">
             <thead>
@@ -31,14 +31,15 @@
                 </tr>
             </thead>
             <tbody>
-                <%for (int i = 0; i < byAgeGroupError.size(); i++) {
+                <%
+                    for (int i = 0; i < byAgeGroupError.size(); i++) {
                         
                 %>
                 <tr>
                     
                     <td><input name="location" type="text" value="<%=byAgeGroupError.get(i).getBarangay()%>" /></td>
                     <td><input name="ageGroup" type="text" value="<%=byAgeGroupError.get(i).getAgeGroup()%>" /></td>
-                    <td><input name="bothSex" type="text" value="<%=byAgeGroupError.get(i).getBothSex()%>" /></td>
+                    <td><input name="bothSexes" type="text" value="<%=byAgeGroupError.get(i).getBothSex()%>" /></td>
                     <td><input name="male" type="text" value="<%=byAgeGroupError.get(i).getMaleCount()%>" /></td>
                      <td><input name="female" type="text" value="<%=byAgeGroupError.get(i).getFemaleCount()%>" /></td>
                 </tr>

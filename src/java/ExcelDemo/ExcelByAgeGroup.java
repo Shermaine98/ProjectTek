@@ -188,7 +188,7 @@ public class ExcelByAgeGroup {
             }
         }
         
-        byAgeGroupError byAgeGroupError = new byAgeGroupError();;
+        byAgeGroupError byAgeGroupError = new byAgeGroupError();
         for (colIndex = 0; colIndex < 4; ++colIndex) {
             td(row.getCell(colIndex), byAgeGroupError);
         }

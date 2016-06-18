@@ -7,6 +7,7 @@ package DAODemo;
 
 import DB.DBConnectionFactory;
 import DB.DBConnectionFactoryStorage;
+import DB.DBConnectionFactoryStorageDB;
 import ModelDemo.ByAgeGroupSex;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,7 +26,7 @@ public class byAgeGroupSexDAO {
     
     public ArrayList<ByAgeGroupSex> ViewByAgeGroupSex() throws ParseException {
         try {
-            DBConnectionFactoryStorage myFactory = DBConnectionFactoryStorage.getInstance();
+            DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             ArrayList<ByAgeGroupSex> ArrByAgeGroupSex = new ArrayList<ByAgeGroupSex>();
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("SELECT * age_group");
@@ -35,6 +36,7 @@ public class byAgeGroupSexDAO {
                 ByAgeGroupSex temp = new ByAgeGroupSex();
                  temp.setAgeGroup(rs.getString("ageGroup"));
                  temp.setYear(rs.getInt("censusYear"));
+                 temp.setBarangay(rs.getString("location"));
                  temp.setMaleCount(rs.getInt("totalMale"));
                  temp.setFemaleCount(rs.getInt("totalFemale"));
                  temp.setApproved(rs.getBoolean("approved"));
@@ -49,26 +51,36 @@ public class byAgeGroupSexDAO {
         return null;
     }
 
-     public boolean EncodeByAgeGroupSex(ByAgeGroupSex newByAgeGroupSex) {
+     public boolean EncodeByAgeGroupSex(ArrayList<ByAgeGroupSex> newByAgeGroupSex) {
         try {
-            DBConnectionFactoryStorage myFactory = DBConnectionFactoryStorage.getInstance();
+            int rows = 0;
+            DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             Connection conn = myFactory.getConnection();
-            String query = "INSERT INTO age_group"
-                    + "(censusYear,ageGroup,totalMale,totalFemale,approved) "
-                    + "VALUES (?,?,?,?,?);";
+            String query = " INSERT INTO age_group "
+                    + " (censusYear,location,ageGroup,totalMale,totalFemale,approved) "
+                    + " VALUES (?,?,?,?,?,?); ";
             PreparedStatement pstmt = conn.prepareStatement(query);
+            int i=0;
+            for(ByAgeGroupSex object: newByAgeGroupSex ){
+             
+             pstmt.setInt(1, object.getYear());
+             pstmt.setString(2, object.getBarangay());
+            pstmt.setString(3, object.getAgeGroup());
+            pstmt.setInt(4, object.getMaleCount());
+            pstmt.setInt(5, object.getFemaleCount());
+            pstmt.setBoolean(6, object.isApproved());
 
-            pstmt.setInt(1, newByAgeGroupSex.getYear());
-            pstmt.setString(2, newByAgeGroupSex.getAgeGroup());
-            pstmt.setInt(3, newByAgeGroupSex.getMaleCount());
-            pstmt.setInt(4, newByAgeGroupSex.getFemaleCount());
-            pstmt.setBoolean(5, newByAgeGroupSex.isApproved());
-
-            int rows = pstmt.executeUpdate();
+               pstmt.addBatch();
+               i++;
+            }
+            
+               if(i%1000==0 || i== newByAgeGroupSex.size()){
+               pstmt.executeBatch();
+               }
+                
             pstmt.close();
             conn.close();
-
-            return rows == 1;
+            return true;
         } catch (SQLException ex) {
             Logger.getLogger(byAgeGroupSexDAO.class.getName()).log(Level.SEVERE, null, ex);
         }

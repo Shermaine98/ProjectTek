@@ -30,7 +30,7 @@
                 <h4 class="modal-title">Upload Excel File</h4>
               </div>
                 <div class="modal-body">
-                    <form action="UploadMaritalStatus" method="post" enctype="multipart/form-data">
+                    <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
                         <input id="file1" name="file1" type="file" />
 
                         <div class="paragraph">

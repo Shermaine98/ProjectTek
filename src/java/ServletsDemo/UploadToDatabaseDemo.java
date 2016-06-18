@@ -1,6 +1,7 @@
 package ServletsDemo;
 
 import Excel.ExcelToHtml;
+import Excel.Excel_MaritalStatus;
 import ExcelDemo.ExcelByAgeGroup;
 import ModelDemoError.byAgeGroupError;
 import Servlets.BaseServlet;
@@ -57,18 +58,18 @@ public class UploadToDatabaseDemo extends BaseServlet {
         if (sheetNumber != -1) {
              request.setAttribute("SheetName", "True");
             if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("AgeGroup")) {
-                 ArrayList<byAgeGroupError> arrTemp = new ArrayList<byAgeGroupError>();
+             ArrayList<byAgeGroupError> arrTemp = new ArrayList<byAgeGroupError>();
+             System.out.print("ARR SIZE" +arrTemp.size());
                 arrTemp = new ExcelByAgeGroup(wb, sheetNumber).getHTML();
-            System.out.println("THIS SIZE" + arrTemp.get(1).getBarangay());
-            request.setAttribute("arrayTemp", arrTemp);           
-         RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/valiAgeBySex.jsp");
-       rd.forward(request, response);               
-            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("")) {
-                String table = new ExcelToHtml(wb, sheetNumber).getHTML();
+             request.setAttribute("arrayTemp", arrTemp);           
+            RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/valiAgeBySex.jsp");
+             rd.forward(request, response);               
+            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("MaritalStatus")) {
+                String table = new Excel_MaritalStatus(wb, sheetNumber).getHTML();
                 request.setAttribute("table", table);
-                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/previewMaritalStatus.jsp");
                 rd.forward(request, response);
-            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("")) {
+            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("HighestAttainment")) {
                 String table = new ExcelToHtml(wb, sheetNumber).getHTML();
                 request.setAttribute("table", table);
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/.jsp");

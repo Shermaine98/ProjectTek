@@ -6,6 +6,7 @@
 package DAODemo;
 
 import DB.DBConnectionFactory;
+import DB.DBConnectionFactoryStorageDB;
 import ModelDemo.MaritalStatus;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,7 +25,7 @@ public class MaritalStatusDAO {
     
     public ArrayList<MaritalStatus> ViewMaritalStatus() throws ParseException {
         try {
-            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
+            DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             ArrayList<MaritalStatus> ArrMaritalStatus = new ArrayList<MaritalStatus>();
             Connection conn = myFactory.getConnection();
             PreparedStatement pstmt = conn.prepareStatement("SELECT * marital_status");
@@ -57,7 +58,7 @@ public class MaritalStatusDAO {
 
      public boolean EncodeMaritalStatus(ArrayList<MaritalStatus> newMaritalStatus) {
         try {
-            DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
+            DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             Connection conn = myFactory.getConnection();
              int rows = 0;
             String query = "INSERT INTO marital_status"

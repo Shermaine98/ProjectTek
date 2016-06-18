@@ -5,8 +5,6 @@
  */
 package DAODemo;
 
-import DB.DBConnectionFactory;
-import DB.DBConnectionFactoryStorage;
 import DB.DBConnectionFactoryStorageDB;
 import ModelDemo.ByAgeGroupSex;
 import java.sql.Connection;

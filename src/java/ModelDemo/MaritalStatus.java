@@ -16,7 +16,7 @@ public class MaritalStatus {
     private String maritalStatus;
     private int femaleCount;
     private int maleCount;
-    private int bothSex;
+    private String sex;
     private boolean approved;
     private String location;
     private int total;
@@ -100,15 +100,15 @@ public class MaritalStatus {
     /**
      * @return the bothSex
      */
-    public int getBothSex() {
-        return bothSex;
+    public String getsex() {
+        return sex;
     }
 
     /**
      * @param bothSex the bothSex to set
      */
-    public void setBothSex(int bothSex) {
-        this.bothSex = bothSex;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     /**

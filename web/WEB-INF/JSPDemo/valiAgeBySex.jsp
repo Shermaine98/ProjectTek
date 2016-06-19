@@ -4,6 +4,7 @@
     Author     : shermainesy
 --%>
 
+<%@page import="ModelDemo.ByAgeGroupSex"%>
 <%@page import="ModelDemoError.byAgeGroupError"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -27,7 +28,7 @@
     <body>
                 <%            
                     
-                    ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("arrayTemp");
+                    ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");
         %>
           <form action="ValiAgeByGrpServ" method="post">   
         <div align="center" class="container">

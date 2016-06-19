@@ -48,6 +48,29 @@ public class byAgeGroupSexDAO {
         }
         return null;
     }
+    
+    public ArrayList<Integer> GetAllCensusYear() throws ParseException {
+        try {
+            DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
+            ArrayList<Integer> censusYear = new ArrayList<Integer>();
+            Connection conn = myFactory.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement("SELECT censusYear from age_group group by censusYear;");
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+             int i =0;
+              i =  rs.getInt("censusYear");
+                censusYear.add(i);
+            }
+            pstmt.close();
+            conn.close();
+            return censusYear;
+        } catch (SQLException ex) {
+            Logger.getLogger(byAgeGroupSexDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
 
      public boolean EncodeByAgeGroupSex(ArrayList<ByAgeGroupSex> newByAgeGroupSex) {
         try {

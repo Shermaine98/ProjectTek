@@ -40,6 +40,10 @@
         <servlet-name>ValiMaritalStatus</servlet-name>
         <servlet-class>ServletsDemo.ValiMaritalStatus</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RetrieveDataDemoServlet</servlet-name>
+        <servlet-class>ServletsDemo.RetrieveDataDemoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>ValiMaritalStatus</servlet-name>
         <url-pattern>/ValiMaritalStatus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RetrieveDataDemoServlet</servlet-name>
+        <url-pattern>/RetrieveDataDemoServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -35,8 +35,12 @@ import org.apache.poi.ss.util.CellRangeAddress;
  */
 public class ExcelByAgeGroup {
 
+     ArrayList<ByAgeGroupSex> arraybyAgeGroup;
+        ArrayList<byAgeGroupError> arrayError;
+    
+    
     //ArrayList
-         ArrayList<byAgeGroupError> ArrErrorByAgeGroupSex;
+    ArrayList<byAgeGroupError> ArrErrorByAgeGroupSex;
 
     final private StringBuilder out = new StringBuilder(65536);
     final private SimpleDateFormat sdf;
@@ -187,12 +191,14 @@ public class ExcelByAgeGroup {
                 isMerged = false;
             }
         }
-        
+   System.out.println("BEFORE HTML LALALALALAL");
         byAgeGroupError byAgeGroupError = new byAgeGroupError();
         for (colIndex = 0; colIndex < 4; ++colIndex) {
             td(row.getCell(colIndex), byAgeGroupError);
         }
         ArrErrorByAgeGroupSex.add(byAgeGroupError);
+        System.out.println("BEFORE HTML" + ArrErrorByAgeGroupSex.get(0).getAgeGroup());
+        //getHTML();
     }
 
     /**
@@ -236,12 +242,12 @@ public class ExcelByAgeGroup {
                 byAgeGroupError.setBothSex(GetFormat(cell));
                 break;
             case 2://MALE
-               byAgeGroupError.setMaleCount(GetFormat(cell));
-               break;
+                byAgeGroupError.setMaleCount(GetFormat(cell));
+                break;
             case 3://FEMALE
                 byAgeGroupError.setFemaleCount(GetFormat(cell));
                 break;
-        }       
+        }
     }
 
     public String GetFormat(final HSSFCell cell) {
@@ -259,7 +265,8 @@ public class ExcelByAgeGroup {
                         val = String.valueOf((int) rounded);
                     } else {
                         val = String.valueOf(original);
-                    } break;
+                    }
+                    break;
                 case HSSFCell.CELL_TYPE_FORMULA:
                     final CellValue cv = evaluator.evaluate(cell);
                     switch (cv.getCellType()) {
@@ -267,22 +274,22 @@ public class ExcelByAgeGroup {
                             val = String.valueOf(cv.getBooleanValue());
                             break;
                         case Cell.CELL_TYPE_NUMERIC:
-                             val = String.valueOf(cv.getNumberValue());
+                            val = String.valueOf(cv.getNumberValue());
                             break;
                         case Cell.CELL_TYPE_STRING:
-                             val = String.valueOf(cv.getStringValue());
+                            val = String.valueOf(cv.getStringValue());
                             break;
                         case Cell.CELL_TYPE_BLANK:
-                             val ="";
+                            val = "";
                             break;
                         case Cell.CELL_TYPE_ERROR:
-                             val ="";
+                            val = "";
                             break;
                         default:
                             break;
                     }
                     break;
-                        default:
+                default:
                     // Neither string or number? Could be a date.
                     try {
                         val = sdf.format(cell.getDateCellValue());
@@ -292,10 +299,67 @@ public class ExcelByAgeGroup {
         } catch (final Exception e) {
             val = e.getMessage();
         }
-return val;
+        return val;
     }
+    //Check ERROR
+
     public ArrayList<byAgeGroupError> getHTML() {
-         
-        return ArrErrorByAgeGroupSex;
+        ByAgeGroupSex ByAgeGroupSex;
+        arraybyAgeGroup = new ArrayList<ByAgeGroupSex>();
+        arrayError = new ArrayList<byAgeGroupError>();
+        System.out.println(ArrErrorByAgeGroupSex.size());
+        for (int i = 0; i < ArrErrorByAgeGroupSex.size(); i++) {
+            // Check if null 
+            System.out.println("AFTER HTML" + ArrErrorByAgeGroupSex.get(i).getAgeGroup());
+            if (ArrErrorByAgeGroupSex.get(i).getBarangay() == null
+                    || ArrErrorByAgeGroupSex.get(i).getAgeGroup() == null
+                    || ArrErrorByAgeGroupSex.get(i).getBothSex() == null
+                    || ArrErrorByAgeGroupSex.get(i).getMaleCount()== null
+                    || ArrErrorByAgeGroupSex.get(i).getFemaleCount()== null) {
+                System.out.println("STRING");
+                arrayError.add(ArrErrorByAgeGroupSex.get(i));
+                //Check if string == string and 
+                // @todo int == int
+            } else if (isNumeric(ArrErrorByAgeGroupSex.get(i).getBothSex())
+                    || isNumeric(ArrErrorByAgeGroupSex.get(i).getFemaleCount())
+                    || isNumeric(ArrErrorByAgeGroupSex.get(i).getMaleCount())) {
+                
+                 System.out.println("NUMBER");
+                arrayError.add(ArrErrorByAgeGroupSex.get(i));
+            } else if (Integer.parseInt(ArrErrorByAgeGroupSex.get(i).getBothSex())
+                    != Integer.parseInt(ArrErrorByAgeGroupSex.get(i).getMaleCount())
+                    + Integer.parseInt(ArrErrorByAgeGroupSex.get(i).getFemaleCount())) {
+                System.out.println("TOTAL");
+                arrayError.add(ArrErrorByAgeGroupSex.get(i));
+            } else {
+                ByAgeGroupSex = new ByAgeGroupSex();
+                ByAgeGroupSex.setAgeGroup(ArrErrorByAgeGroupSex.get(i).getAgeGroup());
+                ByAgeGroupSex.setBarangay(ArrErrorByAgeGroupSex.get(i).getBarangay());
+                ByAgeGroupSex.setBothSex(Integer.parseInt(ArrErrorByAgeGroupSex.get(i).getBothSex()));
+                ByAgeGroupSex.setFemaleCount(Integer.parseInt(ArrErrorByAgeGroupSex.get(i).getFemaleCount()));
+                ByAgeGroupSex.setMaleCount(Integer.parseInt(ArrErrorByAgeGroupSex.get(i).getMaleCount()));
+                arraybyAgeGroup.add(ByAgeGroupSex);
+            }   
+        }
+      return arrayError;
+      
+    }
+
+     public ArrayList<byAgeGroupError> error(){
+            
+            return arrayError;
+    }
+    
+    public ArrayList<ByAgeGroupSex> noError(){
+        return arraybyAgeGroup;
+    
+    }
+    public static boolean isNumeric(String str) {
+        boolean isNumeric = str.chars().allMatch(Character::isDigit);
+        if (isNumeric) {
+            return false;
+        }
+        return true;
     }
 }
+

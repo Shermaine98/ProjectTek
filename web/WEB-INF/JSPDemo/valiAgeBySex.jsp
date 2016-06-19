@@ -74,7 +74,7 @@
                                 } else {
                                 %>
                                 <div class="callout callout-success">
-                                    <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                                    <p>Successfully Save into Database</p>
                                 </div>
                                 <%}%> 
                             </div>

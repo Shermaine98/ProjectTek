@@ -148,11 +148,11 @@
                                             %>
                                             <tr>
 
-                                                <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" /></td>
-                                                <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" /></td>
-                                                <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" /></td>
-                                                <td><input name="male" type="text" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" /></td>
-                                                <td><input name="female" type="text" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" /></td>
+                                                <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" readonly /></td>
+                                                <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" readonly /></td>
+                                                <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" readonly /></td>
+                                                <td><input name="male" type="text" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" readonly /></td>
+                                                <td><input name="female" type="text" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" readonly /></td>
                                             </tr>
                                             <%
                                                 }

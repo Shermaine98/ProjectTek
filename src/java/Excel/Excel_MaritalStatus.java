@@ -170,32 +170,31 @@ public class Excel_MaritalStatus {
         }
         //checks if null and if it contains the location
         if(row.getCell(0)!= null &&row.getCell(0).getCellType() == HSSFCell.CELL_TYPE_STRING) {
-            if(row.getCell(0).getStringCellValue().contains("Age Group") ||
-                    row.getCell(0).getStringCellValue().contains("Barangay") || 
+            if(row.getCell(0).getStringCellValue().contains("Barangay") || 
                     row.getCell(0).getStringCellValue().contains("CALOOCAN CITY") ||
                     row.getCell(0).getStringCellValue().contains("Both Sexes") ||
                     row.getCell(0).getStringCellValue().equalsIgnoreCase("Male") ||
                     row.getCell(0).getStringCellValue().equalsIgnoreCase("Female")){
-                if(row.getCell(0).getStringCellValue().contains("Age Group")){
-                    rowIndex++;
-                    return;
-                }
-                else if(row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")){
+//                if(row.getCell(0).getStringCellValue().contains("Age Group")){
+//                    rowIndex++;
+//                    return;
+//                }
+                if(row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")){
                     firstCell="<b>Caloocan City</b>";
                     return;
-                }
-                else if(row.getCell(0).getStringCellValue().equalsIgnoreCase("Female")){
-                    secondCell="Female";
-                }
-                else if(row.getCell(0).getStringCellValue().equalsIgnoreCase("Male")){
-                    secondCell="Male";
-                }
-                else if(row.getCell(0).getStringCellValue().contains("Both Sexes")){
-                    secondCell="Both Sexes";
                 }
                 else if(row.getCell(0).getStringCellValue().contains("Barangay")){
                     firstCell="<b>"+row.getCell(0).getStringCellValue()+"</b>";
                     return;
+                }
+                else if(row.getCell(0).getStringCellValue().contains("Female")){
+                    secondCell="Female";
+                }
+                else if(row.getCell(0).getStringCellValue().contains("Male")){
+                    secondCell="Male";
+                }
+                else if(row.getCell(0).getStringCellValue().contains("Both Sexes")){
+                    secondCell="Both Sexes";
                 }
             }
         }
@@ -253,12 +252,6 @@ public class Excel_MaritalStatus {
                 out.append("<td contenteditable='true' bgcolor='#f2dede' title='There is no value in this cell'></td>");
                 return;
         }
-        //checks if HH Pop Age Group & Sex
-//        if(cell.getCellType() == HSSFCell.CELL_TYPE_STRING) {
-//             if(cell.getStringCellValue().contains("Household Population by Age Group and Sex:")){
-//                 return;
-//             }
-//        }
         int colspan = 1;
         //System.out.println("MergeStart: " + mergeStart + "MergeEnd: " + mergeEnd);
         if (colIndex == mergeStart) {
@@ -353,7 +346,7 @@ public class Excel_MaritalStatus {
         if(val.toLowerCase().contains("both sexes") ||
                 val.toLowerCase().contains("male")||
                 val.toLowerCase().contains("female")){
-                    out.append("10 years old and over");
+                    out.append("Total");
         }
         else{
             out.append(val);

@@ -86,7 +86,7 @@
                                     } else {
                                     %>
                                     <div class="callout callout-success">
-                                        <p>Successfully Save into Database</p>
+                                        <p>There are no errors in the excel file.</p>
                                     </div>
                                     <%}%> 
                                 </div>

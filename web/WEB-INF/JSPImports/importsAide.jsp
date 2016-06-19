@@ -153,8 +153,8 @@ and open the template in the editor.
                             <!-- Control Sidebar Toggle Button -->
                             <li>
                                 <a href="#"  class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li>My Profile</li>
+                                <ul class="dropdown-menu" style="padding: 5px;">
+                                    <li><a href="">My Profile</a></li>
                                     <li><a href="logout">Sign out</a></li>
                                 </ul>
                             </li>

@@ -87,9 +87,41 @@ public class ServletAccess extends BaseServlet {
             request.setAttribute("page", "eKinderPublic");
              rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/eKinderPublic.jsp");
             rd.forward(request, response);
-            } else if(redirect.equalsIgnoreCase("?")){
-            request.setAttribute("page", "?");
-             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/?");
+            } else if(redirect.equalsIgnoreCase("ePrivateElementary")){
+            request.setAttribute("page", "ePrivateElementary");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/ePrivateElementary.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("ePrivateKinder")){
+            request.setAttribute("page", "ePrivateKinder");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/ePrivateKinder.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("ePublicElementary")){
+            request.setAttribute("page", "ePublicElementary");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/ePublicElementary.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("ePublicSecondary")){
+            request.setAttribute("page", "ePublicSecondary");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/ePublicSecondary.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("eTotalPublicSecondary")){
+            request.setAttribute("page", "eTotalPublicSecondary");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/eTotalPublicSecondary.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("eGovSecondaryTeacherDeployment")){
+            request.setAttribute("page", "eGovSecondaryTeacherDeployment");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/eGovSecondaryTeacherDeployment.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("eClassroomFurnitures")){
+            request.setAttribute("page", "eClassroomFurnitures");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/eClassroomFurnitures.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("eInstructionalElem")){
+            request.setAttribute("page", "eInstructionalElem");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/eInstructionalElem.jsp");
+            rd.forward(request, response);
+            } else if(redirect.equalsIgnoreCase("eInstructionalSecondary")){
+            request.setAttribute("page", "eInstructionalSecondary");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPEducation/eInstructionalSecondary.jsp");
             rd.forward(request, response);
             }else{
             request.getRequestDispatcher("login.html").include(request, response);

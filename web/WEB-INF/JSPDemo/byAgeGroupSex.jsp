@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Project TEK | Dashboard </title>
+        <title>Reports Library | Household Population by Age Group and Sex</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <script src="js/UploadFile.js" type="text/javascript"></script>
@@ -297,7 +297,7 @@
             }
         </style>   
         
-        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+        
     </head>
 
     <body class="hold-transition skin-yellow-light fixed sidebar-mini">
@@ -308,12 +308,12 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1 style='font-family: "Nunito", sans-serif;'><i class="fa fa-files-o"></i> Reports Library</h1>
+                    <h1><i class="fa fa-files-o"></i> Reports Library</h1>
                 </section>
 
                 <ol class="breadcrumb" style='background: transparent; margin-left: 3%; font-size: 120%;'>
-                    <li style='font-family: "Nunito", sans-serif;'>Demographics</li>
-                    <li style='font-family: "Nunito", sans-serif;' class="active">Household Population by Age group and Sex</li>
+                    <li class="title">Demographics</li>
+                    <li class="active title">Household Population by Age Group and Sex</li>
                 </ol>
 
                 <!-- Main content -->

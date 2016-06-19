@@ -13,6 +13,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- Ionicons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
         <!-- Theme style -->
         <link rel="stylesheet" href="AdminLTE/dist/css/AdminLTE.min.css">
         <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -35,8 +37,10 @@ and open the template in the editor.
             .circles-small{
                 font-size: 60%;
             }
+            .title, h1{
+                font-family: "Nunito", sans-serif;
+            }
         </style>
-
     </head>
 
 

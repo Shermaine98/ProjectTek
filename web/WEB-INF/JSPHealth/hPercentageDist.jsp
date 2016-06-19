@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Reports Library | Morbidity Report</title>
+        <title>Reports Library | Percentage Distribution of Elementary School Children in Each District in the Division of Caloocan by Nutritional Status/By Gender</title>
         <script src="js/UploadFile.js" type="text/javascript"></script>
         <style>
             input[type="file"] {
@@ -46,7 +46,7 @@
 
                 <ol class="breadcrumb" style='background: transparent; margin-left: 3%; font-size: 120%;'>
                     <li class="title">Health</li>
-                    <li class="active title">Morbidity Report</li>
+                    <li class="active title">Percentage Distribution of Elementary School Children in Each District in the Division of Caloocan by Nutritional Status/By Gender</li>
                 </ol>
                 <!-- Main content -->
                 <section class="content">
@@ -57,7 +57,7 @@
                                     <h3 class="box-title">Upload A New Report</h3>
                                 </div>
                                 <div class="box-body">
-                                    <form action="UploadMorbidityReport" method="post" enctype="multipart/form-data">
+                                    <form action="UploadPercentageDist" method="post" enctype="multipart/form-data">
                                         <label for="file" id="filename" class="custom-file-upload btn btn-block btn-default">
                                             <i class="fa fa-cloud-upload"></i> Upload File
                                         </label>

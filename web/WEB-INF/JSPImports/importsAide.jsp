@@ -206,11 +206,11 @@ and open the template in the editor.
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=liveBirths"><i class="fa fa-circle-o circles-small"></i>Live Birth Per Day</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=mortality"><i class="fa fa-circle-o circles-small"></i>Mortality Report</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=morbidity"><i class="fa fa-circle-o circles-small"></i>Morbidity Report</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=<?>"><i class="fa fa-circle-o circles-small"></i>Percentage Distribution of<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elementary School
+                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=percentageDist"><i class="fa fa-circle-o circles-small"></i>Percentage Distribution of<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elementary School
                                                 Children<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in Each District in the<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division of
                                                 Caloocan by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nutritional Status/By Gender</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=numOfDocsNursesMidwives"><i class="fa fa-circle-o circles-small"></i>Total Number of Doctors,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nurses, Midwives</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=<--?-->"><i class="fa fa-circle-o circles-small"></i>List of Private and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Government Hospitals</a></li>
+                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=hListOfPrivateGovHosp"><i class="fa fa-circle-o circles-small"></i>List of Private and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Government Hospitals</a></li>
                                     </ul>
                                 </li>          
                             </ul>

@@ -61,24 +61,23 @@ public class ServletAccess extends BaseServlet {
             rd.forward(request, response);
             } else if(redirect.equalsIgnoreCase("mortality")){
             request.setAttribute("page", "mortality");
-             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/hMortality.jsp");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/hMortalityReport.jsp");
             rd.forward(request, response);
             } else if(redirect.equalsIgnoreCase("morbidity")){
             request.setAttribute("page", "morbidity");
-            
-             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/hMorbidity.jsp");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/hMorbidityReport.jsp");
             rd.forward(request, response);
-            } else if(redirect.equalsIgnoreCase("?")){
-            request.setAttribute("page", "?");
-             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/?");
+            } else if(redirect.equalsIgnoreCase("percentageDist")){
+            request.setAttribute("page", "percentageDist");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/hPercentageDist.jsp");
             rd.forward(request, response);
             }else if(redirect.equalsIgnoreCase("numOfDocsNursesMidwives")){
             request.setAttribute("page", "numOfDocsNursesMidwives");
              rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/numOfDocsNursesMidwives.jsp");
             rd.forward(request, response);
-            } else if(redirect.equalsIgnoreCase("numOfDocsNursesMidwives")){
-            request.setAttribute("page", "numOfDocsNursesMidwives");
-             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/numOfDocsNursesMidwives.jsp");
+            } else if(redirect.equalsIgnoreCase("hListOfPrivateGovHosp")){
+            request.setAttribute("page", "hListOfPrivateGovHosp");
+             rd= request.getRequestDispatcher("/WEB-INF/JSPHealth/hListOfPrivateGovHosp.jsp");
             rd.forward(request, response);
             } 
     

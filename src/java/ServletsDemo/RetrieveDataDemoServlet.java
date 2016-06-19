@@ -43,6 +43,7 @@ public class RetrieveDataDemoServlet extends BaseServlet {
                     Logger.getLogger(RetrieveDataDemoServlet.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 System.out.print(censusYear.size());
+               request.setAttribute("saveToDB", "none");
              request.setAttribute("page", "byAgeGroupSex");
              request.setAttribute("censusYear", censusYear);
              rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/byAgeGroupSex.jsp");

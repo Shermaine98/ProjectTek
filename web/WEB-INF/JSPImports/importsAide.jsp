@@ -196,7 +196,7 @@ and open the template in the editor.
                                 </li>
                                 <li style="font-size: 110%; padding-bottom: 8px; color: #cc5200"><a href="#" style="color: #cc5200">Demographics<span class="fa fa-angle-right" style="float: right; margin-right: 5%;"></span></a>
                                     <ul class="treeview-menu">
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=byAgeGroupSex"><i class="fa fa-circle-o circles-small"></i>Household Population by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Age Group and Sex</a></li>
+                                        <li style="margin-left: -20px;"><a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex"><i class="fa fa-circle-o circles-small"></i>Household Population by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Age Group and Sex</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=highestCompleted"><i class="fa fa-circle-o circles-small"></i>Household Population 5<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Highest<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grade/Year Completed,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age group and sex</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=maritalStatus"><i class="fa fa-circle-o circles-small"></i>Household Population 10<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Age<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Group, Sex, and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Marital Status </a></li>
                                     </ul>

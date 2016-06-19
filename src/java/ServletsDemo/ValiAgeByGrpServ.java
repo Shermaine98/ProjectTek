@@ -34,19 +34,19 @@ public class ValiAgeByGrpServ extends BaseServlet {
     
     @Override
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
+          System.out.print("errorMessage" );
         String errorMessage = request.getParameter("errorMessage");
+        System.out.print("errorMessage" +errorMessage);
         
-        if(errorMessage.equalsIgnoreCase("Error")){
+        
+        
+  
          String[] locationError = request.getParameterValues("location");
          String[] ageGroupError = request.getParameterValues("ageGroup");
          String[] bothSexesError = request.getParameterValues("bothSexes");
          String[] maleError = request.getParameterValues("male");
          String[] femaleError = request.getParameterValues("female");
-         
-         
-         
-        }
+       
         String[] location = request.getParameterValues("location");
         String[] ageGroup = request.getParameterValues("ageGroup");
         String[] bothSexes = request.getParameterValues("bothSexes");
@@ -83,8 +83,9 @@ public class ValiAgeByGrpServ extends BaseServlet {
        x =ByAgeGroupSexDAO.EncodeByAgeGroupSex(ArrByAgeGroupSex);
        
        if(x){
-           request.setAttribute("AgeGroupSuccess", "success");
-            RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+            request.setAttribute("saveToDB", "success");
+            request.setAttribute("redirect", "byAgeGroupSex");
+            RequestDispatcher rd = request.getRequestDispatcher("/RetriveDataDemoServlet");
             rd.forward(request, response);
        }else{
             RequestDispatcher rd = request.getRequestDispatcher("/??");

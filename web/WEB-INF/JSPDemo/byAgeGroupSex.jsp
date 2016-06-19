@@ -53,7 +53,24 @@
                     <li class="title">Demographics</li>
                     <li class="active title">Household Population by Age Group and Sex</li>
                 </ol>
+ <%
+                                    String temp = (String) request.getAttribute("saveToDB");
+                                    if (temp.equalsIgnoreCase("success")) {
+                                %>
+                                <div class="callout callout-success">
+                                    <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                                </div>
+                                <%
+                                } else if(temp.equalsIgnoreCase("notSuccess")) {
+                                %>
+                               <div class="callout callout-danger">
+                                    <h4>Oops! There are errors.</h4>
 
+                                    <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
+                                </div>
+                                
+                                <%}%> 
+                
                 <!-- Main content -->
 
                 <section class="content">

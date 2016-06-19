@@ -48,8 +48,7 @@
     <body>
 
         <div class="preload">
-            <img src="" alt=""/>
-            <input type="text" value="Loading"/>
+            <img src="images/loading_spinner.gif" alt=""/>
         </div>
         <div class="content">
             <div class="wrapper">
@@ -155,7 +154,7 @@
         </div>
         <script>
             $(function () {
-                $(".preload").fadeOut(5000, function () {
+                $(".preload").fadeOut(9000, function () {
                     $(".content").fadeIn(1000);
                 });
             });

@@ -43,7 +43,7 @@ public class UploadMaritalStatus extends HttpServlet {
             int sheetNumber = -1;
  
             // obtains the upload file part in this multipart request
-            Part filePart = request.getPart("file1");
+            Part filePart = request.getPart("file");
             // obtains input stream of the upload file
             inputStream = filePart.getInputStream();
         

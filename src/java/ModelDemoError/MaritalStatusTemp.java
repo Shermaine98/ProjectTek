@@ -10,16 +10,16 @@ package ModelDemoError;
  * @author shermainesy
  */
 public class MaritalStatusTemp {
-      private String year;
-        private String location;
-  private String AgeGroup;
-  private String maritalStatus;
-  private String femaleCount;
-  private String maleCount;
-  private String bothSex;
-  private String approved;
-  private String total;
-  private String single;
+    private String year;
+    private String location;
+    private String AgeGroup;
+    private String maritalStatus;
+    private String femaleCount;
+    private String maleCount;
+    private String bothSex;
+    private String approved;
+    private String total;
+    private String single;
     private String married;
     private String widowed;
     private String divorcedSeparated;

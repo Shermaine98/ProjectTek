@@ -34,7 +34,7 @@ import org.apache.poi.ss.util.CellRangeAddress;
  * 
  * @author howard
  */
-public class Excel_HighestAttainment {
+public class ExcelHighestAttainment {
     //GIAN LOL
     final private StringBuilder out = new StringBuilder(65536);
     final private SimpleDateFormat sdf;
@@ -60,7 +60,7 @@ public class Excel_HighestAttainment {
      * @throws IOException
      *             When POI cannot read from the input stream.
      */
-    public Excel_HighestAttainment(final InputStream in, int sheetNumber) throws IOException {
+    public ExcelHighestAttainment(final InputStream in, int sheetNumber) throws IOException {
         sdf = new SimpleDateFormat("dd/MM/yyyy");
         if (in == null) {
             book = null;
@@ -78,7 +78,7 @@ public class Excel_HighestAttainment {
         table(sheet);
     }
     
-    public Excel_HighestAttainment(final HSSFWorkbook book, int sheetNumber) throws IOException {
+    public ExcelHighestAttainment(final HSSFWorkbook book, int sheetNumber) throws IOException {
         sdf = new SimpleDateFormat("dd/MM/yyyy");
         this.book = book;
         palette = book.getCustomPalette();

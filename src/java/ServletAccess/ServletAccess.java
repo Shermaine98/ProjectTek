@@ -50,8 +50,8 @@ public class ServletAccess extends BaseServlet {
             rd.forward(request, response);
             } else if(redirect.equalsIgnoreCase("HighestCompleted")){
             request.setAttribute("page", "HighestCompleted");
-
-             rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/HighestCompleted.jsp");
+            rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/highestCompleted.jsp");
+            rd.forward(request, response);
             }
             
     //Health       

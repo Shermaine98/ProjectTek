@@ -50,7 +50,6 @@ public class ExcelMaritalStatus {
     private Map<Integer, Map<Short, List<HSSFPictureData>>> pix = new HashMap<Integer, Map<Short, List<HSSFPictureData>>>();
     private String firstCell = "Caloocan City";
     private String secondCell = "Both Sexes";
-    private Boolean isSecond = false;
     private boolean isMerged = false;
     private HSSFSheet sheet;
     String errors;
@@ -180,16 +179,16 @@ public class ExcelMaritalStatus {
                 } else if (row.getCell(0).getStringCellValue().contains("CALOOCAN CITY")) {
                     firstCell = "Caloocan City";
                     return;
+                } else if (row.getCell(0).getStringCellValue().toLowerCase().startsWith("barangay")) {
+                    firstCell = row.getCell(0).getStringCellValue();
+                    return;
                 } else if (row.getCell(0).getStringCellValue().equalsIgnoreCase("Female")) {
                     secondCell = "Female";
                 } else if (row.getCell(0).getStringCellValue().equalsIgnoreCase("Male")) {
                     secondCell = "Male";
                 } else if (row.getCell(0).getStringCellValue().contains("Both Sexes")) {
                     secondCell = "Both Sexes";
-                } else if (row.getCell(0).getStringCellValue().contains("Barangay")) {
-                    firstCell = row.getCell(0).getStringCellValue();
-                    return;
-                }
+                } 
             }
         }
         if (row.getCell(0) == null

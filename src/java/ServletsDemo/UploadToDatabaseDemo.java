@@ -73,10 +73,10 @@ public class UploadToDatabaseDemo extends BaseServlet {
                 request.setAttribute("arrTempMarital", arrTemp);
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/valiMaritalStatus.jsp");
                 rd.forward(request, response);
-            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("HighestAttainment")) {
+            } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("HHPop.5yrs.")) {
                 String table = new ExcelToHtml(wb, sheetNumber).getHTML();
                 request.setAttribute("table", table);
-                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/highestCompleted.jsp");
                 rd.forward(request, response);
             }
         } else {

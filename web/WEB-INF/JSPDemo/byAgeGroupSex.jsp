@@ -300,9 +300,7 @@
         
     </head>
 
-    <body class="hold-transition skin-yellow-light fixed sidebar-mini">
-
-
+    <body>
         <div class="wrapper">
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
@@ -369,7 +367,7 @@
                         <!--End of RIGHT Box-->
 
                         <div class="col-md-12">
-                            <div class="box box-danger" style="height: 300px;" >
+                            <div class="box box-default" style="height: 300px;" >
                                 <div class="box-header">
                                     <h3 class="box-title">Archived Reports</h3>
                                 </div>

@@ -45,7 +45,7 @@ and open the template in the editor.
 
 
 
-    <body>
+    <body class="hold-transition skin-yellow-light fixed sidebar-mini">
 
         <!-- jQuery 2.2.0 -->
         <script src="AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js"></script>

@@ -20,8 +20,9 @@
 
         <!--DataTable imports-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <script type="text/javascript" src="jsImported/datatables.min.js"></script>
         <link rel="stylesheet" type="text/css" href="cssImported/datatables.min.css"/>
+        <script type="text/javascript" src="jsImported/datatables.min.js"></script>
+
         <script>
             $(document).ready(function () {
                 $('#dataTable').DataTable({
@@ -48,7 +49,6 @@
             {
                 background: transparent;
                 border: none;
-                
             }
             .DT{
                 width: 95%;
@@ -148,11 +148,11 @@
                                             %>
                                             <tr>
 
-                                                <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" readonly /></td>
-                                                <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" readonly /></td>
-                                                <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" readonly /></td>
-                                                <td><input name="male" type="text" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" readonly /></td>
-                                                <td><input name="female" type="text" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" readonly /></td>
+                                                <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" /></td>
+                                                <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" /></td>
+                                                <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" /></td>
+                                                <td><input name="male" type="text" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" /></td>
+                                                <td><input name="female" type="text" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" /></td>
                                             </tr>
                                             <%
                                                 }

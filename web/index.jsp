@@ -82,7 +82,7 @@
                                 <label class="sr-only" for="form-password">Password</label>
                                 <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
                             </div>
-                            <button type="submit" class="btn">Log in</button>
+                            <button type="submit" class="btn" style="background-color:#ee913a">Log in</button>
                         </form><br/>
                         <center><a href="register.jsp">No account yet? Register now!</a></center>
                     </div>

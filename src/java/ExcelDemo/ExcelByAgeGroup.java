@@ -191,13 +191,11 @@ public class ExcelByAgeGroup {
                 isMerged = false;
             }
         }
-   System.out.println("BEFORE HTML LALALALALAL");
         byAgeGroupError byAgeGroupError = new byAgeGroupError();
         for (colIndex = 0; colIndex < 4; ++colIndex) {
             td(row.getCell(colIndex), byAgeGroupError);
         }
         ArrErrorByAgeGroupSex.add(byAgeGroupError);
-        System.out.println("BEFORE HTML" + ArrErrorByAgeGroupSex.get(0).getAgeGroup());
         //getHTML();
     }
 
@@ -303,14 +301,12 @@ public class ExcelByAgeGroup {
     }
     //Check ERROR
 
-    public ArrayList<byAgeGroupError> getHTML() {
+    public void getHTML() {
         ByAgeGroupSex ByAgeGroupSex;
         arraybyAgeGroup = new ArrayList<ByAgeGroupSex>();
         arrayError = new ArrayList<byAgeGroupError>();
-        System.out.println(ArrErrorByAgeGroupSex.size());
         for (int i = 0; i < ArrErrorByAgeGroupSex.size(); i++) {
             // Check if null 
-            System.out.println("AFTER HTML" + ArrErrorByAgeGroupSex.get(i).getAgeGroup());
             if (ArrErrorByAgeGroupSex.get(i).getBarangay() == null
                     || ArrErrorByAgeGroupSex.get(i).getAgeGroup() == null
                     || ArrErrorByAgeGroupSex.get(i).getBothSex() == null
@@ -341,16 +337,15 @@ public class ExcelByAgeGroup {
                 arraybyAgeGroup.add(ByAgeGroupSex);
             }   
         }
-      return arrayError;
-      
     }
 
      public ArrayList<byAgeGroupError> error(){
-            
+            getHTML();
             return arrayError;
     }
     
     public ArrayList<ByAgeGroupSex> noError(){
+        getHTML();
         return arraybyAgeGroup;
     
     }

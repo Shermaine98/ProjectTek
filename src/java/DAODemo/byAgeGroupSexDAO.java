@@ -32,12 +32,13 @@ public class byAgeGroupSexDAO {
 
             while (rs.next()) {
                 ByAgeGroupSex temp = new ByAgeGroupSex();
+                 temp.setFormID(rs.getInt("formID"));
                  temp.setAgeGroup(rs.getString("ageGroup"));
                  temp.setYear(rs.getInt("censusYear"));
                  temp.setBarangay(rs.getString("location"));
                  temp.setMaleCount(rs.getInt("totalMale"));
                  temp.setFemaleCount(rs.getInt("totalFemale"));
-                 temp.setApproved(rs.getBoolean("approved"));
+                     temp.setValidation(rs.getBoolean("validation"));
                 ArrByAgeGroupSex.add(temp);
             }
             pstmt.close();
@@ -78,18 +79,18 @@ public class byAgeGroupSexDAO {
             DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             Connection conn = myFactory.getConnection();
             String query = " INSERT INTO age_group "
-                    + " (censusYear,location,ageGroup,totalMale,totalFemale,approved) "
-                    + " VALUES (?,?,?,?,?,?); ";
+                    + " (formID,censusYear,location,ageGroup,totalMale,totalFemale,validation) "
+                    + " VALUES (?,?,?,?,?,?,?); ";
             PreparedStatement pstmt = conn.prepareStatement(query);
             int i=0;
             for(ByAgeGroupSex object: newByAgeGroupSex ){
-             
-             pstmt.setInt(1, object.getYear());
-             pstmt.setString(2, object.getBarangay());
-            pstmt.setString(3, object.getAgeGroup());
-            pstmt.setInt(4, object.getMaleCount());
-            pstmt.setInt(5, object.getFemaleCount());
-            pstmt.setBoolean(6, object.isApproved());
+             pstmt.setInt(1, object.getFormID());  
+             pstmt.setInt(2, object.getYear());
+             pstmt.setString(3, object.getBarangay());
+             pstmt.setString(4, object.getAgeGroup());
+             pstmt.setInt(5, object.getMaleCount());
+             pstmt.setInt(6, object.getFemaleCount());
+             pstmt.setBoolean(7, object.isvalidated());
 
                pstmt.addBatch();
                i++;
@@ -108,5 +109,29 @@ public class byAgeGroupSexDAO {
         return false;
     }
     
+     public Integer getFormID() throws SQLException {
+        DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
+        Integer i;
+        try (Connection conn = myFactory.getConnection()) {
+            i = 0;
+            String query = "SELECT MAX(formID) from age_group";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                i = rs.getInt("MAX(formID)");
+            }
+            if (i == 0) {
+                i = 200000000;
+            } else if (i == 299999999) {
+                i = -1;
+            } else {
+                i += 1;
+            }
+            conn.close();
+            pstmt.close();
+            rs.close();
+        }
+        return i;
+    }
     
 }

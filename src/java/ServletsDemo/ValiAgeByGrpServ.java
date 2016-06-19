@@ -5,8 +5,11 @@ import DAODemo.byAgeGroupSexDAO;
 import ModelDemo.ByAgeGroupSex;
 import Servlets.BaseServlet;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -31,29 +34,52 @@ public class ValiAgeByGrpServ extends BaseServlet {
     
     @Override
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+        String errorMessage = request.getParameter("errorMessage");
+        
+        if(errorMessage.equalsIgnoreCase("Error")){
+         String[] locationError = request.getParameterValues("location");
+         String[] ageGroupError = request.getParameterValues("ageGroup");
+         String[] bothSexesError = request.getParameterValues("bothSexes");
+         String[] maleError = request.getParameterValues("male");
+         String[] femaleError = request.getParameterValues("female");
+         
+         
+         
+        }
         String[] location = request.getParameterValues("location");
         String[] ageGroup = request.getParameterValues("ageGroup");
         String[] bothSexes = request.getParameterValues("bothSexes");
         String[] male = request.getParameterValues("male");
         String[] female = request.getParameterValues("female");
         
-       // ArrayList<String> location = new ArrayList<String>(Arrays.asList(request.getParameterValues("location")));
-       
+      int formID =0;
         ByAgeGroupSex byAgeGroupSex;
         byAgeGroupSexDAO ByAgeGroupSexDAO = new byAgeGroupSexDAO();
+        try {
+             formID = ByAgeGroupSexDAO.getFormID();
+        } catch (SQLException ex) {
+            Logger.getLogger(ValiAgeByGrpServ.class.getName()).log(Level.SEVERE, null, ex);
+        }
         ArrayList <ByAgeGroupSex> ArrByAgeGroupSex = new  ArrayList <ByAgeGroupSex>();
         boolean x = false;
+        
        for(int i = 0; i <location.length;i++){
            byAgeGroupSex = new ByAgeGroupSex();
+           byAgeGroupSex.setFormID(formID);
            byAgeGroupSex.setYear(2007);
            byAgeGroupSex.setBarangay(location[i]);
            byAgeGroupSex.setAgeGroup(ageGroup[i]);
            byAgeGroupSex.setBothSex(Integer.parseInt(bothSexes[i].replaceAll(" ", "")));
            byAgeGroupSex.setFemaleCount(Integer.parseInt(male[i].replaceAll(" ", "")));
            byAgeGroupSex.setMaleCount(Integer.parseInt(female[i].replaceAll(" ", "")));
-           byAgeGroupSex.setApproved(false);
+           byAgeGroupSex.setValidation(true);
            ArrByAgeGroupSex.add(byAgeGroupSex);
        }
+       
+       
+       
+       
        x =ByAgeGroupSexDAO.EncodeByAgeGroupSex(ArrByAgeGroupSex);
        
        if(x){

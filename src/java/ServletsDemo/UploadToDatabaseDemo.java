@@ -63,19 +63,18 @@ public class UploadToDatabaseDemo extends BaseServlet {
                 ArrayList<byAgeGroupError> arrTempError = new ArrayList<byAgeGroupError>();
                 ArrayList<ByAgeGroupSex> arrTempNoError = new ArrayList<ByAgeGroupSex>();
 
-               arrTempError = new ExcelByAgeGroup(wb, sheetNumber).getHTML();
-              //  arrTempNoError = new ExcelByAgeGroup(wb, sheetNumber).getHTML();
-                System.out.println("MY SIZE"+ arrTempNoError.size());
-          //      if (arrTempError.size() != 0) {
-                    request.setAttribute("ErrorMessage", "There is an Error");
-                    request.setAttribute("ArrError", arrTempError);
-                  //  request.setAttribute("ArrNoError", arrTempNoError);
-//                } else {
-//                    request.setAttribute("noError", "There is an Error");
-//                    request.setAttribute("ArrNoError", arrTempNoError);
-//                }
-//                System.out.print("ARR SIZE" + arrTempError.size());
-                System.out.print("ARR SIZE" + arrTempNoError.size());
+               arrTempError = new ExcelByAgeGroup(wb, sheetNumber).error();
+               arrTempNoError = new ExcelByAgeGroup(wb, sheetNumber).noError();
+              
+               if (arrTempError.size() != 0) {
+                   request.setAttribute("ErrorMessage", "Error");
+                   request.setAttribute("ArrError", arrTempError);
+                   request.setAttribute("ArrNoError", arrTempNoError);
+                } else {
+                    request.setAttribute("ErrorMessage", "NoError");
+                    request.setAttribute("ArrNoError", arrTempNoError);
+                }
+                
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/valiAgeBySex.jsp");
                 rd.forward(request, response);
             } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("MaritalStatus")) {

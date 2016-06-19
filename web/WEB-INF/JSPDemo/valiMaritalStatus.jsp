@@ -20,7 +20,31 @@
         %>
           <form action="ValiMaritalStatus" method="post">   
         <div align="center" class="container">
-        <table id="dataTable" class="table table-bordered">
+        <div class="box-header with-border">
+                            <center><h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1></center>
+                            <br>
+                            <% String table = null;
+                                String temp  = (String) request.getAttribute("table");
+                                boolean withError = false;
+                                if(temp.contains("bgcolor='#f2dede'")){
+                                    withError = true;
+                              %>
+                                    <div class="callout callout-danger">
+                                        <h4>Oops! There are errors.</h4>
+
+                                        <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
+                                    </div>
+                            <%
+                                }else{
+                            %>
+                                    <div class="callout callout-success">
+                                        <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                                    </div>
+                            <%}%>
+                            <%=temp%>  
+                        </div>
+ 
+            <table id="dataTable" class="table table-bordered">
             <thead>
                 <tr>
                     <th>Location</th>

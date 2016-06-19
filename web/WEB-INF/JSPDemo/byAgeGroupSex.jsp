@@ -14,267 +14,7 @@
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <script src="js/UploadFile.js" type="text/javascript"></script>
-        <script>
-            function myFunction() {
-                var table = document.getElementById("myTable");
-
-                var rowCount = table.rows.length;
-                var row = table.insertRow(rowCount);
-
-                //cell1
-                var cell1 = row.insertCell(0);
-                var div = document.createElement("div");
-                div.setAttribute('class', 'form-group');
-                //Create array of options to be added
-                var array = ["Barangay 2"];
-                //Create and append select list
-                var selectList = document.createElement("select");
-                selectList.id = "selectExpenseType";
-                selectList.name = "selectExpenseType";
-                selectList.setAttribute('class', 'form-control');
-
-                //Create and append the options
-                for (var i = 0; i < array.length; i++) {
-                    var option = document.createElement("option");
-                    option.value = array[i];
-                    option.text = array[i];
-                    selectList.appendChild(option);
-                }
-
-                div.appendChild(selectList);
-                cell1.appendChild(div);
-
-                //cell2
-                var cell2 = row.insertCell(1);
-                var div = document.createElement("div");
-                cell2.innerHTML = "<center>Under 1</center>";
-                cell2.appendChild(div);
-
-                //cell 3
-                var cell3 = row.insertCell(2);
-                var element3 = document.createElement("input");
-                element3.readonly = "true";
-                element3.className = "form-control";
-                element3.disabled = "true";
-                //element6.addEventListener("change", calculate);
-                cell3.appendChild(element3);
-
-                //cell 4
-                var cell4 = row.insertCell(3);
-                var element4 = document.createElement("input");
-                element4.type = "number";
-                element4.name = "totalBudget";
-                element4.required = true;
-                element4.min = "0"
-                element4.max = "99999999999"
-                element4.step = "1"
-                element4.style.width = "100%";
-                element4.className = "form-control";
-                element4.addEventListener("change", calculate);
-                cell4.appendChild(element4);
-
-                //cell 5
-                var cell5 = row.insertCell(4);
-                var element5 = document.createElement("input");
-                element5.type = "number";
-                element5.name = "totalBudget";
-                element5.required = true;
-                element5.min = "0"
-                element5.max = "99999999999"
-                element5.step = "0.01"
-                element5.style.width = "100%";
-                element5.className = "form-control";
-                element5.addEventListener("change", calculate);
-                cell5.appendChild(element5);
-
-                var rowCount = table.rows.length;
-                var row = table.insertRow(rowCount);
-
-                var cell1 = row.insertCell(0);
-                //cell2
-                var cell2 = row.insertCell(1);
-                var div = document.createElement("div");
-                cell2.innerHTML = "<center>1 - 4</center>";
-                cell2.appendChild(div);
-
-                //cell 3
-                var cell3 = row.insertCell(2);
-                var element3 = document.createElement("input");
-                element3.readonly = "true";
-                element3.className = "form-control";
-                element3.disabled = "true";
-                //element6.addEventListener("change", calculate);
-                cell3.appendChild(element3);
-
-                //cell 4
-                var cell4 = row.insertCell(3);
-                var element4 = document.createElement("input");
-                element4.type = "number";
-                element4.name = "totalBudget";
-                element4.required = true;
-                element4.min = "0"
-                element4.max = "99999999999"
-                element4.step = "1"
-                element4.style.width = "100%";
-                element4.className = "form-control";
-                element4.addEventListener("change", calculate);
-                cell4.appendChild(element4);
-
-                //cell 5
-                var cell5 = row.insertCell(4);
-                var element5 = document.createElement("input");
-                element5.type = "number";
-                element5.name = "totalBudget";
-                element5.required = true;
-                element5.min = "0"
-                element5.max = "99999999999"
-                element5.step = "0.01"
-                element5.style.width = "100%";
-                element5.className = "form-control";
-                element5.addEventListener("change", calculate);
-                cell5.appendChild(element5);
-
-                var rowCount = table.rows.length;
-                var row = table.insertRow(rowCount);
-
-                var cell1 = row.insertCell(0);
-
-                //cell2
-                var cell2 = row.insertCell(1);
-                var div = document.createElement("div");
-                cell2.innerHTML = "<center>5 - 9</center>";
-                cell2.appendChild(div);
-
-                //cell 3
-                var cell3 = row.insertCell(2);
-                var element3 = document.createElement("input");
-                element3.readonly = "true";
-                element3.className = "form-control";
-                element3.disabled = "true";
-                //element6.addEventListener("change", calculate);
-                cell3.appendChild(element3);
-
-                //cell 4
-                var cell4 = row.insertCell(3);
-                var element4 = document.createElement("input");
-                element4.type = "number";
-                element4.name = "totalBudget";
-                element4.required = true;
-                element4.min = "0"
-                element4.max = "99999999999"
-                element4.step = "1"
-                element4.style.width = "100%";
-                element4.className = "form-control";
-                element4.addEventListener("change", calculate);
-                cell4.appendChild(element4);
-
-                //cell 5
-                var cell5 = row.insertCell(4);
-                var element5 = document.createElement("input");
-                element5.type = "number";
-                element5.name = "totalBudget";
-                element5.required = true;
-                element5.min = "0"
-                element5.max = "99999999999"
-                element5.step = "0.01"
-                element5.style.width = "100%";
-                element5.className = "form-control";
-                element5.addEventListener("change", calculate);
-                cell5.appendChild(element5);
-
-                var rowCount = table.rows.length;
-                var row = table.insertRow(rowCount);
-
-                var cell1 = row.insertCell(0);
-
-                //cell2
-                var cell2 = row.insertCell(1);
-                var div = document.createElement("div");
-                cell2.innerHTML = "<center>10 - 14</center>";
-                cell2.appendChild(div);
-
-                //cell 3
-                var cell3 = row.insertCell(2);
-                var element3 = document.createElement("input");
-                element3.readonly = "true";
-                element3.className = "form-control";
-                element3.disabled = "true";
-                //element6.addEventListener("change", calculate);
-                cell3.appendChild(element3);
-
-                //cell 4
-                var cell4 = row.insertCell(3);
-                var element4 = document.createElement("input");
-                element4.type = "number";
-                element4.name = "totalBudget";
-                element4.required = true;
-                element4.min = "0"
-                element4.max = "99999999999"
-                element4.step = "1"
-                element4.style.width = "100%";
-                element4.className = "form-control";
-                element4.addEventListener("change", calculate);
-                cell4.appendChild(element4);
-
-                //cell 5
-                var cell5 = row.insertCell(4);
-                var element5 = document.createElement("input");
-                element5.type = "number";
-                element5.name = "totalBudget";
-                element5.required = true;
-                element5.min = "0"
-                element5.max = "99999999999"
-                element5.step = "0.01"
-                element5.style.width = "100%";
-                element5.className = "form-control";
-                element5.addEventListener("change", calculate);
-                cell5.appendChild(element5);
-
-            }
-            function deleteRow() {
-                var table = document.getElementById("myTable");
-
-                var rowCount = table.rows.length;
-                if (rowCount != 3) {
-                    var row = table.deleteRow(rowCount - 1);
-                }
-            }
-
-            function calculate() {
-                var table = document.getElementById("myTable");
-                var rowCount = table.rows.length;
-                var sum = 0;
-                for (var i = 1; i < rowCount; i++) {
-                    var male = document.getElementById("myTable").rows[i].cells[3].children[0].value;
-                    var female = document.getElementById("myTable").rows[i].cells[4].children[0].value;
-                    //if(male != null && male!= "" && female!=null && female!=""){
-                    //  if((isNaN(qty)|| Math.sign(parseInt(qty)) == -1 || Math.sign(parseInt(qty)) == -0 || Math.sign(parseInt(qty)) == 0) 
-                    //&& (isNaN(costingamt) || Math.sign(parseFloat(costingamt)) == -1 || Math.sign(parseFloat(costingamt)) == -0 || Math.sign(parseFloat(costingamt)) == 0 )){
-                    //  alert("Quantity and Costing Amount should both be positive numbers");
-                    //document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group has-error');
-                    //document.getElementById("myTable").rows[i].cells[4].children[0].setAttribute('class','form-group has-error');
-                    //}
-                    //else if(isNaN(male)|| Math.sign(parseInt(male)) == -1 || Math.sign(parseInt(male)) == -0 || Math.sign(parseInt(male)) == 0 ){
-                    //  document.getElementById("myTable").rows[i].cells[4].children[0].setAttribute('class','form-group');
-                    //  alert("Quantity should be a positive number");
-                    //  document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group has-error');
-                    //}
-                    //else if(isNaN(female) || Math.sign(parseFloat(female)) == -1 || Math.sign(parseFloat(female)) == -0 || Math.sign(parseFloat(female)) == 0 ){
-                    //  document.getElementById("myTable").rows[i].cells[3].children[0].setAttribute('class', 'form-group');
-                    //  alert("Costing Amount should be a positive number");
-                    //  document.getElementById("myTable").rows[i].cells[4].children[0].setAttribute('class','form-group has-error');
-                    //} else {
-                    sum = parseInt(male) + parseInt(female);
-                    document.getElementById("myTable").rows[i].cells[2].children[0].value = sum;
-                }
-            }
-            //}
-            //}
-
-
-
-
-        </script>
+       
         <style>
             input[type="file"] {
                 display: none;
@@ -296,8 +36,8 @@
                 display:block;
             }
         </style>   
-        
-        
+
+
     </head>
 
     <body>
@@ -396,6 +136,9 @@
     </body>
     <script>
         document.getElementById('file').onchange = uploadOnChange;
+        var isExcel = function (name) {
+            return name.match(/xls$/i);
+        };
 
         function uploadOnChange() {
             var filename = this.value;
@@ -404,12 +147,13 @@
                 filename = filename.substring(lastIndex + 1);
             }
 
-            if (filename != "") {
+            if (filename != "" && isExcel(filename)) {
                 document.getElementById('filename').innerHTML = filename;
                 document.getElementById('filename').style.fontStyle = 'italic';
                 document.getElementById('filename').style.color = '#cc5200';
                 document.getElementById('submit').style.display = "block";
             } else {
+                alert('Please The Correct File');
                 document.getElementById('filename').style.fontStyle = 'normal';
                 document.getElementById('filename').style.color = '#333333';
                 document.getElementById('filename').innerHTML = '<i class="fa fa-cloud-upload"></i> Upload File';

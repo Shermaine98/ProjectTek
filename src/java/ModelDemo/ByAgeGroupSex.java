@@ -10,13 +10,14 @@ package ModelDemo;
  * @author shermainesy
  */
 public class ByAgeGroupSex {
+    private int formID;
   private int year;
   private String AgeGroup;
   private String barangay;
   private int femaleCount;
   private int maleCount;
   private int bothSex;
-  private boolean approved;
+  private boolean validation;
 
     public int getBothSex() {
         return bothSex;
@@ -99,14 +100,28 @@ public class ByAgeGroupSex {
     /**
      * @return the approved
      */
-    public boolean isApproved() {
-        return approved;
+    public boolean isvalidated() {
+        return validation;
     }
 
     /**
      * @param approved the approved to set
      */
-    public void setApproved(boolean approved) {
-        this.approved = approved;
+    public void setValidation(boolean validation) {
+        this.validation = validation;
+    }
+
+    /**
+     * @return the formID
+     */
+    public int getFormID() {
+        return formID;
+    }
+
+    /**
+     * @param formID the formID to set
+     */
+    public void setFormID(int formID) {
+        this.formID = formID;
     }
 }

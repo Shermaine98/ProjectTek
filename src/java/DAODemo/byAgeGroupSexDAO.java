@@ -6,6 +6,7 @@
 package DAODemo;
 
 import DB.DBConnectionFactoryStorageDB;
+import Model.record;
 import ModelDemo.ByAgeGroupSex;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -50,22 +51,25 @@ public class byAgeGroupSexDAO {
         return null;
     }
     
-    public ArrayList<Integer> GetAllCensusYear() throws ParseException {
+    public ArrayList<record> GetAllValidated() throws ParseException {
         try {
             DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
-            ArrayList<Integer> censusYear = new ArrayList<Integer>();
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("SELECT censusYear from age_group group by censusYear;");
+            ArrayList<record> records = new ArrayList<record>();
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM record where formID >=20000 && `validation` =1;");
             ResultSet rs = pstmt.executeQuery();
-
+            
             while (rs.next()) {
-             int i =0;
-              i =  rs.getInt("censusYear");
-                censusYear.add(i);
+                 record temp = new record();
+                 temp.setFormName(rs.getString("formID"));
+                 temp.setCensusYear(rs.getInt("censusYear"));
+                 temp.setValidation(rs.getBoolean("validation"));
+                 temp.setApproved(rs.getBoolean("approved"));
+                 records.add(temp);
             }
             pstmt.close();
             conn.close();
-            return censusYear;
+            return records;
         } catch (SQLException ex) {
             Logger.getLogger(byAgeGroupSexDAO.class.getName()).log(Level.SEVERE, null, ex);
         }

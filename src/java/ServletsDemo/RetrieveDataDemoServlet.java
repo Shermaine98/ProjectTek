@@ -1,6 +1,7 @@
 package ServletsDemo;
 
 import DAODemo.byAgeGroupSexDAO;
+import Model.record;
 import Servlets.BaseServlet;
 import java.io.IOException;
 import java.text.ParseException;
@@ -37,12 +38,13 @@ public class RetrieveDataDemoServlet extends BaseServlet {
             byAgeGroupSexDAO byAgeGroupSexDAO = new byAgeGroupSexDAO();
     //Demo        
              if(redirect.equalsIgnoreCase("byAgeGroupSex")){
-//                 ArrayList<Integer> censusYear = new ArrayList<Integer>();
-//                try {
-//                    censusYear = byAgeGroupSexDAO.GetAllCensusYear();
-//                } catch (ParseException ex) {
-//                    Logger.getLogger(RetrieveDataDemoServlet.class.getName()).log(Level.SEVERE, null, ex);
-//                }
+                ArrayList<record> records = new ArrayList<record>();
+            
+                try {
+                    records = byAgeGroupSexDAO.GetAllValidated();
+                } catch (ParseException ex) {
+                    Logger.getLogger(RetrieveDataDemoServlet.class.getName()).log(Level.SEVERE, null, ex);
+                }
               //  System.out.print(censusYear.size());
              if(saveToDb!=null && saveToDb.equalsIgnoreCase("successDB")){
              request.setAttribute("saveToDB", "success");
@@ -51,7 +53,7 @@ public class RetrieveDataDemoServlet extends BaseServlet {
                  request.setAttribute("saveToDB", "none");
              request.setAttribute("page", "byAgeGroupSex");
              }
-            // request.setAttribute("censusYear", censusYear);
+             request.setAttribute("validatedRecords", records);
              rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/byAgeGroupSex.jsp");
              rd.forward(request, response);
             } else if(redirect.equalsIgnoreCase("MaritalStatus")){

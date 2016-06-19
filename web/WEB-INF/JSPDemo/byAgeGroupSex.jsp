@@ -3,6 +3,8 @@
     Created on : Jun 8, 2016, 10:13:59 PM
     Author     : Geraldine Atayan
 --%>
+<%@page import="Model.record"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ include file="../JSPImports/importsAide.jsp" %>
 <!DOCTYPE html>
@@ -122,7 +124,9 @@
                         </div>
 
                         <!--End of RIGHT Box-->
-
+<%
+                                   ArrayList<record> records = (ArrayList<record>) request.getAttribute("validatedRecords");%>
+                             
                         <div class="col-md-12">
                             <div class="box box-default" style="height: 300px;" >
                                 <div class="box-header">
@@ -131,13 +135,17 @@
                                 <div class="box-body">
                                     <table class="table">
                                         <tr>
-                                            <th>Hello</th>
-                                            <th>Hello</th>
+                                            <th>Census Year</th>
+                                            <th>Approved</th>
                                         </tr>
+                                        <%for(int i=0; i <records.size();i++){ %>
                                         <tr>
-                                            <td>Yo</td>
-                                            <td>Yooo</td>
+                                            <td><%=records.get(i).getCensusYear() %></td>
+                                            <td><%=records.get(i).isApproved()%></td>
                                         </tr>
+                                        <%
+                                        }
+                                        %>
                                     </table>
                                 </div>
                                 <!-- /.box-body -->

@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Project TEK | Dashboard </title>
+        <title>Reports Library | Household Population 10 years old & over by Age group, Sex and Marital Status</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <script src="js/UploadFile.js" type="text/javascript"></script> 
@@ -36,36 +36,91 @@
             }
         </style>        
     </head>
-    <body class="hold-transition skin-yellow-light fixed sidebar-mini">
-       
+
+    <body>
+
         <div class="wrapper">
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1 style='font-family:"Trebuchet MS", Helvetica, sans-serif'><i class="fa fa-files-o"></i> Reports Library</h1>
+                    <h1><i class="fa fa-files-o"></i> Reports Library</h1>
                 </section>
-
                 <ol class="breadcrumb" style='background: transparent; margin-left: 3%; font-size: 120%;'>
-                    <li>Demographics</li>
-                    <li class="active">Household Population 10 years old & over by Age group, Sex and Marital Status</li>
+                    <li class="title">Demographics</li>
+                    <li class="active title">Household Population 10 years old & over by Age group, Sex and Marital Status</li>
                 </ol>
 
                 <!-- Main content -->
-                <section class="content">
-                    <form action="UploadMaritalStatus" method="post" enctype="multipart/form-data">
-                        <br>
-                        <!--<form id="UploadExcel" >
-                            <input id="file" name="file" type="file" />-->
-                        <label for="file" id="filename" class="custom-file-upload btn btn-block btn-default">
-                            <i class="fa fa-cloud-upload"></i> Upload File
-                        </label>
-                        <input id="file" name="file" type="file" onclick="showDiv()" />
-                            <input  name="UploadFile" type="hidden" value="MaritalStatus" />
-                        <input class="btn btn-flat btn-success button-submit" id="submit" type="submit" value="Submit" style="display:none"/>
-                    </form>                
-                    <!--/form>-->
-                    <br><br>
+                <section class="content">              
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box box-success" style="padding-bottom: 5%;">
+                                <div class="box-header">
+                                    <h3 class="box-title">Upload A New Report</h3>
+                                </div>
+                                <div class="box-body">
+                                    <form action="UploadMaritalStatus" method="post" enctype="multipart/form-data">
+                                        <label for="file" id="filename" class="custom-file-upload btn btn-block btn-default">
+                                            <i class="fa fa-cloud-upload"></i> Upload File
+                                        </label>
+                                        <input id="file" name="file" type="file" onclick="showDiv()" />
+                                        <input  name="UploadFile" type="hidden" value="MaritalStatus" />
+                                        <input class="btn btn-flat btn-success button-submit" id="submit" type="submit" value="Submit" style="display:none"/>
+                                    </form>  
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!--End of LEFT COLUMN-->
+
+                        <div class="col-md-6">
+                            <div class="box box-danger" style="height: 300px;" >
+                                <div class="box-header">
+                                    <h3 class="box-title">Incomplete Reports</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Hello</th>
+                                            <th>Hello</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Yo</td>
+                                            <td>Yooo</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+
+                        <!--End of RIGHT Box-->
+
+                        <div class="col-md-12">
+                            <div class="box box-default" style="height: 300px;" >
+                                <div class="box-header">
+                                    <h3 class="box-title">Archived Reports</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Hello</th>
+                                            <th>Hello</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Yo</td>
+                                            <td>Yooo</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
                 </section>
                 <!-- /.content -->
             </div>

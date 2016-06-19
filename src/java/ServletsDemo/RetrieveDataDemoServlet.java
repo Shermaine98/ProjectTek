@@ -32,20 +32,26 @@ public class RetrieveDataDemoServlet extends BaseServlet {
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
            
             String redirect = request.getParameter("redirect");
+            String saveToDb = (String) request.getAttribute("saveToDB");
             RequestDispatcher rd= null;
             byAgeGroupSexDAO byAgeGroupSexDAO = new byAgeGroupSexDAO();
     //Demo        
              if(redirect.equalsIgnoreCase("byAgeGroupSex")){
-                 ArrayList<Integer> censusYear = new ArrayList<Integer>();
-                try {
-                    censusYear = byAgeGroupSexDAO.GetAllCensusYear();
-                } catch (ParseException ex) {
-                    Logger.getLogger(RetrieveDataDemoServlet.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                System.out.print(censusYear.size());
-               request.setAttribute("saveToDB", "none");
+//                 ArrayList<Integer> censusYear = new ArrayList<Integer>();
+//                try {
+//                    censusYear = byAgeGroupSexDAO.GetAllCensusYear();
+//                } catch (ParseException ex) {
+//                    Logger.getLogger(RetrieveDataDemoServlet.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+              //  System.out.print(censusYear.size());
+             if(saveToDb!=null && saveToDb.equalsIgnoreCase("successDB")){
+             request.setAttribute("saveToDB", "success");
              request.setAttribute("page", "byAgeGroupSex");
-             request.setAttribute("censusYear", censusYear);
+             }else{
+                 request.setAttribute("saveToDB", "none");
+             request.setAttribute("page", "byAgeGroupSex");
+             }
+            // request.setAttribute("censusYear", censusYear);
              rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/byAgeGroupSex.jsp");
              rd.forward(request, response);
             } else if(redirect.equalsIgnoreCase("MaritalStatus")){

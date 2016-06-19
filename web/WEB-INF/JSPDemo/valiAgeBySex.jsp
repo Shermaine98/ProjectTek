@@ -21,13 +21,15 @@
         <!--DataTable imports-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="cssImported/datatables.min.css"/>
-
         <script type="text/javascript" src="jsImported/datatables.min.js"></script>
-
 
         <script>
             $(document).ready(function () {
-                $('#dataTable').DataTable();
+                $('#dataTable').DataTable({
+                    "paging": true,
+                    "ordering": true,
+                    "info": true
+                });
             });
         </script>
         <style>
@@ -54,7 +56,6 @@
                 margin: 0 auto;
             }
         </style>
-
 
     </head>
     <body>
@@ -85,7 +86,7 @@
                                     } else {
                                     %>
                                     <div class="callout callout-success">
-                                        <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                                        <p>Successfully Save into Database</p>
                                     </div>
                                     <%}%> 
                                 </div>

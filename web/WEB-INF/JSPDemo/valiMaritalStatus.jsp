@@ -18,9 +18,9 @@
                     
                     ArrayList<MaritalStatusTemp> MaritalStatusTemp = (ArrayList<MaritalStatusTemp>) request.getAttribute("arrTempMarital");
         %>
-          <form action="ValiAgeByGrpServ" method="post">   
+          <form action="ValiMaritalStatus" method="post">   
         <div align="center" class="container">
-        <table id="productionInventory" class="table table-bordered">
+        <table id="dataTable" class="table table-bordered">
             <thead>
                 <tr>
                     <th>Location</th>
@@ -28,7 +28,7 @@
                      <th>Age Group</th>
                     <th>Single</th>
                     <th>Married</th>
-                    <th>Windowed</th>
+                    <th>Widowed</th>
                      <th>Divorced/Separated</th>
                     <th>Common Law/ Live-in</th>
                      <th>Unknown</th>

@@ -51,7 +51,7 @@ public class byAgeGroupSexDAO {
 
      public boolean EncodeByAgeGroupSex(ArrayList<ByAgeGroupSex> newByAgeGroupSex) {
         try {
-            int rows = 0;
+           
             DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             Connection conn = myFactory.getConnection();
             String query = " INSERT INTO age_group "

@@ -18,18 +18,18 @@
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
+        <!--DataTable imports-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-        <!--        <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
-                <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
-        
-                <script>
-                    $(document).ready(function () {
-                        $('#dataTable').DataTable({
-                            "paging": true,
-                            "info": true
-                        });
-                    });
-                </script>-->
+        <link rel="stylesheet" type="text/css" href="cssImported/datatables.min.css"/>
+
+        <script type="text/javascript" src="jsImported/datatables.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                $('#dataTable').DataTable();
+            });
+        </script>
         <style>
             .loading {
                 display:none;
@@ -48,19 +48,14 @@
                 background: transparent;
                 border: none;
             }
+            .DT{
+                width: 95%;
+                align-content: center;
+                margin: 0 auto;
+            }
         </style>
 
-        <script>
-            function resizeInput() {
-                $(this).attr('size', $(this).val().length);
-            }
 
-            $('input[type="text"]')
-                    // event handler
-                    .keyup(resizeInput)
-                    // resize on page load
-                    .each(resizeInput);
-        </script>
     </head>
     <body>
         <div class="preload">
@@ -73,34 +68,32 @@
                     <section class="content">
                         <div class="row">
                             <form action="ValiAgeByGrpServ" method="post"> 
+                                <div class="box-header with-border">
 
-                                <div align="center" class="container">
-                                    <div class="box-header with-border">
+                                    <center><h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1></center>
+                                    <br>
+                                    <%
+                                        String temp = (String) request.getAttribute("ErrorMessage");
+                                        if (temp.equalsIgnoreCase("Error")) {
+                                    %>
+                                    <div class="callout callout-danger">
+                                        <h4>Oops! There are errors.</h4>
 
-                                        <center><h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1></center>
-                                        <br>
-                                        <%
-                                            String temp = (String) request.getAttribute("ErrorMessage");
-                                            if (temp.equalsIgnoreCase("Error")) {
-                                        %>
-                                        <div class="callout callout-danger">
-                                            <h4>Oops! There are errors.</h4>
-
-                                            <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
-                                        </div>
-                                        <%
-                                        } else {
-                                        %>
-                                        <div class="callout callout-success">
-                                            <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
-                                        </div>
-                                        <%}%> 
+                                        <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
                                     </div>
-                                    <input class="btn btn-flat btn-success" type="submit" value="Submit"/>
-                                    <%if (temp.equalsIgnoreCase("Error")) {
+                                    <%
+                                    } else {
+                                    %>
+                                    <div class="callout callout-success">
+                                        <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                                    </div>
+                                    <%}%> 
+                                </div>
+                                <%if (temp.equalsIgnoreCase("Error")) {
                                         ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
 
-                                    <table id="dataTable" class="table table-bordered">
+                                <div class="DT">
+                                    <table id="dataTable" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>Location</th>
@@ -130,12 +123,14 @@
                                         %>
                                         </tbody>
                                     </table>
+                                </div>
 
-                                    <%
-                                        }
-                                        ArrayList<ByAgeGroupSex> ByAgeGroupSex = (ArrayList<ByAgeGroupSex>) request.getAttribute("ArrNoError");
-                                    %>
-                                    <table id="dataTable" class="table table-bordered">
+                                <%
+                                    }
+                                    ArrayList<ByAgeGroupSex> ByAgeGroupSex = (ArrayList<ByAgeGroupSex>) request.getAttribute("ArrNoError");
+                                %>
+                                <div class="DT">
+                                    <table id="dataTable" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>Location</th>
@@ -164,8 +159,9 @@
                                             %>
                                         </tbody>
                                     </table>
-
                                 </div>
+                                <input class="btn btn-flat btn-success" type="submit" value="Submit" style="float:right;
+                                       margin-right: 3%; margin-top: 3%; margin-bottom: 1%"/>
                             </form>
                         </div>
                     </section>
@@ -174,10 +170,11 @@
         </div>
         <script>
             $(function () {
-                $(".preload").fadeOut(10000, function () {
+                $(".preload").fadeOut(9000, function () {
                     $(".loading").fadeIn(1000);
                 });
             });
         </script>    
     </body>
+    <%@ include file="../JSPImports/footer.html" %>
 </html>

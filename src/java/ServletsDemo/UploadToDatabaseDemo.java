@@ -3,6 +3,7 @@ package ServletsDemo;
 import Excel.ExcelToHtml;
 import ExcelDemo.ExcelMaritalStatus;
 import ExcelDemo.ExcelByAgeGroup;
+import ModelDemo.ByAgeGroupSex;
 import ModelDemo.MaritalStatus;
 import ModelDemoError.MaritalStatusTemp;
 import ModelDemoError.byAgeGroupError;
@@ -37,12 +38,11 @@ public class UploadToDatabaseDemo extends BaseServlet {
      * @throws ServletException
      * @throws IOException
      */
-    
     @Override
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-           
-         InputStream inputStream = null;
-        
+
+        InputStream inputStream = null;
+
         Part filePart = request.getPart("file");
         int sheetNumber = -1;
 
@@ -58,18 +58,29 @@ public class UploadToDatabaseDemo extends BaseServlet {
             }
         }
         if (sheetNumber != -1) {
-             request.setAttribute("SheetName", "True");
+            request.setAttribute("SheetName", "True");
             if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("AgeGroup")) {
-             ArrayList<byAgeGroupError> arrTemp = new ArrayList<byAgeGroupError>();
-            
-                arrTemp = new ExcelByAgeGroup(wb, sheetNumber).getHTML();
-             request.setAttribute("arrayTemp", arrTemp); 
-             System.out.print("ARR SIZE" +arrTemp.size());          
-            RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/valiAgeBySex.jsp");
-             rd.forward(request, response);               
+                ArrayList<byAgeGroupError> arrTempError = new ArrayList<byAgeGroupError>();
+                ArrayList<ByAgeGroupSex> arrTempNoError = new ArrayList<ByAgeGroupSex>();
+
+               arrTempError = new ExcelByAgeGroup(wb, sheetNumber).getHTML();
+              //  arrTempNoError = new ExcelByAgeGroup(wb, sheetNumber).getHTML();
+                System.out.println("MY SIZE"+ arrTempNoError.size());
+          //      if (arrTempError.size() != 0) {
+                    request.setAttribute("ErrorMessage", "There is an Error");
+                    request.setAttribute("ArrError", arrTempError);
+                  //  request.setAttribute("ArrNoError", arrTempNoError);
+//                } else {
+//                    request.setAttribute("noError", "There is an Error");
+//                    request.setAttribute("ArrNoError", arrTempNoError);
+//                }
+//                System.out.print("ARR SIZE" + arrTempError.size());
+                System.out.print("ARR SIZE" + arrTempNoError.size());
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/valiAgeBySex.jsp");
+                rd.forward(request, response);
             } else if (sheetNumber > -1 && uploadFile.equalsIgnoreCase("MaritalStatus")) {
-               ArrayList<MaritalStatusTemp> arrTemp = new ArrayList<MaritalStatusTemp>();
-                 arrTemp = new ExcelMaritalStatus(wb, sheetNumber).getHTML();
+                ArrayList<MaritalStatusTemp> arrTemp = new ArrayList<MaritalStatusTemp>();
+                arrTemp = new ExcelMaritalStatus(wb, sheetNumber).getHTML();
                 request.setAttribute("arrTempMarital", arrTemp);
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSPDemo/valiMaritalStatus.jsp");
                 rd.forward(request, response);
@@ -85,8 +96,8 @@ public class UploadToDatabaseDemo extends BaseServlet {
                 arrSheet.add(wb.getSheetName(i));
                 request.setAttribute("SheetName", "False");
                 request.setAttribute("SheetName", arrSheet);
-                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/home.jsp");
-                 rd.forward(request, response);
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/home.jsp");
+                rd.forward(request, response);
             }
         }
 
@@ -97,6 +108,5 @@ public class UploadToDatabaseDemo extends BaseServlet {
 //            RequestDispatcher rd = context.getRequestDispatcher("/WEB-INF/JSPDemo/ER");
 //            rd.forward(request, response);
 //        }
-          
-}
+    }
 }

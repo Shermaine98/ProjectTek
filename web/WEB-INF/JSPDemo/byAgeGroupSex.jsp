@@ -281,7 +281,7 @@
             }
             .custom-file-upload {
                 padding: 6px 12px;
-                width: 40%;
+                width: 75%;
                 height: 45px;
                 line-height: 45px;
                 margin:0px auto; 
@@ -292,42 +292,107 @@
             }
             .button-submit{
                 width: 13%;
-                margin:5% auto; 
+                margin:7% auto 0 auto; 
                 display:block;
             }
-        </style>    
-
+        </style>   
+        
+        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     </head>
+
     <body class="hold-transition skin-yellow-light fixed sidebar-mini">
+
+
         <div class="wrapper">
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1 style='font-family:"Trebuchet MS", Helvetica, sans-serif'><i class="fa fa-files-o"></i> Reports Library</h1>
+                    <h1 style='font-family: "Nunito", sans-serif;'><i class="fa fa-files-o"></i> Reports Library</h1>
                 </section>
 
                 <ol class="breadcrumb" style='background: transparent; margin-left: 3%; font-size: 120%;'>
-                    <li>Demographics</li>
-                    <li class="active">Household Population by Age group and Sex</li>
+                    <li style='font-family: "Nunito", sans-serif;'>Demographics</li>
+                    <li style='font-family: "Nunito", sans-serif;' class="active">Household Population by Age group and Sex</li>
                 </ol>
 
                 <!-- Main content -->
-                <section class="content">
-                    <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
-                        <br>
-                        <label for="file" id="filename" class="custom-file-upload btn btn-block btn-default">
-                            <i class="fa fa-cloud-upload"></i> Upload File
-                        </label>
-                        <input id="file" name="file" type="file" onclick="showDiv()" />
-                        <input  name="UploadFile" type="hidden" value="AgeGroup" />
-                        <input class="btn btn-flat btn-success button-submit" id="submit" type="submit" value="Submit" style="display:none"/>
-                    </form>                
-                    <!--/form>-->
-                    <br><br>
-                </section>
 
-            </div>       
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="box box-success" style="padding-bottom: 5%;">
+                                <div class="box-header">
+                                    <h3 class="box-title">Upload A New Report</h3>
+                                </div>
+                                <div class="box-body">
+                                    <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
+                                        <br>
+                                        <label for="file" id="filename" class="custom-file-upload btn btn-block btn-default">
+                                            <i class="fa fa-cloud-upload"></i> Upload File
+                                        </label>
+                                        <input id="file" name="file" type="file" onclick="showDiv()" />
+                                        <input  name="UploadFile" type="hidden" value="AgeGroup" />
+                                        <input class="btn btn-flat btn-success button-submit" id="submit" type="submit" value="Submit" style="display:none"/>
+                                    </form>                
+                                    <!--/form>-->
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!--End of LEFT COLUMN-->
+
+                        <div class="col-md-6">
+                            <div class="box box-danger" style="height: 300px;" >
+                                <div class="box-header">
+                                    <h3 class="box-title">Incomplete Reports</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Hello</th>
+                                            <th>Hello</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Yo</td>
+                                            <td>Yooo</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+
+                        <!--End of RIGHT Box-->
+
+                        <div class="col-md-12">
+                            <div class="box box-danger" style="height: 300px;" >
+                                <div class="box-header">
+                                    <h3 class="box-title">Archived Reports</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Hello</th>
+                                            <th>Hello</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Yo</td>
+                                            <td>Yooo</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                    </div>
+
+                </section>
+            </div>   
         </div>
         <!-- ./wrapper -->
     </body>

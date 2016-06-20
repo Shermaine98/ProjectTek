@@ -29,6 +29,12 @@
                     "ordering": true,
                     "info": true
                 });
+
+                $('#dataTableError').DataTable({
+                    "paging": true,
+                    "ordering": true,
+                    "info": true
+                });
             });
         </script>
         <style>
@@ -93,7 +99,7 @@
                                         ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
 
                                 <div class="DT" id="errorsDiv">
-                                    <table id="dataTable" class="table table-striped table-bordered">
+                                    <table id="dataTableError" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
                                                 <th>Location</th>
@@ -165,6 +171,7 @@
                                 </div>
                                 <input class="btn btn-flat btn-success" type="submit" value="Submit" style="float:right;
                                        margin-right: 3%; margin-top: 3%; margin-bottom: 1%"/>
+                           <input type="hidden" name="year" class="year" id="year" />
                             </form>
                         </div>
                     </section>
@@ -188,7 +195,7 @@
 
                 document.body.innerHTML = originalContents;
             }
-
+        document.getElementById('year').setAttribute('value', new Date().getFullYear());
         </script>    
     </body>
     <%@ include file="../JSPImports/footer.html" %>

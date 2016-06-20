@@ -46,6 +46,7 @@ public class ValiAgeByGrpServ extends BaseServlet {
         String[] bothSexes = request.getParameterValues("bothSexes");
         String[] male = request.getParameterValues("male");
         String[] female = request.getParameterValues("female");
+        String year = request.getParameter("year");
         
       int formID =0;
         ByAgeGroupSex byAgeGroupSex;
@@ -61,7 +62,7 @@ public class ValiAgeByGrpServ extends BaseServlet {
        for(int i = 0; i <location.length;i++){
            byAgeGroupSex = new ByAgeGroupSex();
            byAgeGroupSex.setFormID(formID);
-           byAgeGroupSex.setYear(2007);
+           byAgeGroupSex.setYear(Integer.parseInt(year.trim()));
            byAgeGroupSex.setBarangay(location[i]);
            byAgeGroupSex.setAgeGroup(ageGroup[i]);
            byAgeGroupSex.setBothSex(Integer.parseInt(bothSexes[i].replaceAll(" ", "")));

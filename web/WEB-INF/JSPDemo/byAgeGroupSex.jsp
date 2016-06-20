@@ -36,15 +36,15 @@
                     if (temp.equalsIgnoreCase("success")) {
                 %>
                 <div class="callout callout-success">
-                    <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                     <h4>Success! There are no errors.</h4>
+                    <p>Successfully Saved Report.</p>
                 </div>
                 <%
                 } else if (temp.equalsIgnoreCase("notSuccess")) {
                 %>
                 <div class="callout callout-danger">
                     <h4>Oops! There are errors.</h4>
-
-                    <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
+                    <p>There seems to be an error while translating your data</p>
                 </div>
 
                 <%}%> 
@@ -58,7 +58,7 @@
                             <div class="box box-success" style="padding-bottom: 5%;">
                                 <div class="box-header">
                                     <h3 class="box-title">Upload A New Report For The Year 
-                                        <input type="text" class="year" id="year" readonly /></h3>
+                                        <input type="text" name="year" class="year" id="year" readonly /></h3>
                                 </div>
                                 <div class="box-body">
                                     <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
@@ -86,12 +86,12 @@
                                 <div class="box-body">
                                     <table class="table">
                                         <tr>
-                                            <th>Hello</th>
-                                            <th>Hello</th>
+                                            <th>Census Year</th>
+                                            <th>Number of Missing Fields</th>
                                         </tr>
                                         <tr>
-                                            <td>Yo</td>
-                                            <td>Yooo</td>
+                                            <td>2010</td>
+                                            <td>3</td>
                                         </tr>
                                     </table>
                                 </div>

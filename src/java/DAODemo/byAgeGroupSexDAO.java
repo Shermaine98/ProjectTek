@@ -61,7 +61,7 @@ public class byAgeGroupSexDAO {
             
             while (rs.next()) {
                  record temp = new record();
-                 temp.setFormName(rs.getString("formID"));
+                 temp.setFormID(rs.getInt("formID"));
                  temp.setCensusYear(rs.getInt("censusYear"));
                  temp.setValidation(rs.getBoolean("validation"));
                  temp.setApproved(rs.getBoolean("approved"));

@@ -11,23 +11,24 @@ package Model;
  */
 public class record {
     
-    private String formName;
+    private int formID;
     private int censusYear;
     private boolean validation;
     private boolean approved;
+    private int approvedBy;
 
     /**
      * @return the formName
      */
-    public String getFormName() {
-        return formName;
+    public int getFormID() {
+        return formID;
     }
 
     /**
      * @param formName the formName to set
      */
-    public void setFormName(String formName) {
-        this.formName = formName;
+    public void setFormID(int formID) {
+        this.formID = formID;
     }
 
     /**
@@ -70,6 +71,20 @@ public class record {
      */
     public void setApproved(boolean approved) {
         this.approved = approved;
+    }
+
+    /**
+     * @return the approvedBy
+     */
+    public int getApprovedBy() {
+        return approvedBy;
+    }
+
+    /**
+     * @param approvedBy the approvedBy to set
+     */
+    public void setApprovedBy(int approvedBy) {
+        this.approvedBy = approvedBy;
     }
     
     

@@ -49,7 +49,7 @@ public class RetrieveDataDemoServlet extends BaseServlet {
              if(saveToDb!=null && saveToDb.equalsIgnoreCase("successDB")){
              request.setAttribute("saveToDB", "success");
              request.setAttribute("page", "byAgeGroupSex");
-             }else{
+             }else {
                  request.setAttribute("saveToDB", "none");
              request.setAttribute("page", "byAgeGroupSex");
              }

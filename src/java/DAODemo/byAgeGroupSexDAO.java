@@ -56,14 +56,14 @@ public class byAgeGroupSexDAO {
             DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             Connection conn = myFactory.getConnection();
             ArrayList<record> records = new ArrayList<record>();
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM record where formID >=20000 && `validation` =1;");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM record where formID >=20000 && `validated` =1;");
             ResultSet rs = pstmt.executeQuery();
             
             while (rs.next()) {
                  record temp = new record();
                  temp.setFormID(rs.getInt("formID"));
                  temp.setCensusYear(rs.getInt("censusYear"));
-                 temp.setValidation(rs.getBoolean("validation"));
+                 temp.setValidation(rs.getBoolean("validated"));
                  temp.setApproved(rs.getBoolean("approved"));
                  records.add(temp);
             }

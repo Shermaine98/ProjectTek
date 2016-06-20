@@ -105,34 +105,13 @@ and open the template in the editor.
                                     <i class="fa fa-bell-o"></i>
                                     <span class="label label-danger">10</span></a>
                                 <ul class="dropdown-menu">
-                                    <li class="header">You have 10 notifications</li>
+                                    <li class="header">You have 0 notifications</li>
                                     <li>
                                         <!-- inner menu: contains the actual data -->
                                         <ul class="menu">
                                             <li>
                                                 <a href="#">
                                                     <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                                                    page and may cause design problems
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-users text-red"></i> 5 new members joined
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-user text-red"></i> You changed your username
                                                 </a>
                                             </li>
                                         </ul>
@@ -180,7 +159,7 @@ and open the template in the editor.
                                 <span>Reports Library</span>
                             </a>
                             <ul class="treeview-menu menu-open" style="display:block; background-color: #f9fafc">
-                                <li class="treeview"><a href="#" style="color: #cc5200">Education<span class="fa fa-angle-left" style="float: right; "></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-mortar-board"></span> Education<span class="fa fa-angle-left" style="float: right; "></span></a>
                                     <ul class="treeview-menu">
                                         <li class="treeview">
                                             <a href="#">Public<span class="fa fa-angle-left" style="float: right; "></span></a>
@@ -206,14 +185,14 @@ and open the template in the editor.
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="treeview"><a href="#" style="color: #cc5200">Demographics<span class="fa fa-angle-left" style="float: right;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-venus-mars"></span> Demographics<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
                                         <li><a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex">Household Population by<br/>Age Group and Sex</a></li>
                                         <li><a href="/ProjectTek/ServletAccess?redirect=highestCompleted">Household Population 5<br/>years old and over by Highest<br/>Grade/Year Completed,<br/>age group and sex</a></li>
                                         <li><a href="/ProjectTek/ServletAccess?redirect=maritalStatus">Household Population 10<br/>years old and over by Age<br/>Group, Sex, and<br/> Marital Status </a></li>
                                     </ul>
                                 </li>
-                                <li class="treeview"><a href="#" style="color: #cc5200">Health<span class="fa fa-angle-left" style="float: right;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-plus-square"></span> Health<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
                                         <li><a href="/ProjectTek/ServletAccess?redirect=liveBirths">Live Birth Per Day</a></li>
                                         <li><a href="/ProjectTek/ServletAccess?redirect=mortality">Mortality Report</a></li>

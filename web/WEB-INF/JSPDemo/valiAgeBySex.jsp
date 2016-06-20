@@ -19,14 +19,14 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link href="cssImported/ValidateCSS.css" rel="stylesheet" type="text/css"/>
         <script src="jsImported/ValidateJS.js" type="text/javascript"></script>
+
+        <!--Pace Imports-->
+        <script src="Pace/pace.js"></script>
+        <link href="Pace/dataurl.css" rel="stylesheet" />
     </head>
     <body>
-        <!--        <div class="preload">
-                    <img src="images/loading_spinner.gif" alt=""/>
-                </div>-->
         <div class="wrapper">
             <!-- Content Wrapper. Contains page content -->
-            <!--<div class="loading">-->
             <div class="content-wrapper">
                 <section class="content">
                     <div class="row">
@@ -54,7 +54,7 @@
                                 <%}%> 
                             </div>
                             <%if (temp.equalsIgnoreCase("Error")) {
-                                        ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
+                                    ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
                             <div class="box-body">
                                 <div class="DT" id="errorsDiv">
                                     <table id="dataTableError" class="table table-striped table-bordered dataTable">
@@ -133,10 +133,11 @@
                             </div>
                         </form>
 
+                        <a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex"><button class="btn btn-block btn-default" style="margin-left: 7%; margin-bottom: 4%; width: 10%"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+                        </a>
                     </div>
                 </section>
             </div>
         </div>
-        <!--</div>--> 
     </body>
 </html>

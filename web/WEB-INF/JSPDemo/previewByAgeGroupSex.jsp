@@ -17,7 +17,7 @@
 
         <style>
             th{
-                
+
                 vertical-align:middle;
             }
             .table tbody td > td.success {
@@ -39,7 +39,7 @@
 
     </head>
     <body class="hold-transition skin-yellow-light fixed sidebar-mini">
-        
+
         <div class="wrapper">
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
@@ -50,33 +50,33 @@
                             <center><h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1></center>
                             <br>
                             <% String table = null;
-                                String temp  = (String) session.getAttribute("table");
+                                String temp = (String) session.getAttribute("table");
                                 boolean withError = false;
-                                if(temp.contains("bgcolor='#f2dede'")){
+                                if (temp.contains("bgcolor='#f2dede'")) {
                                     withError = true;
-                              %>
-                                    <div class="callout callout-danger">
-                                        <h4>Oops! There are errors.</h4>
-
-                                        <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
-                                    </div>
-                            <%
-                                }else{
                             %>
-                                    <div class="callout callout-success">
-                                        <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
-                                    </div>
+                            <div class="callout callout-danger">
+                                <h4>Oops! There are errors.</h4>
+
+                                <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
+                            </div>
+                            <%
+                            } else {
+                            %>
+                            <div class="callout callout-success">
+                                <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                            </div>
                             <%}%>
                             <%=temp%>  
                         </div>
                         <center>
-                        <button onclick="goBack()" class="btn btn-default btn-flat">Go Back</button>
-                        &nbsp;&nbsp;
-                        <%if(withError==true){%>
-                        <button class="btn btn-success btn-flat" disabled="true" style='width:20%'>Next</button>
-                        <%} else{%>
-                        <button class="btn btn-success btn-flat" style='width:20%'>Next</button>
-                        <%}%>
+                            <button onclick="goBack()" class="btn btn-default btn-flat">Go Back</button>
+                            &nbsp;&nbsp;
+                            <%if (withError == true) {%>
+                            <button class="btn btn-success btn-flat" disabled="true" style='width:20%'>Next</button>
+                            <%} else {%>
+                            <button class="btn btn-success btn-flat" style='width:20%'>Next</button>
+                            <%}%>
                         </center>
                         <br>
                     </div>
@@ -87,10 +87,10 @@
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
     </body>
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
 </html>

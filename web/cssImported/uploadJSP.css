@@ -23,6 +23,7 @@ input[type="file"] {
 }
 .box{
     height: 300px;
+    margin-bottom: 5%;
 }
 .table{
     align-content: center;

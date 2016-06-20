@@ -38,7 +38,8 @@
                         <div class="col-md-6">
                             <div class="box box-success" style="padding-bottom: 5%;">
                                 <div class="box-header">
-                                    <h3 class="box-title">Upload A New Report</h3>
+                                    <h3 class="box-title">Upload A New Report For The Year 
+                                        <input type="text" name="year" class="year" id="year" readonly /></h3>
                                 </div>
                                 <div class="box-body">
                                     <form action="UploadMaritalStatus" method="post" enctype="multipart/form-data">
@@ -66,24 +67,14 @@
                                         <table id="incomplete" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
                                             <thead>
                                                 <tr>
-                                                    <th>Rendering engine</th>
-                                                    <th>Browser</th>
-                                                    <th>Platform(s)</th>
+                                                    <th>Census Year</th>
+                                                    <th>Missing Fields</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>Moo</td>
-                                                    <td>Firefox 1.0</td>
-                                                    <td>Win 98+ / OSX.2+</td>
-                                                </tr><tr>
-                                                    <td>Sample 2</td>
-                                                    <td>Firefox 1.5</td>
-                                                    <td>Win 98+ / OSX.2+</td>
-                                                </tr><tr>
-                                                    <td>Gecko</td>
-                                                    <td>Firefox 2.0</td>
-                                                    <td>Win 98+ / OSX.2+</td>
+                                                    <td>2010</td>
+                                                    <td>3</td>
                                                 </tr></tbody>
                                         </table>
                                     </div>
@@ -99,23 +90,21 @@
                                         by Age Group, Sex, and Marital Status</h3>
                                 </div>
                                 <div class="box-body">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Census Year</th>
-                                            <th>Title</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Sample 1</td>
-                                            <td>Sample 11</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sample 1</td>
-                                            <td>Sample 2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sample 1</td>
-                                            <td>Sample 2</td>
-                                        </tr>
+                                    <table id="archived" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                        <thead>
+                                            <tr>
+                                                <th>Census Year</th>
+                                                <th>Report Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2007</td>
+                                                <td>Saved</td>
+                                            </tr><tr>
+                                                <td>2008</td>
+                                                <td>Approved</td>
+                                            </tr></tbody>
                                     </table>
                                 </div>
                                 <!-- /.box-body -->
@@ -130,19 +119,33 @@
                                     <h3 class="box-title">Saved Reports</h3>
                                 </div>
                                 <div class="box-body">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Hello</th>
-                                            <th>Hello</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Yo</td>
-                                            <td>Yooo</td>
-                                        </tr>
+                                    <table id="saved" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                        <thead>
+                                            <tr>
+                                                <th>Rendering engine</th>
+                                                <th>Browser</th>
+                                                <th>Platform(s)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Moo</td>
+                                                <td>Firefox 1.0</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr><tr>
+                                                <td>Sample 2</td>
+                                                <td>Firefox 1.5</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr><tr>
+                                                <td>Gecko</td>
+                                                <td>Firefox 2.0</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr></tbody>
                                     </table>
                                 </div>
+                                <!-- /.box-body -->
                             </div>
-                            <!-- /.box-body -->
+                        </div>
                     </section>
                     <!-- /.content -->
                 </div>

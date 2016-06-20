@@ -29,6 +29,7 @@ and open the template in the editor.
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
+        <!--DataTables--> 
         <link rel="stylesheet" href="AdminLTE/plugins/datatables/dataTables.bootstrap.css">
 
         <style>

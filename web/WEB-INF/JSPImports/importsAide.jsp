@@ -33,6 +33,7 @@ and open the template in the editor.
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
         <style>
             .circles-small{
                 font-size: 60%;
@@ -102,36 +103,15 @@ and open the template in the editor.
                             <li class="dropdown notifications-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-bell-o"></i>
-                                    <span class="label label-danger">10</span></a>
+                                    <span class="label label-danger"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li class="header">You have 10 notifications</li>
+                                    <li class="header">You have 0 notifications</li>
                                     <li>
                                         <!-- inner menu: contains the actual data -->
                                         <ul class="menu">
                                             <li>
                                                 <a href="#">
                                                     <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                                                    page and may cause design problems
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-users text-red"></i> 5 new members joined
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fa fa-user text-red"></i> You changed your username
                                                 </a>
                                             </li>
                                         </ul>
@@ -141,13 +121,23 @@ and open the template in the editor.
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->
                             <% User user = (User) session.getAttribute("user");%>
-                            <li class="user user-menu">
-                                <a href="#" >
-                                    <span class="hidden-xs">
-                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        <b><%= user.getFirstName()%> <%= user.getLastName()%></b> - <%= user.getPosition()%>
-                                    </span>
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                    <b><%= user.getFirstName()%> <%= user.getLastName()%></b>
                                 </a>
+
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <img src="AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                        <p>
+                                            <%= user.getFirstName()%> <%= user.getLastName()%><br/>
+                                            <small><%= user.getPosition()%></small>
+                                        </p>
+                                    </li>
+                                </ul>
                             </li>
                             <!-- Control Sidebar Toggle Button -->
                             <li>
@@ -179,37 +169,49 @@ and open the template in the editor.
                                 <span>Reports Library</span>
                             </a>
                             <ul class="treeview-menu menu-open" style="display:block; background-color: #f9fafc">
-                                <li class="treeview"><a href="#" style="color: #cc5200">Education<span class="fa fa-angle-left" style="float: right; "></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-mortar-board"></span> Education<span class="fa fa-angle-left" style="float: right; "></span></a>
                                     <ul class="treeview-menu">
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eKinderPublic"><i class="fa fa-circle-o circles-small"></i>Kindergarten Data in<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Public Elementary School</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=ePrivateElementary"><i class="fa fa-circle-o circles-small"></i>Enrollment in Private<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Elementary Schools</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=ePrivateKinder"><i class="fa fa-circle-o circles-small"></i>Enrollment in Private<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Kinder Schools</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=ePublicElementary"><i class="fa fa-circle-o circles-small"></i>Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Elementary Schools</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=ePublicSecondary"><i class="fa fa-circle-o circles-small"></i>Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Secondary Schools</a></li> 
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eTotalPublicSecondary"><i class="fa fa-circle-o circles-small"></i>Total Enrollment in Public<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Secondary Schools</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eGovSecondaryTeacherDeployment"><i class="fa fa-circle-o circles-small"></i>Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools - Teacher<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Deployment</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eClassroomFurnitures"><i class="fa fa-circle-o circles-small"></i>Classroom Furniture for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eInstructionalElem"><i class="fa fa-circle-o circles-small"></i>Instructional Rooms for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Elementary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eInstructionalSecondary"><i class="fa fa-circle-o circles-small"></i>Instructional Rooms for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
+                                        <li class="treeview">
+                                            <a href="#">Public<span class="fa fa-angle-left" style="float: right; "></span></a>
+                                            <ul class="treeview-menu">
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=eKinderPublic">Kindergarten Data in<br/>Public Elementary School</a></li>
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=ePublicElementary">Enrollment in Public<br/>Elementary Schools</a></li>
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=ePublicSecondary">Enrollment in Public<br/>Secondary Schools</a></li> 
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=eTotalPublicSecondary">Total Enrollment in Public<br/>Secondary Schools</a></li>
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=eGovSecondaryTeacherDeployment">Government Secondary<br/>Schools - Teacher<br/>Deployment</a></li>
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=eClassroomFurnitures">Classroom Furniture for<br/>Government Secondary<br/>Schools</a></li>
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=eInstructionalElem">Instructional Rooms for<br/>Government Elementary<br/>Schools</a></li>
+                                                <li><a href="/ProjectTek/ServletAccess?redirect=eInstructionalSecondary">Instructional Rooms for<br/>Government Secondary<br/>Schools</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="treeview"><a href="#">Private<span class="fa fa-angle-left" style="float: right; "></span></a>
+                                            <ul class="treeview-menu">
+                                                <li>
+                                                    <a href="/ProjectTek/ServletAccess?redirect=ePrivateElementary">Enrollment in Private<br/>Elementary Schools</a></li>
+                                                <li>
+                                                    <a href="/ProjectTek/ServletAccess?redirect=ePrivateKinder">Enrollment in Private<br/>Kinder Schools</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li class="treeview"><a href="#" style="color: #cc5200">Demographics<span class="fa fa-angle-left" style="float: right;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-venus-mars"></span> Demographics<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex"><i class="fa fa-circle-o circles-small"></i>Household Population by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Age Group and Sex</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=highestCompleted"><i class="fa fa-circle-o circles-small"></i>Household Population 5<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Highest<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grade/Year Completed,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age group and sex</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=maritalStatus"><i class="fa fa-circle-o circles-small"></i>Household Population 10<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Age<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Group, Sex, and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Marital Status </a></li>
+                                        <li><a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex">Household Population by<br/>Age Group and Sex</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=highestCompleted">Household Population 5<br/>years old and over by Highest<br/>Grade/Year Completed,<br/>age group and sex</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=maritalStatus">Household Population 10<br/>years old and over by Age<br/>Group, Sex, and<br/> Marital Status </a></li>
                                     </ul>
                                 </li>
-                                <li class="treeview"><a href="#" style="color: #cc5200">Health<span class="fa fa-angle-left" style="float: right;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-heartbeat"></span> Health<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=liveBirths"><i class="fa fa-circle-o circles-small"></i>Live Birth Per Day</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=mortality"><i class="fa fa-circle-o circles-small"></i>Mortality Report</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=morbidity"><i class="fa fa-circle-o circles-small"></i>Morbidity Report</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=percentageDist"><i class="fa fa-circle-o circles-small"></i>Percentage Distribution of<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Elementary School
-                                                Children<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in Each District in the<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Division of
-                                                Caloocan by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nutritional Status/By Gender</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=numOfDocsNursesMidwives"><i class="fa fa-circle-o circles-small"></i>Total Number of Doctors,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nurses, Midwives</a></li>
-                                        <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=hListOfPrivateGovHosp"><i class="fa fa-circle-o circles-small"></i>List of Private and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Government Hospitals</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=liveBirths">Live Birth Per Day</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=mortality">Mortality Report</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=morbidity">Morbidity Report</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=percentageDist">Percentage Distribution of<br/>Elementary School
+                                                Children<br/>in Each District in the<br/>Division of
+                                                Caloocan by<br/>Nutritional Status/By Gender</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=numOfDocsNursesMidwives">Total Number of Doctors,<br/>Nurses, Midwives</a></li>
+                                        <li><a href="/ProjectTek/ServletAccess?redirect=hListOfPrivateGovHosp">List of Private and<br/>Government Hospitals</a></li>
                                     </ul>
                                 </li>          
                             </ul>

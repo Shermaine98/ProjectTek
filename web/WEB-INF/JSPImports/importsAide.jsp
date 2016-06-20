@@ -9,11 +9,13 @@ and open the template in the editor.
     <head>
         <!-- Bootstrap 3.3.6 -->
         <link rel="stylesheet" href="AdminLTE/bootstrap/css/bootstrap.min.css">
-        <!-- Font Awesome -->
+<!--         Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-        <!-- Ionicons -->
+<!--         Ionicons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
         
+<!--<link href="cssImported/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="cssImported/ionicons.min.css" rel="stylesheet" type="text/css"/>-->
         <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
         <!-- Theme style -->
         <link rel="stylesheet" href="AdminLTE/dist/css/AdminLTE.min.css">
@@ -50,7 +52,8 @@ and open the template in the editor.
         <!-- jQuery 2.2.0 -->
         <script src="AdminLTE/plugins/jQuery/jQuery-2.2.0.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
-        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <script src="AdminLTE/plugins/jQueryUI/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="AdminLTE/plugins/jQueryUI/jquery-ui.js" type="text/javascript"></script>
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
         <script>
             $.widget.bridge('uibutton', $.ui.button);

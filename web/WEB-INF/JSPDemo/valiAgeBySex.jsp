@@ -19,7 +19,6 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
         <!--DataTable imports-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="cssImported/datatables.min.css"/>
         <script type="text/javascript" src="jsImported/datatables.min.js"></script>
 
@@ -93,7 +92,7 @@
                                 <%if (temp.equalsIgnoreCase("Error")) {
                                         ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
 
-                                <div class="DT">
+                                <div class="DT" id="errorsDiv">
                                     <table id="dataTable" class="table table-striped table-bordered">
                                         <thead>
                                             <tr>
@@ -117,15 +116,19 @@
                                                 <td><input name="maleError" type="text" value="<%=byAgeGroupError.get(i).getMaleCount()%>" /></td>
                                                 <td><input name="femaleError" type="text" value="<%=byAgeGroupError.get(i).getFemaleCount()%>" /></td>
                                             </tr>
-                                        <input name="errorMessage" type="hidden" value="<%=temp%>" />
-                                        <%
+                                            <%
 
-                                            }
-                                        %>
+                                                }
+                                            %>
                                         </tbody>
-                                    </table>
-                                </div>
 
+                                    </table>
+                                    <input name="errorMessage" type="hidden" value="<%=temp%>" />
+
+                                </div>
+                                <div align="center">
+                                    <input align="center" class="btn btn-flat btn-success" style="margin: 0 auto 5% auto" onClick="printDiv('errorsDiv')" type="button" value="Print Summary"/>
+                                </div>
                                 <%
                                     }
                                     ArrayList<ByAgeGroupSex> ByAgeGroupSex = (ArrayList<ByAgeGroupSex>) request.getAttribute("ArrNoError");
@@ -147,7 +150,6 @@
 
                                             %>
                                             <tr>
-
                                                 <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" readonly /></td>
                                                 <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" readonly /></td>
                                                 <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" readonly /></td>
@@ -175,6 +177,18 @@
                     $(".loading").fadeIn(1000);
                 });
             });
+
+            function printDiv(divName) {
+                var printContents = document.getElementById(divName).innerHTML;
+                var originalContents = document.body.innerHTML;
+
+                document.body.innerHTML = printContents;
+
+                window.print();
+
+                document.body.innerHTML = originalContents;
+            }
+
         </script>    
     </body>
     <%@ include file="../JSPImports/footer.html" %>

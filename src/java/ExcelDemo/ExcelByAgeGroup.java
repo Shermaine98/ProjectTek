@@ -170,10 +170,10 @@ public class ExcelByAgeGroup {
         }
 
         //WHAT IS THIS FOR
-        if (row.getCell(0) == null
-                && row.getCell(1) == null
-                && row.getCell(2) == null
-                && row.getCell(3) == null) {
+        if (row.getCell(0) == null || row.getCell(0).getCellType() == HSSFCell.CELL_TYPE_BLANK
+                && row.getCell(1) == null || row.getCell(1).getCellType() == HSSFCell.CELL_TYPE_BLANK
+                && row.getCell(2) == null || row.getCell(2).getCellType() == HSSFCell.CELL_TYPE_BLANK
+                && row.getCell(3) == null || row.getCell(3).getCellType() == HSSFCell.CELL_TYPE_BLANK) {
 //                    out.append("<tr><td name='nullValues'></td></tr>");
             return;
         }
@@ -350,7 +350,7 @@ public class ExcelByAgeGroup {
     
     }
     public static boolean isNumeric(String str) {
-        boolean isNumeric = str.chars().allMatch(Character::isDigit);
+        boolean isNumeric =true;//= str.chars().allMatch(Character::isDigit);
         if (isNumeric) {
             return false;
         }

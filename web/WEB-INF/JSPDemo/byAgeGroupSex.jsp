@@ -137,5 +137,4 @@
         <!-- ./wrapper -->
         <script src="jsImported/uploadJSP.js" type="text/javascript"></script>
     </body>
-    <%--<%@ include file="../JSPImports/footer.html" %>--%>
 </html>

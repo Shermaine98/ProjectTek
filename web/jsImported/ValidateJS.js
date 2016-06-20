@@ -11,12 +11,6 @@ $(function () {
     });
 });
 
-$(function () {
-    $(".preload").fadeOut(9000, function () {
-        $(".loading").fadeIn(1000);
-    });
-});
-
 function printDiv(divName) {
     var printContents = document.getElementById(divName).innerHTML;
     var originalContents = document.body.innerHTML;

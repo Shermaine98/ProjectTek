@@ -52,7 +52,7 @@ public class ValiAgeByGrpServ extends BaseServlet {
         ByAgeGroupSex byAgeGroupSex;
         byAgeGroupSexDAO ByAgeGroupSexDAO = new byAgeGroupSexDAO();
         try {
-             formID = ByAgeGroupSexDAO.getFormID();
+             formID = ByAgeGroupSexDAO.getFormID(Integer.parseInt(year.trim()));
         } catch (SQLException ex) {
             Logger.getLogger(ValiAgeByGrpServ.class.getName()).log(Level.SEVERE, null, ex);
         }

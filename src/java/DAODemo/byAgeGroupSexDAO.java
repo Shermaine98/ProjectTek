@@ -103,6 +103,7 @@ public class byAgeGroupSexDAO {
                if(i%1000==0 || i== newByAgeGroupSex.size()){
                pstmt.executeBatch();
                }
+               
                 
             pstmt.close();
             conn.close();
@@ -113,7 +114,7 @@ public class byAgeGroupSexDAO {
         return false;
     }
     
-     public Integer getFormID() throws SQLException {
+     public Integer getFormID(int year) throws SQLException {
         DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
         Integer i;
         try (Connection conn = myFactory.getConnection()) {
@@ -122,14 +123,7 @@ public class byAgeGroupSexDAO {
             PreparedStatement pstmt = conn.prepareStatement(query);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
-                i = rs.getInt("MAX(formID)");
-            }
-            if (i == 0) {
-                i = 200000000;
-            } else if (i == 299999999) {
-                i = -1;
-            } else {
-                i += 1;
+                 i = 200000000 + year;
             }
             conn.close();
             pstmt.close();
@@ -137,5 +131,7 @@ public class byAgeGroupSexDAO {
         }
         return i;
     }
+     
+     
     
 }

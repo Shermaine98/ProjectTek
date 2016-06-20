@@ -11,15 +11,14 @@ $(function () {
     });
 });
 
-function printDiv(divName) {
-    var printContents = document.getElementById(divName).innerHTML;
-    var originalContents = document.body.innerHTML;
+function printDiv(divToPrint) {
+    var x = document.getElementById(divToPrint);
 
-    document.body.innerHTML = printContents;
+    var printPage = window.open('', '_blank');
+    printPage.document.write(x.innerHTML);
+    setTimeout(printPage.print(), 5);
 
-    window.print();
-
-    document.body.innerHTML = originalContents;
+//    window.print();
 }
 
 document.getElementById('year').setAttribute('value', new Date().getFullYear());

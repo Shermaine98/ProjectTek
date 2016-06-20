@@ -151,5 +151,4 @@
             }
         }
     </script>
-    <%@ include file="../JSPImports/footer.html" %>
 </html>

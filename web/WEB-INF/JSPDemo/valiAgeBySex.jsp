@@ -198,5 +198,4 @@
         document.getElementById('year').setAttribute('value', new Date().getFullYear());
         </script>    
     </body>
-    <%@ include file="../JSPImports/footer.html" %>
 </html>

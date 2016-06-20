@@ -93,5 +93,4 @@
             window.history.back();
         }
     </script>
-      <%@ include file="../JSPImports/footer.html" %>
 </html>

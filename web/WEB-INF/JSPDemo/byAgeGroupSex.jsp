@@ -15,31 +15,7 @@
         <title>Reports Library | Household Population by Age Group and Sex</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <script src="js/UploadFile.js" type="text/javascript"></script>
-       
-        <style>
-            input[type="file"] {
-                display: none;
-            }
-            .custom-file-upload {
-                padding: 6px 12px;
-                width: 75%;
-                height: 45px;
-                line-height: 45px;
-                margin:0px auto; 
-                display:block;
-                font-size: 120%;
-                text-align: center;
-                padding:0 5px;
-            }
-            .button-submit{
-                width: 13%;
-                margin:7% auto 0 auto; 
-                display:block;
-            }
-        </style>   
-
-
+        <link href="cssImported/uploadJSP.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body>
@@ -55,24 +31,24 @@
                     <li class="title">Demographics</li>
                     <li class="active title">Household Population by Age Group and Sex</li>
                 </ol>
- <%
-                                    String temp = (String) request.getAttribute("saveToDB");
-                                    if (temp.equalsIgnoreCase("success")) {
-                                %>
-                                <div class="callout callout-success">
-                                    <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
-                                </div>
-                                <%
-                                } else if(temp.equalsIgnoreCase("notSuccess")) {
-                                %>
-                               <div class="callout callout-danger">
-                                    <h4>Oops! There are errors.</h4>
+                <%
+                    String temp = (String) request.getAttribute("saveToDB");
+                    if (temp.equalsIgnoreCase("success")) {
+                %>
+                <div class="callout callout-success">
+                    <p>There are no errors with the Household Population by Age Group and Sex excel file.</p>
+                </div>
+                <%
+                } else if (temp.equalsIgnoreCase("notSuccess")) {
+                %>
+                <div class="callout callout-danger">
+                    <h4>Oops! There are errors.</h4>
 
-                                    <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
-                                </div>
-                                
-                                <%}%> 
-                
+                    <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
+                </div>
+
+                <%}%> 
+
                 <!-- Main content -->
 
                 <section class="content">
@@ -81,7 +57,8 @@
 
                             <div class="box box-success" style="padding-bottom: 5%;">
                                 <div class="box-header">
-                                    <h3 class="box-title">Upload A New Report</h3>
+                                    <h3 class="box-title">Upload A New Report For The Year 
+                                        <input type="text" class="year" id="year" readonly /></h3>
                                 </div>
                                 <div class="box-body">
                                     <form action="UploadToDatabaseDemo" method="post" enctype="multipart/form-data">
@@ -124,9 +101,9 @@
                         </div>
 
                         <!--End of RIGHT Box-->
-<%
+                        <%
                                    ArrayList<record> records = (ArrayList<record>) request.getAttribute("validatedRecords");%>
-                             
+
                         <div class="col-md-12">
                             <div class="box box-default" style="height: 300px;" >
                                 <div class="box-header">
@@ -158,33 +135,7 @@
             </div>   
         </div>
         <!-- ./wrapper -->
+        <script src="jsImported/uploadJSP.js" type="text/javascript"></script>
     </body>
-    <script>
-        document.getElementById('file').onchange = uploadOnChange;
-        var isExcel = function (name) {
-            return name.match(/xls$/i);
-        };
-
-        function uploadOnChange() {
-            var filename = this.value;
-            var lastIndex = filename.lastIndexOf("\\");
-            if (lastIndex >= 0) {
-                filename = filename.substring(lastIndex + 1);
-            }
-
-            if (filename != "" && isExcel(filename)) {
-                document.getElementById('filename').innerHTML = filename;
-                document.getElementById('filename').style.fontStyle = 'italic';
-                document.getElementById('filename').style.color = '#cc5200';
-                document.getElementById('submit').style.display = "block";
-            } else {
-                alert('Please The Correct File');
-                document.getElementById('filename').style.fontStyle = 'normal';
-                document.getElementById('filename').style.color = '#333333';
-                document.getElementById('filename').innerHTML = '<i class="fa fa-cloud-upload"></i> Upload File';
-                document.getElementById('submit').style.display = "none";
-            }
-        }
-    </script>
     <%@ include file="../JSPImports/footer.html" %>
 </html>

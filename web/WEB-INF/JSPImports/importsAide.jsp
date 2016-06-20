@@ -9,13 +9,11 @@ and open the template in the editor.
     <head>
         <!-- Bootstrap 3.3.6 -->
         <link rel="stylesheet" href="AdminLTE/bootstrap/css/bootstrap.min.css">
-<!--         Font Awesome -->
+        <!--Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--         Ionicons -->
+        <!--Ionicons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-        
-<!--<link href="cssImported/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-<link href="cssImported/ionicons.min.css" rel="stylesheet" type="text/css"/>-->
+
         <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
         <!-- Theme style -->
         <link rel="stylesheet" href="AdminLTE/dist/css/AdminLTE.min.css">
@@ -34,7 +32,7 @@ and open the template in the editor.
         <link rel="stylesheet" href="AdminLTE/plugins/daterangepicker/daterangepicker-bs3.css">
         <!-- bootstrap wysihtml5 - text editor -->
         <link rel="stylesheet" href="AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
         <style>
             .circles-small{
                 font-size: 60%;
@@ -44,8 +42,6 @@ and open the template in the editor.
             }
         </style>
     </head>
-
-
 
     <body class="hold-transition skin-yellow-light fixed sidebar-mini">
 
@@ -144,12 +140,12 @@ and open the template in the editor.
                                 </ul>
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->
-                                        <% User user = (User) session.getAttribute("user"); %>
+                            <% User user = (User) session.getAttribute("user");%>
                             <li class="user user-menu">
                                 <a href="#" >
                                     <span class="hidden-xs">
                                         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        <b><%= user.getFirstName() %> <%= user.getLastName() %></b> - <%= user.getPosition() %>
+                                        <b><%= user.getFirstName()%> <%= user.getLastName()%></b> - <%= user.getPosition()%>
                                     </span>
                                 </a>
                             </li>
@@ -171,19 +167,19 @@ and open the template in the editor.
                 <section class="sidebar">
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li class="active header">MAIN NAVIGATION</li>
+                        <li class="header">MAIN NAVIGATION</li>
                         <li>
                             <a href="/ProjectTek/ServletAccess?redirect=home">
                                 <i class="fa fa-dashboard"></i><span>Dashboard</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-files-o"></i>
                                 <span>Reports Library</span>
                             </a>
-                            <ul>
-                                <li style="font-size: 110%; padding-bottom: 8px; color: #cc5200"><a href="#" style="color: #cc5200">Education<span class="fa fa-angle-right" style="float: right; margin-right: 5%; "></span></a>
+                            <ul class="treeview-menu menu-open" style="display:block; background-color: #f9fafc">
+                                <li class="treeview"><a href="#" style="color: #cc5200">Education<span class="fa fa-angle-left" style="float: right; "></span></a>
                                     <ul class="treeview-menu">
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eKinderPublic"><i class="fa fa-circle-o circles-small"></i>Kindergarten Data in<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Public Elementary School</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=ePrivateElementary"><i class="fa fa-circle-o circles-small"></i>Enrollment in Private<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Elementary Schools</a></li>
@@ -197,14 +193,14 @@ and open the template in the editor.
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=eInstructionalSecondary"><i class="fa fa-circle-o circles-small"></i>Instructional Rooms for<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Government Secondary<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Schools</a></li>
                                     </ul>
                                 </li>
-                                <li style="font-size: 110%; padding-bottom: 8px; color: #cc5200"><a href="#" style="color: #cc5200">Demographics<span class="fa fa-angle-right" style="float: right; margin-right: 5%;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200">Demographics<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex"><i class="fa fa-circle-o circles-small"></i>Household Population by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Age Group and Sex</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=highestCompleted"><i class="fa fa-circle-o circles-small"></i>Household Population 5<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Highest<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Grade/Year Completed,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; age group and sex</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=maritalStatus"><i class="fa fa-circle-o circles-small"></i>Household Population 10<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; years old and over by Age<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Group, Sex, and<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Marital Status </a></li>
                                     </ul>
                                 </li>
-                                <li style="font-size: 110%; padding-bottom: 8px; color: #cc5200"><a href="#" style="color: #cc5200">Health<span class="fa fa-angle-right" style="float: right; margin-right: 5%;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200">Health<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=liveBirths"><i class="fa fa-circle-o circles-small"></i>Live Birth Per Day</a></li>
                                         <li style="margin-left: -20px;"><a href="/ProjectTek/ServletAccess?redirect=mortality"><i class="fa fa-circle-o circles-small"></i>Mortality Report</a></li>

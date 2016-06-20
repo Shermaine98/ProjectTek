@@ -127,14 +127,24 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <input class="btn btn-flat btn-success" type="submit" value="Submit" style="float:right;
-                                       margin-right: 3%; margin-top: 3%; margin-bottom: 1%"/>
+
                                 <input type="hidden" name="year" class="year" id="year" />
+                                <div style="width:96%; margin-left: 2%; margin-top: 5%;">   
+                                    <div style="display:inline; float:left;">
+                                        <a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex">
+                                            <input type="button" class="btn btn-flat btn-default" style="width: 100px;" value='Back'>
+                                    </a></div>   
+                                    <div  style="display:inline; float:right;"><input class="btn btn-flat btn-success" type="submit" value="Submit" /></div>
+                                </div>
+                                <div style="">
+                                    
+
+                                    
+                                </div>
                             </div>
                         </form>
 
-                        <a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex"><button class="btn btn-block btn-default" style="margin-left: 7%; margin-bottom: 4%; width: 10%"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
-                        </a>
+
                     </div>
                 </section>
             </div>

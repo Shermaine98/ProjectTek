@@ -27,7 +27,7 @@
                 </section>
                 <ol class="breadcrumb" style='background: transparent; margin-left: 3%; font-size: 120%;'>
                     <li class="title">Demographics</li>
-                    <li class="active title">Household Population 10 years old & over by Age group, Sex and Marital Status</li>
+                    <li class="active title">Household Population 10 years old & over by Age Group, Sex and Marital Status</li>
                 </ol>
 
                 <!-- Main content -->
@@ -55,7 +55,7 @@
                         <!--End of LEFT COLUMN-->
 
                         <div class="col-md-6">
-                            <div class="box box-danger" style="height: 300px;" >
+                            <div class="box box-danger">
                                 <div class="box-header">
                                     <h3 class="box-title">Incomplete Reports</h3>
                                 </div>
@@ -78,10 +78,34 @@
 
                         <!--End of RIGHT Box-->
 
-                        <div class="col-md-12">
-                            <div class="box box-default" style="height: 300px;" >
+                        <div class="col-md-6">
+                            <div class="box box-default">
                                 <div class="box-header">
-                                    <h3 class="box-title">Archived Reports</h3>
+                                    <h3 class="box-title">Archived Reports > Household Population 10 years old & over 
+                                        by Age Group, Sex, and Marital Status</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Hello</th>
+                                            <th>Hello</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Yo</td>
+                                            <td>Yooo</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!--END OF ARCHIVED-->
+                        
+                        <div class="col-md-6">
+                            <div class="box box-default">
+                                <div class="box-header">
+                                    <h3 class="box-title">Saved Reports</h3>
                                 </div>
                                 <div class="box-body">
                                     <table class="table">

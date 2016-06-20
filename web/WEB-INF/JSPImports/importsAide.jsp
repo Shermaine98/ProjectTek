@@ -103,7 +103,7 @@ and open the template in the editor.
                             <li class="dropdown notifications-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-bell-o"></i>
-                                    <span class="label label-danger">10</span></a>
+                                    <span class="label label-danger"></span></a>
                                 <ul class="dropdown-menu">
                                     <li class="header">You have 0 notifications</li>
                                     <li>
@@ -121,13 +121,23 @@ and open the template in the editor.
                             </li>
                             <!-- User Account: style can be found in dropdown.less -->
                             <% User user = (User) session.getAttribute("user");%>
-                            <li class="user user-menu">
-                                <a href="#" >
-                                    <span class="hidden-xs">
-                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                        <b><%= user.getFirstName()%> <%= user.getLastName()%></b> - <%= user.getPosition()%>
-                                    </span>
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                    <b><%= user.getFirstName()%> <%= user.getLastName()%></b>
                                 </a>
+
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header">
+                                        <img src="AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                        <p>
+                                            <%= user.getFirstName()%> <%= user.getLastName()%><br/>
+                                            <small><%= user.getPosition()%></small>
+                                        </p>
+                                    </li>
+                                </ul>
                             </li>
                             <!-- Control Sidebar Toggle Button -->
                             <li>
@@ -192,7 +202,7 @@ and open the template in the editor.
                                         <li><a href="/ProjectTek/ServletAccess?redirect=maritalStatus">Household Population 10<br/>years old and over by Age<br/>Group, Sex, and<br/> Marital Status </a></li>
                                     </ul>
                                 </li>
-                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-plus-square"></span> Health<span class="fa fa-angle-left" style="float: right;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-heartbeat"></span> Health<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
                                         <li><a href="/ProjectTek/ServletAccess?redirect=liveBirths">Live Birth Per Day</a></li>
                                         <li><a href="/ProjectTek/ServletAccess?redirect=mortality">Mortality Report</a></li>

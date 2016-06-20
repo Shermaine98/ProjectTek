@@ -65,22 +65,22 @@
                                     <div class="box-body">
                                         <table id="incomplete" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
                                             <thead>
-                                                <tr role="row">
-                                                    <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 181px;">Rendering engine</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 222px;">Browser</th>
-                                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 197px;">Platform(s)</th>
+                                                <tr>
+                                                    <th>Rendering engine</th>
+                                                    <th>Browser</th>
+                                                    <th>Platform(s)</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr role="row" class="odd">
+                                                <tr>
                                                     <td class="sorting_1">Moo</td>
                                                     <td>Firefox 1.0</td>
                                                     <td>Win 98+ / OSX.2+</td>
-                                                </tr><tr role="row" class="even">
+                                                </tr><tr>
                                                     <td class="sorting_1">Sample 2</td>
                                                     <td>Firefox 1.5</td>
                                                     <td>Win 98+ / OSX.2+</td>
-                                                </tr><tr role="row" class="odd">
+                                                </tr><tr>
                                                     <td class="sorting_1">Gecko</td>
                                                     <td>Firefox 2.0</td>
                                                     <td>Win 98+ / OSX.2+</td>
@@ -107,6 +107,10 @@
                                         <tr>
                                             <td>Sample 1</td>
                                             <td>Sample 11</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sample 1</td>
+                                            <td>Sample 2</td>
                                         </tr>
                                         <tr>
                                             <td>Sample 1</td>

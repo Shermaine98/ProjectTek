@@ -73,15 +73,15 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="sorting_1">Moo</td>
+                                                    <td>Moo</td>
                                                     <td>Firefox 1.0</td>
                                                     <td>Win 98+ / OSX.2+</td>
                                                 </tr><tr>
-                                                    <td class="sorting_1">Sample 2</td>
+                                                    <td>Sample 2</td>
                                                     <td>Firefox 1.5</td>
                                                     <td>Win 98+ / OSX.2+</td>
                                                 </tr><tr>
-                                                    <td class="sorting_1">Gecko</td>
+                                                    <td>Gecko</td>
                                                     <td>Firefox 2.0</td>
                                                     <td>Win 98+ / OSX.2+</td>
                                                 </tr></tbody>

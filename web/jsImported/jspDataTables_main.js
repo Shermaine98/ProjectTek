@@ -1,17 +1,17 @@
 $(function () {
     $("#incomplete").DataTable({
-        "paging":   false,
+        "paging": false,
         "ordering": true,
-        "info":     false
+        "info": false
     });
     $("#archived").DataTable({
-        "paging":   false,
+        "paging": false,
         "ordering": true,
-        "info":     false
+        "info": false
     });
     $('#saved').DataTable({
-        "paging":   false,
+        "paging": false,
         "ordering": true,
-        "info":     false
+        "info": false
     });
 });

@@ -17,51 +17,8 @@
         <title>Preview Upload | Age Group and Sex</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-
-        <!--DataTable imports-->
-        <link rel="stylesheet" type="text/css" href="cssImported/datatables.min.css"/>
-        <script type="text/javascript" src="jsImported/datatables.min.js"></script>
-
-        <script>
-            $(document).ready(function () {
-                $('#dataTable').DataTable({
-                    "paging": true,
-                    "ordering": true,
-                    "info": true
-                });
-
-                $('#dataTableError').DataTable({
-                    "paging": true,
-                    "ordering": true,
-                    "info": true
-                });
-            });
-        </script>
-        <style>
-            .loading {
-                display:none;
-            }
-
-            .preload {
-                margin:0;
-                position:absolute;
-                top:50%;
-                left:50%;
-                margin-right: -50%;
-                transform:translate(-50%, -50%);
-            }
-            input[type="text"]
-            {
-                background: transparent;
-                border: none;
-            }
-            .DT{
-                width: 95%;
-                align-content: center;
-                margin: 0 auto;
-            }
-        </style>
-
+        <link href="cssImported/ValidateCSS.css" rel="stylesheet" type="text/css"/>
+        <script src="jsImported/ValidateJS.js" type="text/javascript"></script>
     </head>
     <body>
         <div class="preload">
@@ -75,8 +32,9 @@
                         <div class="row">
                             <form action="ValiAgeByGrpServ" method="post"> 
                                 <div class="box-header with-border">
-
-                                    <center><h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1></center>
+                                    <center>
+                                        <h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1>
+                                    </center>
                                     <br>
                                     <%
                                         String temp = (String) request.getAttribute("ErrorMessage");
@@ -97,105 +55,88 @@
                                 </div>
                                 <%if (temp.equalsIgnoreCase("Error")) {
                                         ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
+                                <div class="box-body">
+                                    <div class="DT" id="errorsDiv">
+                                        <table id="dataTableError" class="table table-striped table-bordered dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Location</th>
+                                                    <th>AgeGroup</th>
+                                                    <th>Both Sex</th>
+                                                    <th>Male</th>
+                                                    <th>Female</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%
+                                                    for (int i = 0; i < byAgeGroupError.size(); i++) {
 
-                                <div class="DT" id="errorsDiv">
-                                    <table id="dataTableError" class="table table-striped table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>Location</th>
-                                                <th>AgeGroup</th>
-                                                <th>Both Sex</th>
-                                                <th>Male</th>
-                                                <th>Female</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <%
-                                                for (int i = 0; i < byAgeGroupError.size(); i++) {
 
+                                                %>
+                                                <tr>
+                                                    <td><input name="locationError" type="text" value="<%=byAgeGroupError.get(i).getBarangay()%>" /></td>
+                                                    <td><input name="ageGroupError" type="text" value="<%=byAgeGroupError.get(i).getAgeGroup()%>" /></td>
+                                                    <td><input name="bothSexesError" type="text" value="<%=byAgeGroupError.get(i).getBothSex()%>" /></td>
+                                                    <td><input name="maleError" type="text" value="<%=byAgeGroupError.get(i).getMaleCount()%>" /></td>
+                                                    <td><input name="femaleError" type="text" value="<%=byAgeGroupError.get(i).getFemaleCount()%>" /></td>
+                                                </tr>
+                                                <%
 
-                                            %>
-                                            <tr>
-                                                <td><input name="locationError" type="text" value="<%=byAgeGroupError.get(i).getBarangay()%>" /></td>
-                                                <td><input name="ageGroupError" type="text" value="<%=byAgeGroupError.get(i).getAgeGroup()%>" /></td>
-                                                <td><input name="bothSexesError" type="text" value="<%=byAgeGroupError.get(i).getBothSex()%>" /></td>
-                                                <td><input name="maleError" type="text" value="<%=byAgeGroupError.get(i).getMaleCount()%>" /></td>
-                                                <td><input name="femaleError" type="text" value="<%=byAgeGroupError.get(i).getFemaleCount()%>" /></td>
-                                            </tr>
-                                            <%
+                                                    }
+                                                %>
+                                            </tbody>
 
-                                                }
-                                            %>
-                                        </tbody>
+                                        </table>
+                                        <input name="errorMessage" type="hidden" value="<%=temp%>" />
 
-                                    </table>
-                                    <input name="errorMessage" type="hidden" value="<%=temp%>" />
+                                    </div>
+                                    <div align="center">
+                                        <input align="center" class="btn btn-flat btn-success" style="margin: 0 auto 5% auto" onClick="printDiv('errorsDiv')" type="button" value="Print Summary"/>
+                                    </div>
+                                    <%
+                                        }
+                                        ArrayList<ByAgeGroupSex> ByAgeGroupSex = (ArrayList<ByAgeGroupSex>) request.getAttribute("ArrNoError");
+                                    %>
+                                    <div class="DT">
+                                        <table id="dataTable" class="table table-striped table-bordered dataTable">
+                                            <thead>
+                                                <tr>
+                                                    <th>Location</th>
+                                                    <th>AgeGroup</th>
+                                                    <th>Both Sex</th>
+                                                    <th>Male</th>
+                                                    <th>Female</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <%
+                                                    for (int i = 0; i < ByAgeGroupSex.size(); i++) {
 
+                                                %>
+                                                <tr>
+                                                    <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" readonly /></td>
+                                                    <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" readonly /></td>
+                                                    <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" readonly /></td>
+                                                    <td><input name="male" type="text" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" readonly /></td>
+                                                    <td><input name="female" type="text" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" readonly /></td>
+                                                </tr>
+                                                <%
+                                                    }
+
+                                                %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <input class="btn btn-flat btn-success" type="submit" value="Submit" style="float:right;
+                                           margin-right: 3%; margin-top: 3%; margin-bottom: 1%"/>
+                                    <input type="hidden" name="year" class="year" id="year" />
                                 </div>
-                                <div align="center">
-                                    <input align="center" class="btn btn-flat btn-success" style="margin: 0 auto 5% auto" onClick="printDiv('errorsDiv')" type="button" value="Print Summary"/>
-                                </div>
-                                <%
-                                    }
-                                    ArrayList<ByAgeGroupSex> ByAgeGroupSex = (ArrayList<ByAgeGroupSex>) request.getAttribute("ArrNoError");
-                                %>
-                                <div class="DT">
-                                    <table id="dataTable" class="table table-striped table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th>Location</th>
-                                                <th>AgeGroup</th>
-                                                <th>Both Sex</th>
-                                                <th>Male</th>
-                                                <th>Female</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <%
-                                                for (int i = 0; i < ByAgeGroupSex.size(); i++) {
-
-                                            %>
-                                            <tr>
-                                                <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" readonly /></td>
-                                                <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" readonly /></td>
-                                                <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" readonly /></td>
-                                                <td><input name="male" type="text" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" readonly /></td>
-                                                <td><input name="female" type="text" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" readonly /></td>
-                                            </tr>
-                                            <%
-                                                }
-
-                                            %>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <input class="btn btn-flat btn-success" type="submit" value="Submit" style="float:right;
-                                       margin-right: 3%; margin-top: 3%; margin-bottom: 1%"/>
-                           <input type="hidden" name="year" class="year" id="year" />
                             </form>
+
                         </div>
                     </section>
                 </div>
             </div>
-        </div>
-        <script>
-            $(function () {
-                $(".preload").fadeOut(9000, function () {
-                    $(".loading").fadeIn(1000);
-                });
-            });
-
-            function printDiv(divName) {
-                var printContents = document.getElementById(divName).innerHTML;
-                var originalContents = document.body.innerHTML;
-
-                document.body.innerHTML = printContents;
-
-                window.print();
-
-                document.body.innerHTML = originalContents;
-            }
-        document.getElementById('year').setAttribute('value', new Date().getFullYear());
-        </script>    
+        </div> 
     </body>
 </html>

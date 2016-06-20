@@ -202,7 +202,9 @@ and open the template in the editor.
         <script src="AdminLTE/plugins/fastclick/fastclick.js"></script>
         <!-- AdminLTE App -->
         <script src="AdminLTE/dist/js/app.min.js"></script>
-
+        <!--DataTables-->
+        <script src="AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="AdminLTE/plugins/datatables/dataTables.bootstrap.min.js"></script>
 
     </body>
 </html>

@@ -154,7 +154,5 @@
         </div>
         <!-- ./wrapper -->
         <script src="jsImported/uploadJSP.js" type="text/javascript"></script>
-        <script src="AdminLTE/plugins/datatables/jquery.dataTables.min.js"></script>
-        <script src="AdminLTE/plugins/datatables/dataTables.bootstrap.min.js"></script>
     </body>
 </html>

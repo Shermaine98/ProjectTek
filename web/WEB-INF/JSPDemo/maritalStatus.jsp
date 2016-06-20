@@ -32,9 +32,9 @@
                     <li class="active title">Household Population 10 years old & over by Age Group, Sex and Marital Status</li>
                 </ol>
 
-                <!-- Main content -->
-                <section class="content">              
-                    <div class="row">
+                <div class="row">
+                    <!-- Main content -->
+                    <section class="content">    
                         <div class="col-md-6">
                             <div class="box box-success" style="padding-bottom: 5%;">
                                 <div class="box-header">
@@ -90,58 +90,58 @@
                                     <!-- /.box-body -->
                                 </div></div>
                         </div>
-                    </div>
-                    <!--End of RIGHT Box-->
+                        <!--End of RIGHT Box-->
 
-                    <div class="col-md-6">
-                        <div class="box box-default">
-                            <div class="box-header">
-                                <h3 class="box-title">Archived Reports > Household Population 10 years old & over 
-                                    by Age Group, Sex, and Marital Status</h3>
+                        <div class="col-md-6">
+                            <div class="box box-default">
+                                <div class="box-header">
+                                    <h3 class="box-title">Archived Reports > Household Population 10 years old & over 
+                                        by Age Group, Sex, and Marital Status</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Census Year</th>
+                                            <th>Title</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Sample 1</td>
+                                            <td>Sample 11</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sample 1</td>
+                                            <td>Sample 2</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
                             </div>
-                            <div class="box-body">
-                                <table class="table">
-                                    <tr>
-                                        <th>Census Year</th>
-                                        <th>Title</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Sample 1</td>
-                                        <td>Sample 11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sample 1</td>
-                                        <td>Sample 2</td>
-                                    </tr>
-                                </table>
+                            <!-- /.box -->
+                        </div>
+                        <!--END OF ARCHIVED-->
+
+                        <div class="col-md-6">
+                            <div class="box box-default">
+                                <div class="box-header">
+                                    <h3 class="box-title">Saved Reports</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Hello</th>
+                                            <th>Hello</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Yo</td>
+                                            <td>Yooo</td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                             <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-                    </div>
-                    <!--END OF ARCHIVED-->
-
-                    <div class="col-md-6">
-                        <div class="box box-default">
-                            <div class="box-header">
-                                <h3 class="box-title">Saved Reports</h3>
-                            </div>
-                            <div class="box-body">
-                                <table class="table">
-                                    <tr>
-                                        <th>Hello</th>
-                                        <th>Hello</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Yo</td>
-                                        <td>Yooo</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- /.box-body -->
-                </section>
-                <!-- /.content -->
+                    </section>
+                    <!-- /.content -->
+                </div>
             </div>
             <!-- /.content-wrapper -->
         </div>

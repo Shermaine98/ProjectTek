@@ -13,27 +13,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Reports Library | Instructional Rooms for Government Secondary Schools</title>
         <script src="js/UploadFile.js" type="text/javascript"></script>
-        <style>
-            input[type="file"] {
-                display: none;
-            }
-            .custom-file-upload {
-                padding: 6px 12px;
-                width: 40%;
-                height: 45px;
-                line-height: 45px;
-                margin:0px auto; 
-                display:block;
-                font-size: 120%;
-                text-align: center;
-                padding:0 5px;
-            }
-            .button-submit{
-                width: 13%;
-                margin:5% auto; 
-                display:block;
-            }
-        </style>
+        <link href="cssImported/uploadJSP.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div class="wrapper">
@@ -123,30 +103,6 @@
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
+        <script src="jsImported/uploadJSP.js" type="text/javascript"></script>
     </body>
-
-    <script>
-        document.getElementById('file').onchange = uploadOnChange;
-
-        function uploadOnChange() {
-            var filename = this.value;
-            var lastIndex = filename.lastIndexOf("\\");
-            if (lastIndex >= 0) {
-                filename = filename.substring(lastIndex + 1);
-            }
-
-            if (filename != "") {
-                document.getElementById('filename').innerHTML = filename;
-                document.getElementById('filename').style.fontStyle = 'italic';
-                document.getElementById('filename').style.color = '#cc5200';
-                document.getElementById('submit').style.display = "block";
-            } else {
-                document.getElementById('filename').style.fontStyle = 'normal';
-                document.getElementById('filename').style.color = '#333333';
-                document.getElementById('filename').innerHTML = '<i class="fa fa-cloud-upload"></i> Upload File';
-                document.getElementById('submit').style.display = "none";
-            }
-        }
-    </script>
-    <%@ include file="../JSPImports/footer.html" %>
 </html>

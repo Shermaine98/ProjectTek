@@ -83,11 +83,10 @@
             <!-- /.content-wrapper -->
         </div>
         <!-- ./wrapper -->
-    </body>
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
-    <%@ include file="footer.html" %>
+    </body>
 </html>

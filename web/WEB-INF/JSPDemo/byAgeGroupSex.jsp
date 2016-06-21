@@ -112,7 +112,7 @@
                                 <div class="box-header">
                                     <h3 class="box-title">Archived Reports > Household Population by Age Group and Sex</h3>
                                 </div>  
-                                <form id="archivedView" action="ViewArchivesTableCharts" method="post">
+                                <form id="archivedView" action="ViewArchivesAccess" method="post">
                                     <div class="box-body">
 
                                         <table id="archived" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
@@ -189,23 +189,19 @@
         <script>
                                             $('#clickedTable, #clickedChart').click(function () {
                                                 if (this.id == 'clickedTable') {
-                                                    alert('Submit 1 clickedTable');
                                                     document.getElementById('clicked').setAttribute('value', "table");
                                                     var $item = $(this).closest("tr")   // Finds the closest row <tr> 
                                                             .find(".nr")     // Gets a descendent with class="nr"
                                                             .text();         // Retrieves the text within <td>
-                                                     alert($item);
-                                                     console.log($item);
+                                                     
                                                   document.getElementById('formID').setAttribute('value', $item);
                                                    document.getElementById('archivedView').submit();
                                                 } else if (this.id == 'clickedChart') {
-                                                    alert('Submit 2 clickedChart');
                                                     document.getElementById('clicked').setAttribute('value', "chart");
                                                     var $item = $(this).closest("tr")   // Finds the closest row <tr> 
                                                             .find(".nr")     // Gets a descendent with class="nr"
                                                             .text();         // Retrieves the text within <td>
-                                                    alert($item);     
-                                                     console.log($item);
+                                                    
                                                     document.getElementById('formID').setAttribute('value', $item);
                                                    document.getElementById('archivedView').submit();
                                                 }

@@ -9,6 +9,11 @@ $(function () {
         "ordering": true,
         "info": false
     });
+    $("#archived").DataTable({
+        "paging": true,
+        "ordering": true,
+        "info": false
+    });
 });
 
 function printDiv(divToPrint) {

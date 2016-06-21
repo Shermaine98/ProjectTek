@@ -2,6 +2,7 @@ package ServletsDemo;
 
 import DAODemo.byAgeGroupSexDAO;
 import Model.record;
+import ModelDemo.ByAgeGroupSex;
 import Servlets.BaseServlet;
 import java.io.IOException;
 import java.text.ParseException;
@@ -20,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Sy
  *
  */
-public class ViewArchivesTableCharts extends BaseServlet {
+public class ViewArchivesTables extends BaseServlet {
 
     /**
      *
@@ -32,22 +33,21 @@ public class ViewArchivesTableCharts extends BaseServlet {
     @Override
     public void servletAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
            
-            String redirect = request.getParameter("clicked");
-            String formID = request.getParameter("formID");
-          //  String approved = request.getParameter("approved");
-             RequestDispatcher rd= null;
-             if(redirect.equalsIgnoreCase("table")){
-            request.setAttribute("page", "table");
-             request.setAttribute("formID", formID);
-//             request.setAttribute("page", "byAgeGroupSex");
+        try {
+            byAgeGroupSexDAO DAO = new byAgeGroupSexDAO();
+            ArrayList <ByAgeGroupSex> temp = new ArrayList<ByAgeGroupSex>();
+            String formID = (String) request.getAttribute("formID");
+            //  String approved = request.getParameter("approved");
+            RequestDispatcher rd= null;
+            temp = DAO.ViewByAgeGroupSexFormID(Integer.parseInt(formID));
+            request.setAttribute("formID", formID);
+            request.setAttribute("ageGroupSexData", temp);
             rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/showTables.jsp");
-             rd.forward(request, response);
-             }else if(redirect.equalsIgnoreCase("chart")) {
-               request.setAttribute("page", "chart");
-               request.setAttribute("formID", formID);
-             rd= request.getRequestDispatcher("/WEB-INF/JSPDemo/viewGraphs.jsp");
-             rd.forward(request, response);
-             }
+            rd.forward(request, response);
+        } catch (ParseException ex) {
+            Logger.getLogger(ViewArchivesTables.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             
             
              
              

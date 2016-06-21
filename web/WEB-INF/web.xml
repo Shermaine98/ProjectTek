@@ -45,8 +45,16 @@
         <servlet-class>ServletsDemo.RetrieveDataDemoServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ViewArchivesTableCharts</servlet-name>
-        <servlet-class>ServletsDemo.ViewArchivesTableCharts</servlet-class>
+        <servlet-name>ViewArchivesAccess</servlet-name>
+        <servlet-class>ServletsDemo.ViewArchivesAccess</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewArchivesTables</servlet-name>
+        <servlet-class>ServletsDemo.ViewArchivesTables</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewArchivesCharts</servlet-name>
+        <servlet-class>ServletsDemo.ViewArchivesCharts</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>login</servlet-name>
@@ -93,8 +101,16 @@
         <url-pattern>/RetrieveDataDemoServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ViewArchivesTableCharts</servlet-name>
-        <url-pattern>/ViewArchivesTableCharts</url-pattern>
+        <servlet-name>ViewArchivesTables</servlet-name>
+        <url-pattern>/ViewArchivesTables</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewArchivesAccess</servlet-name>
+        <url-pattern>/ViewArchivesAccess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewArchivesCharts</servlet-name>
+        <url-pattern>/ViewArchivesCharts</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

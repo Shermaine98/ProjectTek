@@ -28,7 +28,7 @@ public class byAgeGroupSexDAO {
             DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
             ArrayList<ByAgeGroupSex> ArrByAgeGroupSex = new ArrayList<ByAgeGroupSex>();
             Connection conn = myFactory.getConnection();
-            PreparedStatement pstmt = conn.prepareStatement("SELECT * age_group");
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM age_group");
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
@@ -50,6 +50,36 @@ public class byAgeGroupSexDAO {
         }
         return null;
     }
+    
+    public ArrayList<ByAgeGroupSex> ViewByAgeGroupSexFormID(int formID) throws ParseException {
+        try {
+            DBConnectionFactoryStorageDB myFactory = DBConnectionFactoryStorageDB.getInstance();
+            ArrayList<ByAgeGroupSex> ArrByAgeGroupSex = new ArrayList<ByAgeGroupSex>();
+            Connection conn = myFactory.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM age_group WHERE formID = ?");
+           pstmt.setInt(1, formID);
+            ResultSet rs = pstmt.executeQuery();
+             
+            while (rs.next()) {
+                ByAgeGroupSex temp = new ByAgeGroupSex();
+                 temp.setFormID(rs.getInt("formID"));
+                 temp.setAgeGroup(rs.getString("ageGroup"));
+                 temp.setYear(rs.getInt("censusYear"));
+                 temp.setBarangay(rs.getString("location"));
+                 temp.setMaleCount(rs.getInt("totalMale"));
+                 temp.setFemaleCount(rs.getInt("totalFemale"));
+                     temp.setValidation(rs.getBoolean("validation"));
+                ArrByAgeGroupSex.add(temp);
+            }
+            pstmt.close();
+            conn.close();
+            return ArrByAgeGroupSex;
+        } catch (SQLException ex) {
+            Logger.getLogger(byAgeGroupSexDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
     
     public ArrayList<record> GetAllValidated() throws ParseException {
         try {

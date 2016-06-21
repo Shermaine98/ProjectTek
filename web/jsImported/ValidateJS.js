@@ -1,13 +1,40 @@
 $(function () {
-    $("#dataTableError").DataTable({
+    $("#error-ageGroup").DataTable({
         "paging": false,
         "ordering": true,
         "info": false
     });
-    $("#dataTable").DataTable({
+    $("#dataTable-ageGroup").DataTable({
         "paging": true,
         "ordering": true,
-        "info": false
+        "info": false,
+        "columnDefs": [
+            {
+                "targets": [5],
+                "visible": false,
+                "searchable": false
+            },
+            {
+                "targets": [6],
+                "visible": false,
+                "searchable": false
+            },
+            {
+                "targets": [7],
+                "visible": false
+            },
+            {
+                "targets": [8],
+                "visible": false,
+                "searchable": false
+            },
+            {
+                "targets": [9],
+                "visible": false,
+                "searchable": false
+            }
+
+        ]
     });
     $("#archived").DataTable({
         "paging": true,

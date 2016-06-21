@@ -9,31 +9,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Project TEK | Dashboard </title>
-  <!-- Tell the browser to be responsive to screen width -->
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  
-</head>
-<body class="hold-transition skin-yellow-light fixed sidebar-mini">
-<div class="wrapper">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Project TEK | Dashboard </title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    
+    </head>
+    <body class="hold-transition skin-yellow-light fixed sidebar-mini">
+        <div class="wrapper">
 
-    <!-- Main content -->
-    
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
 
 
-</div>
-<!-- ./wrapper -->
+                <!-- Main content -->
 
-</body>
-<%@ include file="JSPImports/footer.html" %>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+
+        </div>
+        <!-- ./wrapper -->
+
+    </body>
 </html>

@@ -17,89 +17,47 @@
         <title>Preview Upload | Age Group and Sex</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link href="cssImported/ValidateCSS.css" rel="stylesheet" type="text/css"/>
+        <script src="jsImported/ValidateJS.js" type="text/javascript"></script>
 
-        <!--DataTable imports-->
-        <link rel="stylesheet" type="text/css" href="cssImported/datatables.min.css"/>
-        <script type="text/javascript" src="jsImported/datatables.min.js"></script>
-
-        <script>
-            $(document).ready(function () {
-                $('#dataTable').DataTable({
-                    "paging": true,
-                    "ordering": true,
-                    "info": true
-                });
-
-                $('#dataTableError').DataTable({
-                    "paging": true,
-                    "ordering": true,
-                    "info": true
-                });
-            });
-        </script>
-        <style>
-            .loading {
-                display:none;
-            }
-
-            .preload {
-                margin:0;
-                position:absolute;
-                top:50%;
-                left:50%;
-                margin-right: -50%;
-                transform:translate(-50%, -50%);
-            }
-            input[type="text"]
-            {
-                background: transparent;
-                border: none;
-            }
-            .DT{
-                width: 95%;
-                align-content: center;
-                margin: 0 auto;
-            }
-        </style>
-
+        <!--Pace Imports-->
+        <script src="Pace/pace.js"></script>
+        <link href="Pace/dataurl.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="preload">
-            <img src="images/loading_spinner.gif" alt=""/>
-        </div>
         <div class="wrapper">
             <!-- Content Wrapper. Contains page content -->
-            <div class="loading">
-                <div class="content-wrapper">
-                    <section class="content">
-                        <div class="row">
-                            <form action="ValiAgeByGrpServ" method="post"> 
-                                <div class="box-header with-border">
+            <div class="content-wrapper">
+                <section class="content">
+                    <div class="row">
+                        <form action="ValiAgeByGrpServ" method="post"> 
+                            <div class="box-header with-border">
+                                <center>
+                                    <h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1>
+                                </center>
+                                <br>
+                                <%
+                                    String temp = (String) request.getAttribute("ErrorMessage");
+                                    if (temp.equalsIgnoreCase("Error")) {
+                                %>
+                                <div class="callout callout-danger">
+                                    <h4>Oops! There are errors.</h4>
 
-                                    <center><h1 class="box-title"><b>Preview of Household Population by Age Group and Sex</b></h1></center>
-                                    <br>
-                                    <%
-                                        String temp = (String) request.getAttribute("ErrorMessage");
-                                        if (temp.equalsIgnoreCase("Error")) {
-                                    %>
-                                    <div class="callout callout-danger">
-                                        <h4>Oops! There are errors.</h4>
-
-                                        <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
-                                    </div>
-                                    <%
-                                    } else {
-                                    %>
-                                    <div class="callout callout-success">
-                                        <p>There are no errors in the excel file.</p>
-                                    </div>
-                                    <%}%> 
+                                    <p>Kindly head onto the cells highlighted in red to see what's wrong.</p>
                                 </div>
-                                <%if (temp.equalsIgnoreCase("Error")) {
-                                        ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
-
+                                <%
+                                } else {
+                                %>
+                                <div class="callout callout-success">
+                                    <p>There are no errors in the excel file.</p>
+                                </div>
+                                <%}%> 
+                            </div>
+                            <%if (temp.equalsIgnoreCase("Error")) {
+                                    ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
+                            <div class="box-body">
                                 <div class="DT" id="errorsDiv">
-                                    <table id="dataTableError" class="table table-striped table-bordered">
+                                    <table id="dataTableError" class="table table-striped table-bordered dataTable">
                                         <thead>
                                             <tr>
                                                 <th>Location</th>
@@ -133,14 +91,14 @@
 
                                 </div>
                                 <div align="center">
-                                    <input align="center" class="btn btn-flat btn-success" style="margin: 0 auto 5% auto" onClick="printDiv('errorsDiv')" type="button" value="Print Summary"/>
+                                    <input align="center" class="btn btn-flat btn-success" style="margin: 0 auto 5% auto" onClick="printDiv('errorsDiv')" type="button" value="Print Error Summary"/>
                                 </div>
                                 <%
                                     }
                                     ArrayList<ByAgeGroupSex> ByAgeGroupSex = (ArrayList<ByAgeGroupSex>) request.getAttribute("ArrNoError");
                                 %>
                                 <div class="DT">
-                                    <table id="dataTable" class="table table-striped table-bordered">
+                                    <table id="dataTable" class="table table-striped table-bordered dataTable">
                                         <thead>
                                             <tr>
                                                 <th>Location</th>
@@ -169,33 +127,27 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <input class="btn btn-flat btn-success" type="submit" value="Submit" style="float:right;
-                                       margin-right: 3%; margin-top: 3%; margin-bottom: 1%"/>
-                           <input type="hidden" name="year" class="year" id="year" />
-                            </form>
-                        </div>
-                    </section>
-                </div>
+
+                                <input type="hidden" name="year" class="year" id="year" />
+                                <div style="width:96%; margin-left: 2%; margin-top: 5%;">   
+                                    <div style="display:inline; float:left;">
+                                        <a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex">
+                                            <input type="button" class="btn btn-flat btn-default" style="width: 100px;" value='Back'>
+                                    </a></div>   
+                                    <div  style="display:inline; float:right;"><input class="btn btn-flat btn-success" type="submit" value="Submit" /></div>
+                                </div>
+                                <div style="">
+                                    
+
+                                    
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </section>
             </div>
         </div>
-        <script>
-            $(function () {
-                $(".preload").fadeOut(9000, function () {
-                    $(".loading").fadeIn(1000);
-                });
-            });
-
-            function printDiv(divName) {
-                var printContents = document.getElementById(divName).innerHTML;
-                var originalContents = document.body.innerHTML;
-
-                document.body.innerHTML = printContents;
-
-                window.print();
-
-                document.body.innerHTML = originalContents;
-            }
-        document.getElementById('year').setAttribute('value', new Date().getFullYear());
-        </script>    
     </body>
 </html>

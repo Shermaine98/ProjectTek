@@ -15,7 +15,7 @@
         <title>Reports Library | Household Population by Age Group and Sex</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <link href="cssImported/uploadJSP.css" rel="stylesheet" type="text/css"/>
+        <link href="cssImported/uploadJSP.css" rel="stylesheet" type="text/css"/> 
     </head>
 
     <body>
@@ -36,7 +36,7 @@
                     if (temp.equalsIgnoreCase("success")) {
                 %>
                 <div class="callout callout-success">
-                     <h4>Success! There are no errors.</h4>
+                    <h4>Success! There are no errors.</h4>
                     <p>Successfully Saved Report.</p>
                 </div>
                 <%
@@ -79,20 +79,23 @@
                         <!--End of LEFT COLUMN-->
 
                         <div class="col-md-6">
-                            <div class="box box-danger" style="height: 300px;" >
+                            <div class="box box-danger">
                                 <div class="box-header">
                                     <h3 class="box-title">Incomplete Reports</h3>
                                 </div>
                                 <div class="box-body">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Census Year</th>
-                                            <th>Number of Missing Fields</th>
-                                        </tr>
-                                        <tr>
-                                            <td>2010</td>
-                                            <td>3</td>
-                                        </tr>
+                                    <table id="incomplete" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                        <thead>
+                                            <tr>
+                                                <th>Census Year</th>
+                                                <th>Missing Fields</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2010</td>
+                                                <td>3</td>
+                                            </tr></tbody>
                                     </table>
                                 </div>
                                 <!-- /.box-body -->
@@ -102,34 +105,69 @@
 
                         <!--End of RIGHT Box-->
                         <%
-                                   ArrayList<record> records = (ArrayList<record>) request.getAttribute("validatedRecords");%>
+                            ArrayList<record> records = (ArrayList<record>) request.getAttribute("validatedRecords");%>
 
-                        <div class="col-md-12">
-                            <div class="box box-default" style="height: 300px;" >
+                        <div class="col-md-6">
+                            <div class="box box-default">
                                 <div class="box-header">
-                                    <h3 class="box-title">Archived Reports</h3>
+                                    <h3 class="box-title">Archived Reports > Household Population by Age Group and Sex</h3>
                                 </div>
                                 <div class="box-body">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Census Year</th>
-                                            <th>Approved</th>
-                                        </tr>
-                                        <%for(int i=0; i <records.size();i++){ %>
-                                        <tr>
-                                            <td><%=records.get(i).getCensusYear() %></td>
-                                            <td><%=records.get(i).isApproved()%></td>
-                                        </tr>
-                                        <%
-                                        }
-                                        %>
+                                    <table id="archived" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                        <thead>
+                                            <tr>
+                                                <th>Census Year</th>
+                                                <th>Report Status</th>
+                                            </tr>
+                                        </thead>
+                                        <%for (int i = 0; i < records.size(); i++) {%>
+                                        <tbody>
+                                            <tr>
+                                                <td><%=records.get(i).getCensusYear()%></td>
+                                                <td><%=records.get(i).isApproved()%></td>
+                                            </tr></tbody>
                                     </table>
+                                    <% }%>
                                 </div>
                                 <!-- /.box-body -->
                             </div>
                             <!-- /.box -->
                         </div>
-                    </div>
+                        <!--END OF ARCHIVED-->
+
+                        <div class="col-md-6">
+                            <div class="box box-default">
+                                <div class="box-header">
+                                    <h3 class="box-title">Saved Reports</h3>
+                                </div>
+                                <div class="box-body">
+                                    <table id="saved" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                        <thead>
+                                            <tr>
+                                                <th>Rendering engine</th>
+                                                <th>Browser</th>
+                                                <th>Platform(s)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Moo</td>
+                                                <td>Firefox 1.0</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr><tr>
+                                                <td>Sample 2</td>
+                                                <td>Firefox 1.5</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr><tr>
+                                                <td>Gecko</td>
+                                                <td>Firefox 2.0</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr></tbody>
+                                    </table>
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
 
                 </section>
             </div>   

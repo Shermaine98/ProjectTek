@@ -198,13 +198,13 @@ public class Excel_MaritalStatus {
                 }
             }
         }
-         if(row.getCell(0) == null &&
-                row.getCell(1) == null &&
-                row.getCell(2) == null &&
-                row.getCell(4) == null &&
-                row.getCell(5) == null &&
-                row.getCell(6) == null &&
-                row.getCell(7) == null){
+         if(row.getCell(0) == null || row.getCell(0).getCellType() == HSSFCell.CELL_TYPE_BLANK &&
+                row.getCell(1) == null || row.getCell(1).getCellType() == HSSFCell.CELL_TYPE_BLANK&&
+                row.getCell(2) == null || row.getCell(2).getCellType() == HSSFCell.CELL_TYPE_BLANK &&
+                row.getCell(3) == null || row.getCell(3).getCellType() == HSSFCell.CELL_TYPE_BLANK &&
+                row.getCell(4) == null || row.getCell(4).getCellType() == HSSFCell.CELL_TYPE_BLANK &&
+                row.getCell(5) == null || row.getCell(5).getCellType() == HSSFCell.CELL_TYPE_BLANK &&
+                row.getCell(6) == null || row.getCell(6).getCellType() == HSSFCell.CELL_TYPE_BLANK){
                 rowIndex++;
                 return;
         }

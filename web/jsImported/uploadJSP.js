@@ -25,4 +25,3 @@ function uploadOnChange() {
 }
 
 document.getElementById('year').setAttribute('value', new Date().getFullYear());
-

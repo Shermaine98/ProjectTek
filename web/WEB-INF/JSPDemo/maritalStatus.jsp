@@ -14,6 +14,8 @@
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link href="cssImported/uploadJSP.css" rel="stylesheet" type="text/css"/> 
+
+        <script src="jsImported/jspDataTables_main.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -30,13 +32,14 @@
                     <li class="active title">Household Population 10 years old & over by Age Group, Sex and Marital Status</li>
                 </ol>
 
-                <!-- Main content -->
-                <section class="content">              
-                    <div class="row">
+                <div class="row">
+                    <!-- Main content -->
+                    <section class="content">    
                         <div class="col-md-6">
                             <div class="box box-success" style="padding-bottom: 5%;">
                                 <div class="box-header">
-                                    <h3 class="box-title">Upload A New Report</h3>
+                                    <h3 class="box-title">Upload A New Report For The Year 
+                                        <input type="text" name="year" class="year" id="year" readonly /></h3>
                                 </div>
                                 <div class="box-body">
                                     <form action="UploadMaritalStatus" method="post" enctype="multipart/form-data">
@@ -58,24 +61,26 @@
                             <div class="box box-danger">
                                 <div class="box-header">
                                     <h3 class="box-title">Incomplete Reports</h3>
-                                </div>
-                                <div class="box-body">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Hello</th>
-                                            <th>Hello</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Yo</td>
-                                            <td>Yooo</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <!-- /.box-body -->
-                            </div>
-                            <!-- /.box -->
-                        </div>
 
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <table id="incomplete" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                            <thead>
+                                                <tr>
+                                                    <th>Census Year</th>
+                                                    <th>Missing Fields</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2010</td>
+                                                    <td>3</td>
+                                                </tr></tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div></div>
+                        </div>
                         <!--End of RIGHT Box-->
 
                         <div class="col-md-6">
@@ -85,15 +90,21 @@
                                         by Age Group, Sex, and Marital Status</h3>
                                 </div>
                                 <div class="box-body">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Hello</th>
-                                            <th>Hello</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Yo</td>
-                                            <td>Yooo</td>
-                                        </tr>
+                                    <table id="archived" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                        <thead>
+                                            <tr>
+                                                <th>Census Year</th>
+                                                <th>Report Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2007</td>
+                                                <td>Saved</td>
+                                            </tr><tr>
+                                                <td>2008</td>
+                                                <td>Approved</td>
+                                            </tr></tbody>
                                     </table>
                                 </div>
                                 <!-- /.box-body -->
@@ -101,31 +112,43 @@
                             <!-- /.box -->
                         </div>
                         <!--END OF ARCHIVED-->
-                        
+
                         <div class="col-md-6">
                             <div class="box box-default">
                                 <div class="box-header">
                                     <h3 class="box-title">Saved Reports</h3>
                                 </div>
                                 <div class="box-body">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Hello</th>
-                                            <th>Hello</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Yo</td>
-                                            <td>Yooo</td>
-                                        </tr>
+                                    <table id="saved" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                        <thead>
+                                            <tr>
+                                                <th>Rendering engine</th>
+                                                <th>Browser</th>
+                                                <th>Platform(s)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Moo</td>
+                                                <td>Firefox 1.0</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr><tr>
+                                                <td>Sample 2</td>
+                                                <td>Firefox 1.5</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr><tr>
+                                                <td>Gecko</td>
+                                                <td>Firefox 2.0</td>
+                                                <td>Win 98+ / OSX.2+</td>
+                                            </tr></tbody>
                                     </table>
                                 </div>
                                 <!-- /.box-body -->
                             </div>
-                            <!-- /.box -->
                         </div>
-                    </div>
-                </section>
-                <!-- /.content -->
+                    </section>
+                    <!-- /.content -->
+                </div>
             </div>
             <!-- /.content-wrapper -->
         </div>

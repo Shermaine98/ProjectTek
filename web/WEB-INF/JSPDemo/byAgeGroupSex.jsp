@@ -111,24 +111,36 @@
                             <div class="box box-default">
                                 <div class="box-header">
                                     <h3 class="box-title">Archived Reports > Household Population by Age Group and Sex</h3>
-                                </div>
-                                <div class="box-body">
-                                    <table id="archived" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
-                                        <thead>
-                                            <tr>
-                                                <th>Census Year</th>
-                                                <th>Report Status</th>
-                                            </tr>
-                                        </thead>
-                                        <%for (int i = 0; i < records.size(); i++) {%>
-                                        <tbody>
-                                            <tr>
-                                                <td><%=records.get(i).getCensusYear()%></td>
-                                                <td><%=records.get(i).isApproved()%></td>
-                                            </tr></tbody>
-                                    </table>
-                                    <% }%>
-                                </div>
+                                </div>  
+                                <form id="archivedView" action="ViewArchivesTableCharts" method="post">
+                                    <div class="box-body">
+
+                                        <table id="archived" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="incomplete_info">
+                                            <thead>
+                                                <tr>
+                                                    <th>Census Year</th>
+                                                    <th>Report Status</th>
+                                                    <th>View Table</th>
+                                                    <th>View Charts</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                 <%for (int i = 0; i < records.size(); i++) {%>
+                                                <tr>
+                                                    <td class="nr"><%=records.get(i).getFormID()%></td>
+                                                     <td><%=records.get(i).getCensusYear()%></td>
+                                                    <td><%=records.get(i).isApproved()%></td>
+                                                    <td> <input align="center" id ="clickedTable" class="btn btn-flat btn-success" style="margin: 0 auto 5% auto" type="button" value="View Table"/></td>
+                                                    <td> <input align="center" id= "clickedChart" class="btn btn-flat btn-success" style="margin: 0 auto 5% auto"  type="button" value="View Chart"/></td>
+                                                </tr>
+                                                 <% }%>
+                                            </tbody>
+                                        </table>    
+                                    </div>
+                                    <input id="clicked" name="clicked" type="hidden" />
+                                    <input id="formID" name="formID" type="hidden" />
+                                    
+                                </form>  
                                 <!-- /.box-body -->
                             </div>
                             <!-- /.box -->
@@ -174,5 +186,30 @@
         </div>
         <!-- ./wrapper -->
         <script src="jsImported/uploadJSP.js" type="text/javascript"></script>
+        <script>
+                                            $('#clickedTable, #clickedChart').click(function () {
+                                                if (this.id == 'clickedTable') {
+                                                    alert('Submit 1 clickedTable');
+                                                    document.getElementById('clicked').setAttribute('value', "table");
+                                                    var $item = $(this).closest("tr")   // Finds the closest row <tr> 
+                                                            .find(".nr")     // Gets a descendent with class="nr"
+                                                            .text();         // Retrieves the text within <td>
+                                                     alert($item);
+                                                     console.log($item);
+                                                  document.getElementById('formID').setAttribute('value', $item);
+                                                   document.getElementById('archivedView').submit();
+                                                } else if (this.id == 'clickedChart') {
+                                                    alert('Submit 2 clickedChart');
+                                                    document.getElementById('clicked').setAttribute('value', "chart");
+                                                    var $item = $(this).closest("tr")   // Finds the closest row <tr> 
+                                                            .find(".nr")     // Gets a descendent with class="nr"
+                                                            .text();         // Retrieves the text within <td>
+                                                    alert($item);     
+                                                     console.log($item);
+                                                    document.getElementById('formID').setAttribute('value', $item);
+                                                   document.getElementById('archivedView').submit();
+                                                }
+                                            });
+        </script>
     </body>
 </html>

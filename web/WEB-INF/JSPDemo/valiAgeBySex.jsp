@@ -26,7 +26,7 @@
     </head>
     <body>
         <div class="wrapper">
-             Content Wrapper. Contains page content 
+            Content Wrapper. Contains page content 
             <div class="content-wrapper">
                 <section class="content">
                     <div class="row">
@@ -57,7 +57,7 @@
                                     ArrayList<byAgeGroupError> byAgeGroupError = (ArrayList<byAgeGroupError>) request.getAttribute("ArrError");%>
                             <div class="box-body">
                                 <div class="DT" id="errorsDiv">
-                                    <table id="dataTableError" class="table table-striped table-bordered dataTable">
+                                    <table id="error-ageGroup" class="table table-striped table-bordered dataTable">
                                         <thead>
                                             <tr>
                                                 <th>Location</th>
@@ -98,7 +98,7 @@
                                     ArrayList<ByAgeGroupSex> ByAgeGroupSex = (ArrayList<ByAgeGroupSex>) request.getAttribute("ArrNoError");
                                 %>
                                 <div class="DT">
-                                    <table id="dataTable" class="table table-striped table-bordered dataTable">
+                                    <table id="dataTable-ageGroup" class="table table-striped table-bordered dataTable">
                                         <thead>
                                             <tr>
                                                 <th>Location</th>
@@ -106,6 +106,11 @@
                                                 <th>Both Sex</th>
                                                 <th>Male</th>
                                                 <th>Female</th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -114,11 +119,16 @@
 
                                             %>
                                             <tr>
-                                                <td><input name="location" type="text" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" readonly /></td>
-                                                <td><input name="ageGroup" type="text" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" readonly /></td>
-                                                <td><input name="bothSexes" type="text" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" readonly /></td>
-                                                <td><input name="male" type="text" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" readonly /></td>
-                                                <td><input name="female" type="text" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" readonly /></td>
+                                                <td><%=ByAgeGroupSex.get(i).getBarangay()%></td>
+                                                <td><%=ByAgeGroupSex.get(i).getAgeGroup()%></td>
+                                                <td><%=ByAgeGroupSex.get(i).getBothSex()%></td>
+                                                <td><%=ByAgeGroupSex.get(i).getMaleCount()%></td>
+                                                <td><%=ByAgeGroupSex.get(i).getFemaleCount()%></td>
+                                                <td><input name="location" type="hidden" value="<%=ByAgeGroupSex.get(i).getBarangay()%>" /></td>
+                                                <td><input name="ageGroup" type="hidden" value="<%=ByAgeGroupSex.get(i).getAgeGroup()%>" /></td>
+                                                <td><input name="bothSexes" type="hidden" value="<%=ByAgeGroupSex.get(i).getBothSex()%>" /></td>
+                                                <td><input name="male" type="hidden" value="<%=ByAgeGroupSex.get(i).getMaleCount()%>" /></td>
+                                                <td><input name="female" type="hidden" value="<%=ByAgeGroupSex.get(i).getFemaleCount()%>" /></td>
                                             </tr>
                                             <%
                                                 }
@@ -133,13 +143,13 @@
                                     <div style="display:inline; float:left;">
                                         <a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex">
                                             <input type="button" class="btn btn-flat btn-default" style="width: 100px;" value='Back'>
-                                    </a></div>   
+                                        </a></div>   
                                     <div  style="display:inline; float:right;"><input class="btn btn-flat btn-success" type="submit" value="Submit" /></div>
                                 </div>
                                 <div style="">
-                                    
 
-                                    
+
+
                                 </div>
                             </div>
                         </form>

@@ -154,7 +154,7 @@ and open the template in the editor.
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-venus-mars"></span> Demographics<span class="fa fa-angle-left" style="float: right;"></span></a>
+                                <li class="treeview"><a href="#" style="color: #cc5200"><span class="fa fa-users"></span> Demographics<span class="fa fa-angle-left" style="float: right;"></span></a>
                                     <ul class="treeview-menu">
                                         <li><a href="/ProjectTek/RetrieveDataDemoServlet?redirect=byAgeGroupSex">Household Population by<br/>Age Group and Sex</a></li>
                                         <li><a href="/ProjectTek/ServletAccess?redirect=highestCompleted">Household Population 5<br/>years old and over by Highest<br/>Grade/Year Completed,<br/>age group and sex</a></li>

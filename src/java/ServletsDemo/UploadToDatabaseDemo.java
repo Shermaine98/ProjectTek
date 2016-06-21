@@ -63,8 +63,8 @@ public class UploadToDatabaseDemo extends BaseServlet {
                 ArrayList<byAgeGroupError> arrTempError = new ArrayList<byAgeGroupError>();
                 ArrayList<ByAgeGroupSex> arrTempNoError = new ArrayList<ByAgeGroupSex>();
 
-               arrTempError = new ExcelByAgeGroup(wb, sheetNumber).error();
-               arrTempNoError = new ExcelByAgeGroup(wb, sheetNumber).noError();
+               arrTempError = new ExcelByAgeGroup(wb, sheetNumber).getArrayError();
+               arrTempNoError = new ExcelByAgeGroup(wb, sheetNumber).getArrayNoError();
               
                if (arrTempError.size() != 0) {
                    request.setAttribute("ErrorMessage", "Error");
